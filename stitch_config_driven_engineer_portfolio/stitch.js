@@ -1316,16 +1316,23 @@ directories.forEach(dir => {
       updateNavHighlights(url);
 
       // Synchronize window.PORTFOLIO_CONFIG
-      const configScript = doc.querySelector('script[id^="stitch-config-json"]') || Array.from(doc.querySelectorAll('script')).find(s => s.innerHTML.includes('window.PORTFOLIO_CONFIG ='));
+      const configScript = doc.querySelector('script[id^="stitch-config-json"]') || Array.from(doc.querySelectorAll('script')).find(s => (s.textContent || s.innerHTML || '').includes('window.PORTFOLIO_CONFIG =') && !(s.textContent || s.innerHTML || '').includes('configScript'));
+      console.log("[SPA Router] configScript found:", !!configScript);
       if (configScript) {
+        const scriptText = configScript.textContent || configScript.innerHTML || '';
+        console.log("[SPA Router] scriptText snippet:", scriptText.substring(0, 100));
         try {
-          const match = configScript.innerHTML.match(/window\\.PORTFOLIO_CONFIG\\s*=\\s*(\\{[\\s\\S]*?\\});/);
+          const match = scriptText.match(/window\\.PORTFOLIO_CONFIG\\s*=\\s*(\\{[\\s\\S]*?\\});/);
+          console.log("[SPA Router] regex match found:", !!match);
           if (match) {
             window.PORTFOLIO_CONFIG = JSON.parse(match[1]);
+            console.log("[SPA Router] window.PORTFOLIO_CONFIG synced successfully. blogPosts count:", window.PORTFOLIO_CONFIG?.blogPosts?.length);
           }
         } catch (e) {
-          console.error("Failed to parse config from loaded page script:", e);
+          console.error("[SPA Router] Failed to parse config from loaded page script:", e);
         }
+      } else {
+        console.warn("[SPA Router] configScript not found in fetched document.");
       }
 
       // Execute scripts in main
@@ -1333,7 +1340,7 @@ directories.forEach(dir => {
 
       // Load only NEW external scripts (CDN libs like Marked.js, Prism.js)
       // Skip inline body scripts to prevent duplicate event listeners
-      var bodyScripts = Array.from(doc.body.querySelectorAll('script')).filter(function(s) {
+      var bodyScripts = Array.from(doc.querySelectorAll('script')).filter(function(s) {
         var inHeader = s.closest('header');
         var inDrawer = s.closest('#mobile-drawer');
         var inMain = s.closest('main');
@@ -1500,7 +1507,7 @@ directories.forEach(dir => {
     SOCIALS_GRID: () => getSocialsGridHtml(portfolioConfig.socialLinks),
     LOCATION_WIDGET: () => getLocationWidgetHtml(portfolioConfig.personalInfo.location),
     STATS_GRID: () => getStatsGridHtml(portfolioConfig.stats),
-    CONFIG_JSON: () => `<script>window.PORTFOLIO_CONFIG = ${JSON.stringify(portfolioConfig)};</script>`,
+    CONFIG_JSON: () => `<script id="stitch-config-json">window.PORTFOLIO_CONFIG = ${JSON.stringify(portfolioConfig)};</script>`,
     ABOUT_INTRO: () => {
       return `<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
                     I'm ${portfolioConfig.personalInfo.name}, a ${portfolioConfig.personalInfo.title}. ${portfolioConfig.personalInfo.shortBio}
