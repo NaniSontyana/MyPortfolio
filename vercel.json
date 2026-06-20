@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/stitch_config_driven_engineer_portfolio/:path*",
+      "destination": "/stitch_config_driven_engineer_portfolio/:path*"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/stitch_config_driven_engineer_portfolio/:path*"
+    }
+  ]
+}
