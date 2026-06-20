@@ -1,0 +1,12 @@
+{
+  "name": "stitch-config-driven-engineer-portfolio",
+  "version": "1.0.0",
+  "description": "Config-driven engineer portfolio with interactive editor server",
+  "scripts": {
+    "dev": "node stitch_config_driven_engineer_portfolio/server.js",
+    "build": "node stitch_config_driven_engineer_portfolio/stitch.js",
+    "start": "node stitch_config_driven_engineer_portfolio/stitch.js && node stitch_config_driven_engineer_portfolio/server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

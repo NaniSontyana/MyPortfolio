@@ -1,0 +1,2578 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+  <script>
+    (function () {
+      const theme = localStorage.getItem('theme') || 'dark';
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <!-- STITCH_TITLE_START -->
+<title>Settings &amp; Contact | Nani Sontyana Portfolio</title>
+<!-- STITCH_TITLE_END -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface": "var(--color-surface)",
+            "on-tertiary-container": "var(--color-on-tertiary-container)",
+            "tertiary-fixed": "var(--color-tertiary-fixed)",
+            "primary": "var(--color-primary)",
+            "on-primary-container": "var(--color-on-primary-container)",
+            "primary-fixed-dim": "var(--color-primary-fixed-dim)",
+            "on-tertiary-fixed-variant": "var(--color-on-tertiary-fixed-variant)",
+            "on-secondary-fixed-variant": "var(--color-on-secondary-fixed-variant)",
+            "surface-container-lowest": "var(--color-surface-container-lowest)",
+            "inverse-primary": "var(--color-inverse-primary)",
+            "surface-container-low": "var(--color-surface-container-low)",
+            "on-tertiary-fixed": "var(--color-on-tertiary-fixed)",
+            "on-surface": "var(--color-on-surface)",
+            "surface-tint": "var(--color-surface-tint)",
+            "surface-bright": "var(--color-surface-bright)",
+            "surface-container-high": "var(--color-surface-container-high)",
+            "surface-container": "var(--color-surface-container)",
+            "on-surface-variant": "var(--color-on-surface-variant)",
+            "inverse-surface": "var(--color-inverse-surface)",
+            "surface-variant": "var(--color-surface-variant)",
+            "on-error": "var(--color-on-error)",
+            "on-error-container": "var(--color-on-error-container)",
+            "on-primary": "var(--color-on-primary)",
+            "outline": "var(--color-outline)",
+            "on-secondary-fixed": "var(--color-on-secondary-fixed)",
+            "tertiary-fixed-dim": "var(--color-tertiary-fixed-dim)",
+            "primary-container": "var(--color-primary-container)",
+            "on-secondary-container": "var(--color-on-secondary-container)",
+            "on-background": "var(--color-on-background)",
+            "on-primary-fixed-variant": "var(--color-on-primary-fixed-variant)",
+            "background": "var(--color-background)",
+            "tertiary": "var(--color-tertiary)",
+            "error": "var(--color-error)",
+            "primary-fixed": "var(--color-primary-fixed)",
+            "tertiary-container": "var(--color-tertiary-container)",
+            "on-tertiary": "var(--color-on-tertiary)",
+            "on-primary-fixed": "var(--color-on-primary-fixed)",
+            "inverse-on-surface": "var(--color-inverse-on-surface)",
+            "surface-dim": "var(--color-surface-dim)",
+            "surface-container-highest": "var(--color-surface-container-highest)",
+            "secondary-fixed-dim": "var(--color-secondary-fixed-dim)",
+            "secondary-fixed": "var(--color-secondary-fixed)",
+            "error-container": "var(--color-error-container)",
+            "secondary": "var(--color-secondary)",
+            "outline-variant": "var(--color-outline-variant)",
+            "secondary-container": "var(--color-secondary-container)",
+            "on-secondary": "var(--color-on-secondary)",
+            "white/10": "var(--border-color)",
+            "white/5": "var(--border-color-soft)"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "24px",
+            "sm": "8px",
+            "xxl": "96px",
+            "unit": "4px",
+            "md": "16px",
+            "xl": "48px",
+            "lg": "24px",
+            "xs": "4px",
+            "container-max": "1200px"
+          },
+          "fontFamily": {
+            "headline-md": ["Geist"],
+            "headline-lg": ["Geist"],
+            "label-mono": ["JetBrains Mono"],
+            "body-md": ["Geist"],
+            "display": ["Geist"],
+            "headline-lg-mobile": ["Geist"],
+            "body-lg": ["Geist"]
+          },
+          "fontSize": {
+            "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+            "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "label-mono": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "display": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+            "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+          }
+    input: focus, textarea: focus, select: focus {
+      outline: none;
+      border - color: var(--color - primary);
+      box - shadow: 0 0 0 2px var(--input - focus - shadow);
+    }
+    
+    body {
+      min - height: max(884px, 100dvh);
+    }
+  </style >
+</head >
+      <body class="font-body-md text-body-md antialiased">
+<!-- STITCH_SHADER_START -->
+<div class="fixed inset-0 w-full h-full" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_4" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_4');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = gl_FragCoord.xy / u_resolution.xy;
+    float color = 0.0;
+    
+    // Create a subtle, moving "digital grain" or "nebula" effect
+    vec2 p = uv * 2.0 - 1.0;
+    p.x *= u_resolution.x / u_resolution.y;
+    
+    float t = u_time * 0.1;
+    
+    for(float i = 1.0; i < 4.0; i++){
+        p.x += 0.3 / i * sin(i * 3.0 * p.y + t);
+        p.y += 0.3 / i * cos(i * 3.0 * p.x + t);
+    }
+    
+    vec3 colorVec = vec3(0.05, 0.06, 0.1); // Deep surface color base
+    colorVec += 0.05 * vec3(0.5, 0.6, 1.0) * (sin(p.x + p.y) + 1.0); // Subtle blue accent
+    
+    gl_FragColor = vec4(colorVec, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END -->
+
+  <!-- TopAppBar -->
+  <header
+    class="fixed top-0 w-full z-50 bg-surface/70 dark:bg-surface/70 backdrop-blur-xl border-b border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_0_1px_rgba(255,255,255,0.05)] flex items-center justify-between px-md h-16">
+    <div class="flex items-center gap-sm">
+      <!-- STITCH_HEADER_LOGO_START -->
+<div class="w-8 h-8 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center">
+<span class="font-display text-primary font-bold text-headline-md-mobile">NS</span>
+</div>
+<span class="font-display text-headline-md-mobile font-bold text-primary hidden min-[400px]:inline">DevPortfolio</span>
+<!-- STITCH_HEADER_LOGO_END -->
+    </div>
+    <!-- STITCH_NAV_DESKTOP_START -->
+
+<!-- Desktop nav -->
+<nav class="hidden lg:flex gap-6 xl:gap-8 items-center">
+  <a class="relative text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-colors duration-200" href="../home_portfolio/code.html">Home</a>
+  <a class="relative text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-colors duration-200" href="../about_portfolio/code.html">About</a>
+  <a class="relative text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-colors duration-200" href="../projects_portfolio/code.html">Projects</a>
+  <a class="relative text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-colors duration-200" href="../experience_portfolio/code.html">Experience</a>
+  <a class="relative text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-colors duration-200" href="../blog_portfolio/code.html">Blog</a>
+  <a class="relative text-primary font-bold font-label-mono text-label-mono transition-colors duration-200 after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-primary after:rounded-full" href="../contact_portfolio/code.html">Settings</a>
+</nav>
+<!-- Mobile hamburger button (hidden as requested, using bottom mobile nav bar) -->
+<button id="mobile-menu-btn" class="hidden" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+  <span class="material-symbols-outlined text-on-surface">menu</span>
+</button>
+<!-- Mobile full-screen drawer -->
+<div id="mobile-drawer" class="fixed inset-0 z-[200] pointer-events-none" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <!-- Backdrop -->
+  <div id="mobile-drawer-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+  <!-- Drawer panel -->
+  <div id="mobile-drawer-panel" class="absolute top-0 right-0 h-full w-[280px] max-w-[85vw] bg-surface-container-low border-l border-white/10 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+    <!-- Drawer header -->
+    <div class="flex items-center justify-between px-lg py-md border-b border-white/10">
+      <span class="font-display font-bold text-primary text-headline-md-mobile">Navigation</span>
+      <button id="mobile-drawer-close" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-white/5 transition-colors active:scale-95" aria-label="Close navigation menu">
+        <span class="material-symbols-outlined text-on-surface-variant">close</span>
+      </button>
+    </div>
+    <!-- Drawer links -->
+    <nav class="flex flex-col gap-sm px-md py-lg flex-1 overflow-y-auto">
+  <a href="../home_portfolio/code.html" style="transition-delay:0ms" class="drawer-item flex items-center gap-md px-lg py-md rounded-2xl hover:bg-white/5 text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-all duration-300">
+    <span class="material-symbols-outlined text-[22px]">home</span>
+    <span>Home</span>
+  </a>
+  <a href="../about_portfolio/code.html" style="transition-delay:60ms" class="drawer-item flex items-center gap-md px-lg py-md rounded-2xl hover:bg-white/5 text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-all duration-300">
+    <span class="material-symbols-outlined text-[22px]">person</span>
+    <span>About</span>
+  </a>
+  <a href="../projects_portfolio/code.html" style="transition-delay:120ms" class="drawer-item flex items-center gap-md px-lg py-md rounded-2xl hover:bg-white/5 text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-all duration-300">
+    <span class="material-symbols-outlined text-[22px]">code</span>
+    <span>Projects</span>
+  </a>
+  <a href="../experience_portfolio/code.html" style="transition-delay:180ms" class="drawer-item flex items-center gap-md px-lg py-md rounded-2xl hover:bg-white/5 text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-all duration-300">
+    <span class="material-symbols-outlined text-[22px]">work</span>
+    <span>Experience</span>
+  </a>
+  <a href="../blog_portfolio/code.html" style="transition-delay:240ms" class="drawer-item flex items-center gap-md px-lg py-md rounded-2xl hover:bg-white/5 text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-all duration-300">
+    <span class="material-symbols-outlined text-[22px]">article</span>
+    <span>Blog</span>
+  </a>
+  <a href="../contact_portfolio/code.html" style="transition-delay:300ms" class="drawer-item flex items-center gap-md px-lg py-md rounded-2xl bg-primary/10 border border-primary/20 text-primary font-bold font-label-mono text-label-mono">
+    <span class="material-symbols-outlined text-[22px]">settings</span>
+    <span>Settings</span>
+  </a>
+    </nav>
+    <!-- Drawer footer -->
+    <div class="px-lg pb-safe py-md border-t border-white/10">
+      <p class="font-label-mono text-[11px] text-on-surface-variant opacity-50">Swipe right to close</p>
+    </div>
+  </div>
+</div>
+<style>
+  .drawer-item { opacity: 0; transform: translateX(20px); }
+  #mobile-drawer.open .drawer-item { opacity: 1; transform: translateX(0); transition: opacity 0.3s ease, transform 0.3s ease; }
+  #mobile-drawer.open #mobile-drawer-backdrop { opacity: 1; }
+  #mobile-drawer.open #mobile-drawer-panel { transform: translateX(0); }
+  #mobile-drawer.open { pointer-events: auto; }
+</style>
+<script>
+(function() {
+  const btn = document.getElementById('mobile-menu-btn');
+  const drawer = document.getElementById('mobile-drawer');
+  const backdrop = document.getElementById('mobile-drawer-backdrop');
+  const closeBtn = document.getElementById('mobile-drawer-close');
+  if (!btn || !drawer) return;
+  function openDrawer() {
+    drawer.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  btn.addEventListener('click', openDrawer);
+  closeBtn && closeBtn.addEventListener('click', closeDrawer);
+  backdrop && backdrop.addEventListener('click', closeDrawer);
+  // Swipe to close
+  let startX = 0;
+  drawer.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  drawer.addEventListener('touchend', e => { if (e.changedTouches[0].clientX - startX > 60) closeDrawer(); }, { passive: true });
+  // Close on escape
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+})();
+</script>
+<!-- STITCH_NAV_DESKTOP_END -->
+    <div class="flex items-center gap-md">
+      <button id="theme-toggle"
+        class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/5 transition-colors active:scale-95">
+        <span class="material-symbols-outlined text-primary">dark_mode</span>
+      </button>
+      <!-- STITCH_HEADER_AVATAR_START -->
+
+<div class="flex items-center gap-2 mr-2">
+  <span class="font-label-mono text-[10px] text-outline uppercase tracking-wider hidden sm:inline">Recruiter</span>
+  <button id="global-recruiter-toggle" class="relative inline-flex h-5 w-9 shrink-0 items-center rounded-full bg-surface-variant transition-colors duration-300 focus:outline-none" aria-label="Toggle recruiter view">
+    <span class="inline-block h-3.5 w-3.5 transform rounded-full bg-on-surface-variant transition-transform duration-300" id="global-recruiter-thumb" style="transform: translateX(2px)"></span>
+  </button>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-white/10">
+<img alt="Nani Sontyana" class="w-full h-full object-cover" data-alt="Profile" src=""/>
+</div>
+<script>
+(function() {
+  const config = {"personalInfo":{"name":"Nani Sontyana","title":"Full Stack Developer","introduction":"Building high-performance, scalable web applications with a focus on developer experience and elegant UI.","shortBio":"Passionate about bridging the gap between design and engineering. Specialized in React, TypeScript, and Cloud Architecture.","profilePhoto":"","resumeUrl":"https://drive.google.com/file/d/1e1WEKuGPQeq2oAnUPHIDEYMaESPyZYyE/view?usp=drive_link","email":"nanisontyana47@gmail.com","location":"Visakhapatnam, India","yearsOfExperience":"Fresher","yearsOfExperienceLabel":"Experience"},"socialLinks":{"github":"https://github.com/NaniSontyana","linkedin":"https://linkedin.com/in/nani-sontyana","twitter":"https://twitter.com/nani_sontyana","leetcode":"https://leetcode.com/u/nani_sontyana"},"stats":[{"label":"Projects Completed","value":"15+","icon":"Briefcase"},{"label":"Certifications","value":"4","icon":"Award"},{"label":"Internships","value":"2","icon":"Terminal"},{"label":"Problems Solved","value":"200+","icon":"Code"}],"skills":[{"category":"Frontend","items":[{"name":"React","level":96,"icon":"atom"},{"name":"TypeScript","level":99,"icon":"code"},{"name":"Angular","level":94},{"name":"JavaScript","level":80},{"name":"Tailwind css","level":80}]},{"category":"Backend","items":[{"name":"Node.js","level":90,"icon":"cpu"},{"name":"Python","level":80,"icon":"cpu"},{"name":"PostgreSQL","level":85,"icon":"database"},{"name":"MongoDB","level":100},{"name":"Next.js","level":80}]},{"category":"Tools","items":[{"name":"Docker","level":80,"icon":"container"},{"name":"Git","level":95,"icon":"git-branch"},{"name":"AWS","level":75,"icon":"cloud"},{"name":"GitHub","level":80}]}],"projects":[{"title":"smartHR-attrition Based Prediction System","description":"ML): Designed and built an enterprise-grade HR\nintelligence platform featuring real-time attrition risk scoring and workforce telemetry. Implemented a decoupled architecture\nhosting a React/Vite SPA on Vercel, an Express API gateway on Render, and a Python Flask ML microservice. Leveraged\nScikit-Learn to execute feature importance analyses, enabling explainable risk predictions based on demographic and\noperational metrics. Established security best practices including Bcrypt password hashing, JWT authorization middleware.\n","technologies":["React","Tailwind","Express","Python","ML"],"githubLink":"https://github.com/NaniSontyana/smartHR-main","liveLink":"https://smarthr-three.vercel.app/","image":"https://drive.google.com/file/d/1b7VGox5fkNkqv1g92xKaiscqxqqx1bXy/view?usp=sharing","category":"Web Development & ML","featured":true,"metrics":{"latency":"< 20ms","fcp":"0.40s","bundleSize":"40kB"}},{"title":"Subscription Tracker","description":"(Backend-Focused): Developed a backend-driven subscription management system to help\nusers track recurring subscriptions and avoid missed renewals. Implemented automated email reminders scheduled at multiple\nintervals before renewal dates using event-driven workflows. Designed secure RESTful APIs for subscription management,\nauthentication, and notifications. Tech: Node.js, Express.js, MongoDB, JWT, Nodemailer, Upstash QStash, Arcjet, Git.","technologies":["HTML","CSS","javascript","Express.js"],"githubLink":"https://github.com/NaniSontyana/subscrption_tracker","liveLink":"https://subscrption-tracker-2.onrender.com","image":"https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=600","category":"Web Development","featured":true,"metrics":{"latency":"< 10ms","fcp":"0.40s","bundleSize":"40kB"}},{"title":"E-commerce platform","description":"A complete E-commerce website with frontend, backend and Admin page. used MongoDb as a Database server to store the complete data to store the data.","technologies":["React","Tailwind","Express","Node","MongoDB"],"githubLink":"https://github.com/NaniSontyana/e-commerce-2","liveLink":"https://github.com/NaniSontyana/e-commerce-2","image":"https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=600","category":"Web Development","featured":true,"metrics":{"latency":"< 10ms","fcp":"0.40s","bundleSize":"40kB"}}],"experience":[{"company":"TechNova Systems","role":"Software Engineering Intern","duration":"June 2023 - Aug 2023","location":"Remote","description":"Developed microservices for a large-scale e-commerce platform using Spring Boot.","technologies":["Java","Spring Boot","Kafka"],"logo":"https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&q=80&w=100"}],"education":[{"institution":"Stanford University","degree":"B.S. in Computer Science","duration":"2020 - 2024","cgpa":"3.9/4.0","achievements":["Dean's List","UPE Honor Society"]}],"skillsSummary":[{"category":"Languages","icon":"translate","color":"primary","items":[{"name":"JAVA","iconType":"devicon","icon":"devicon-java-plain colored"},{"name":"Python","iconType":"devicon","icon":"devicon-python-plain colored"},{"name":"JavaScript","iconType":"devicon","icon":"devicon-javascript-plain colored"},{"name":"C++","iconType":"devicon","icon":"devicon-cplusplus-plain colored"}]},{"category":"Frameworks","icon":"layers","color":"tertiary","items":[{"name":"React.js","iconType":"devicon","icon":"devicon-react-original colored"},{"name":"Express.js","iconType":"devicon","icon":"devicon-express-original"},{"name":"NodeJS","iconType":"devicon","icon":"devicon-nodejs-plain colored"}]},{"category":"Tools","icon":"build","color":"primary","items":[{"name":"Git","iconType":"devicon","icon":"devicon-git-plain colored"},{"name":"GitHub","iconType":"devicon","icon":"devicon-github-original"},{"name":"MongoDB","iconType":"devicon","icon":"devicon-mongodb-plain colored"},{"name":"PostgreSQL","iconType":"devicon","icon":"devicon-postgresql-plain colored"},{"name":"MySQL","iconType":"devicon","icon":"devicon-mysql-plain colored"},{"name":"SQLite","iconType":"devicon","icon":"devicon-sqlite-plain colored"}]},{"category":"Soft Skills","icon":"psychology","color":"tertiary","items":[{"name":"Leadership","iconType":"material","icon":"groups"},{"name":"Writing","iconType":"material","icon":"edit_note"},{"name":"Public Speaking","iconType":"material","icon":"record_voice_over"},{"name":"Time Management","iconType":"material","icon":"schedule"}]}],"blogPosts":[{"title":"Building a Config-Driven Developer Portfolio","slug":"config-driven-portfolio","description":"How to create a single source of truth for your developer profile, projects, and themes using a dynamic compiler.","date":"2026-06-18","tags":["NodeJS","JavaScript","HTML","CMS"],"filePath":"../blog_portfolio/posts/config-driven-portfolio.md"},{"title":"Understanding WebGL Shaders for Web Design","slug":"webgl-shaders","description":"An introduction to writing vertex and fragment shaders for atmospheric web backgrounds and interactive elements.","date":"2026-06-15","tags":["WebGL","GLSL","Graphics","CSS"],"filePath":"../blog_portfolio/posts/webgl-shaders.md"}]};
+
+  // Override Event Listeners for dynamic scripts loaded via AJAX SPA routing
+  const originalAddEventListener = document.addEventListener;
+  document.addEventListener = function(type, listener, options) {
+    if (type === 'DOMContentLoaded' && document.readyState !== 'loading') {
+      setTimeout(listener, 1);
+    } else {
+      originalAddEventListener.call(this, type, listener, options);
+    }
+  };
+
+  const originalWindowAddEventListener = window.addEventListener;
+  window.addEventListener = function(type, listener, options) {
+    if (type === 'load' && document.readyState === 'complete') {
+      setTimeout(listener, 1);
+    } else {
+      originalWindowAddEventListener.call(this, type, listener, options);
+    }
+  };
+
+  // Inject custom CSS classes for recruiter mode and terminal
+  if (!document.getElementById('global-recruiter-styles')) {
+    const style = document.createElement('style');
+    style.id = 'global-recruiter-styles';
+    style.innerHTML = `
+      .recruiter-mode .stats-grid-highlight {
+        border-color: rgba(192, 193, 255, 0.4) !important;
+        box-shadow: 0 0 20px rgba(192, 193, 255, 0.2) !important;
+        transform: translateY(-4px) scale(1.02) !important;
+      }
+      .recruiter-mode .recruiter-show-grid {
+        display: grid !important;
+      }
+      .recruiter-mode .recruiter-highlight-border {
+        border-color: var(--color-primary) !important;
+      }
+      .recruiter-mode .recruiter-glow {
+        box-shadow: 0 0 20px rgba(192, 193, 255, 0.2) !important;
+      }
+      #dev-terminal-console.hidden {
+        display: none !important;
+      }
+      #dev-terminal-output::-webkit-scrollbar {
+        width: 4px;
+      }
+      #dev-terminal-output::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.02);
+      }
+      #dev-terminal-output::-webkit-scrollbar-thumb {
+        background: rgba(192, 193, 255, 0.2);
+        border-radius: 99px;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  function applyRecruiterView(active) {
+    const thumb = document.getElementById('global-recruiter-thumb');
+    const toggle = document.getElementById('global-recruiter-toggle');
+    const pageToggle = document.getElementById('toggle-recruiter');
+    const pageThumb = document.getElementById('toggle-thumb');
+    const pageCard = document.getElementById('recruiter-card');
+
+    if (active) {
+      document.body.classList.add('recruiter-mode');
+      
+      // Update global header switch
+      if (toggle && thumb) {
+        toggle.classList.replace('bg-surface-variant', 'bg-primary');
+        thumb.style.transform = 'translateX(18px)';
+        thumb.classList.replace('bg-on-surface-variant', 'bg-on-primary');
+      }
+
+      // Update page settings switch if it exists
+      if (pageToggle && pageThumb) {
+        pageToggle.classList.replace('bg-surface-variant', 'bg-primary');
+        pageThumb.style.transform = 'translateX(20px)';
+        pageThumb.classList.replace('bg-on-surface-variant', 'bg-on-primary');
+        if (pageCard) pageCard.classList.add('recruiter-mode-active');
+      }
+
+      // Home Page: highlight stats cards
+      const statsGrid = document.querySelector('main section.grid-cols-2.md\\:grid-cols-4');
+      if (statsGrid) {
+        statsGrid.querySelectorAll('.glass-card').forEach(card => {
+          card.classList.add('stats-grid-highlight');
+        });
+      }
+
+      // Experience Page: highlight GPA and focus area cards
+      const eduStats = document.querySelectorAll('.grid.grid-cols-2.gap-4.mb-8 > .bg-white\\/5');
+      if (eduStats.length) {
+        eduStats.forEach(stat => {
+          stat.classList.add('recruiter-highlight-border', 'recruiter-glow');
+        });
+      }
+    } else {
+      document.body.classList.remove('recruiter-mode');
+
+      // Update global header switch
+      if (toggle && thumb) {
+        toggle.classList.replace('bg-primary', 'bg-surface-variant');
+        thumb.style.transform = 'translateX(2px)';
+        thumb.classList.replace('bg-on-primary', 'bg-on-surface-variant');
+      }
+
+      // Update page settings switch if it exists
+      if (pageToggle && pageThumb) {
+        pageToggle.classList.replace('bg-primary', 'bg-surface-variant');
+        pageThumb.style.transform = 'translateX(4px)';
+        pageThumb.classList.replace('bg-on-primary', 'bg-on-surface-variant');
+        if (pageCard) pageCard.classList.remove('recruiter-mode-active');
+      }
+
+      // Remove Home Page Highlights
+      const statsGrid = document.querySelector('main section.grid-cols-2.md\\:grid-cols-4');
+      if (statsGrid) {
+        statsGrid.querySelectorAll('.glass-card').forEach(card => {
+          card.classList.remove('stats-grid-highlight');
+        });
+      }
+
+      // Remove Experience highlights
+      const eduStats = document.querySelectorAll('.grid.grid-cols-2.gap-4.mb-8 > .bg-white\\/5');
+      if (eduStats.length) {
+        eduStats.forEach(stat => {
+          stat.classList.remove('recruiter-highlight-border', 'recruiter-glow');
+        });
+      }
+    }
+  }
+
+  // --- TERMINAL CLI EMULATOR ---
+  function printLog(outputEl, text, type = '') {
+    const log = document.createElement('div');
+    if (type === 'cmd') {
+      log.innerHTML = `<span class="text-tertiary">guest@portfolio:~$</span> ${text}`;
+    } else if (type === 'error') {
+      log.innerHTML = `<span class="text-red-400 font-bold">Error:</span> ${text}`;
+    } else {
+      log.innerHTML = text;
+    }
+    outputEl.appendChild(log);
+    outputEl.scrollTop = outputEl.scrollHeight;
+  }
+
+  function executeCommand(inputVal) {
+    const outputEl = document.getElementById('dev-terminal-output');
+    if (!outputEl) return;
+
+    const cmdLine = inputVal.trim();
+    printLog(outputEl, cmdLine, 'cmd');
+
+    const args = cmdLine.split(' ');
+    const cmd = args[0].toLowerCase();
+
+    if (cmd === 'clear') {
+      outputEl.innerHTML = '';
+      return;
+    }
+    
+    if (cmd === 'help') {
+      printLog(outputEl, 'Available commands:');
+      printLog(outputEl, '  <span class="text-primary font-bold">neofetch</span> - Show developer profile summary');
+      printLog(outputEl, '  <span class="text-primary font-bold">skills</span>   - List skills and levels');
+      printLog(outputEl, '  <span class="text-primary font-bold">projects</span> - Show portfolio projects');
+      printLog(outputEl, '  <span class="text-primary font-bold">contact</span>  - Output email and social URLs');
+      printLog(outputEl, '  <span class="text-primary font-bold">resume</span>   - Print resume / CV link');
+      printLog(outputEl, '  <span class="text-primary font-bold">theme</span>    - Toggle dark / light mode');
+      printLog(outputEl, '  <span class="text-primary font-bold">clear</span>    - Flush the terminal logs');
+      return;
+    }
+
+    if (cmd === 'neofetch') {
+      printLog(outputEl, `
+<div class="flex gap-4 items-start py-1 font-mono text-[10px] leading-tight">
+  <pre class="text-tertiary font-bold select-none">
+  /\\_/\\  
+ ( o.o ) 
+  > ^ <  
+ /     \\ 
+ (\\  |  /)
+  (__|__)
+  </pre>
+  <div class="space-y-1">
+    <div class="text-on-surface font-bold text-xs">${config.personalInfo.name}</div>
+    <div class="text-outline">---------------------</div>
+    <div><span class="text-tertiary">OS:</span> PortfolioOS v1.0.0</div>
+    <div><span class="text-tertiary">SHELL:</span> Bash v1.2</div>
+    <div><span class="text-tertiary">TITLE:</span> ${config.personalInfo.title}</div>
+    <div><span class="text-tertiary">EXP:</span> ${config.personalInfo.yearsOfExperience}</div>
+    <div><span class="text-tertiary">LOCATION:</span> ${config.personalInfo.location}</div>
+    <div><span class="text-tertiary">THEME:</span> ${document.documentElement.classList.contains('dark') ? 'Dark Neon' : 'Light Classic'}</div>
+  </div>
+</div>
+      `);
+      return;
+    }
+
+    if (cmd === 'skills') {
+      printLog(outputEl, '<span class="text-on-surface font-bold">=== Skills Proficiency Inventory ===</span>');
+      (config.skills || []).forEach(cat => {
+        printLog(outputEl, `&nbsp;`);
+        printLog(outputEl, `<span class="text-tertiary font-bold">${cat.category}</span>`);
+        (cat.items || []).forEach(item => {
+          const barsCount = Math.round(item.level / 5);
+          const bars = '█'.repeat(barsCount) + '░'.repeat(20 - barsCount);
+          const namePadded = item.name.padEnd(14, '.');
+          printLog(outputEl, `  ${namePadded} [${bars}] ${item.level}%`);
+        });
+      });
+      return;
+    }
+
+    if (cmd === 'projects') {
+      printLog(outputEl, '<span class="text-on-surface font-bold">=== Engineering Projects Showcase ===</span>');
+      (config.projects || []).forEach(p => {
+        printLog(outputEl, `&nbsp;`);
+        printLog(outputEl, `<span class="text-tertiary font-bold">${p.title}</span> [${p.category || 'System'}]`);
+        printLog(outputEl, `  Desc: ${p.description}`);
+        if (p.metrics) {
+          printLog(outputEl, `  Specs: Latency: ${p.metrics.latency || 'N/A'} | FCP: ${p.metrics.fcp || 'N/A'} | Bundle: ${p.metrics.bundleSize || 'N/A'}`);
+        }
+      });
+      return;
+    }
+
+    if (cmd === 'contact') {
+      printLog(outputEl, '<span class="text-on-surface font-bold">=== Connection Protocols ===</span>');
+      printLog(outputEl, `  Email:    <a class="text-primary hover:underline" href="mailto:${config.personalInfo.email}">${config.personalInfo.email}</a>`);
+      if (config.socialLinks) {
+        Object.keys(config.socialLinks).forEach(key => {
+          printLog(outputEl, `  ${key.padEnd(8)}: <a class="text-primary hover:underline" href="${config.socialLinks[key]}" target="_blank">${config.socialLinks[key]}</a>`);
+        });
+      }
+      return;
+    }
+
+    if (cmd === 'resume') {
+      printLog(outputEl, '<span class="text-on-surface font-bold">=== Resume Connection ===</span>');
+      printLog(outputEl, `  Link: <a class="text-primary hover:underline" href="${config.personalInfo.resumeUrl}" target="_blank">Google Drive CV Link</a>`);
+      printLog(outputEl, `  (Type 'open resume' to view or click link)`);
+      return;
+    }
+
+    if (cmdLine.toLowerCase() === 'open resume') {
+      window.open(config.personalInfo.resumeUrl, '_blank');
+      printLog(outputEl, 'Opening resume in new tab...');
+      return;
+    }
+
+    if (cmd === 'theme') {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      const icon = document.querySelector('#theme-toggle .material-symbols-outlined');
+      if (icon) icon.textContent = isDark ? 'dark_mode' : 'light_mode';
+      printLog(outputEl, `System theme switched to: <span class="text-tertiary font-bold">${isDark ? 'Dark Mode' : 'Light Mode'}</span>`);
+      return;
+    }
+
+    printLog(outputEl, `Command not found: ${cmd}. Type <span class="text-primary font-bold">help</span> for assistance.`, 'error');
+  }
+
+  function initTerminal() {
+    if (document.getElementById('dev-terminal-console')) return;
+
+    // Create trigger button (floating bottom-left)
+    const trigger = document.createElement('button');
+    trigger.id = 'dev-terminal-trigger';
+    trigger.className = 'fixed bottom-lg left-lg z-50 w-10 h-10 rounded-full glass-card flex items-center justify-center hover:text-primary transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg border border-white/10';
+    trigger.innerHTML = '<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: \'FILL\' 0, \'wght\' 500">terminal</span>';
+    trigger.title = "Developer CLI Console (Press ` key)";
+    document.body.appendChild(trigger);
+
+    // Create console modal
+    const consoleDiv = document.createElement('div');
+    consoleDiv.id = 'dev-terminal-console';
+    consoleDiv.className = 'fixed inset-0 z-[300] flex items-center justify-center hidden p-4';
+    consoleDiv.innerHTML = `
+      <div id="dev-terminal-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-md"></div>
+      <div id="dev-terminal-console-panel" class="relative w-full max-w-2xl h-[400px] bg-black/90 backdrop-blur-xl border border-primary/30 rounded-2xl shadow-2xl p-6 flex flex-col font-mono text-[11px] text-primary z-10">
+        <!-- Header -->
+        <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-4 select-none shrink-0">
+          <div class="flex items-center gap-2">
+            <span class="w-3.5 h-3.5 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            </span>
+            <span class="text-on-surface font-bold text-xs">visitor@nanisontyana:~$ developer_cli</span>
+          </div>
+          <button id="dev-terminal-close" class="text-outline hover:text-white transition-colors flex items-center">
+            <span class="material-symbols-outlined text-sm">close</span>
+          </button>
+        </div>
+        <!-- Output Area -->
+        <div id="dev-terminal-output" class="flex-grow overflow-y-auto space-y-2 mb-4 pr-1">
+          <div class="text-outline font-bold text-xs select-none">
+            Nani Sontyana Developer Command Line Interface (v1.0.0)
+          </div>
+          <div class="text-outline select-none">
+            Type <span class="text-primary font-bold">help</span> to view available operations, or press <span class="text-tertiary font-bold">Esc</span> to dismiss.
+          </div>
+          <div class="text-outline select-none">----------------------------------------------------</div>
+        </div>
+        <!-- Input Row -->
+        <div class="flex items-center gap-2 border-t border-white/10 pt-3 shrink-0">
+          <span class="text-tertiary select-none">guest@portfolio:~$</span>
+          <input type="text" id="dev-terminal-input" class="flex-grow bg-transparent border-0 p-0 text-[11px] font-mono text-primary focus:ring-0 focus:outline-none placeholder-primary/20" placeholder="run command..." autocomplete="off" spellcheck="false" autofocus />
+        </div>
+      </div>
+    `;
+    document.body.appendChild(consoleDiv);
+
+    const consolePanel = document.getElementById('dev-terminal-console-panel');
+    const terminalInput = document.getElementById('dev-terminal-input');
+    const terminalOutput = document.getElementById('dev-terminal-output');
+    const closeBtn = document.getElementById('dev-terminal-close');
+    const backdrop = document.getElementById('dev-terminal-backdrop');
+
+    function toggleTerminal() {
+      const isHidden = consoleDiv.classList.toggle('hidden');
+      if (!isHidden) {
+        setTimeout(() => {
+          terminalInput.focus();
+          terminalOutput.scrollTop = terminalOutput.scrollHeight;
+        }, 50);
+      }
+    }
+
+    trigger.addEventListener('click', toggleTerminal);
+    closeBtn.addEventListener('click', toggleTerminal);
+    backdrop.addEventListener('click', toggleTerminal);
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === '`' || e.key === '~') {
+        e.preventDefault();
+        toggleTerminal();
+      } else if (e.key === 'Escape' && !consoleDiv.classList.contains('hidden')) {
+        toggleTerminal();
+      }
+    });
+
+    terminalInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const val = terminalInput.value;
+        terminalInput.value = '';
+        if (val.trim()) {
+          executeCommand(val);
+        }
+      }
+    });
+  }
+
+  // Update nav highlights by toggling classes on existing elements (no innerHTML replacement = no flicker)
+  function updateNavHighlights(url) {
+    var folders = ['home_portfolio','about_portfolio','projects_portfolio','experience_portfolio','blog_portfolio','contact_portfolio'];
+    var activeFolder = '';
+    for (var i = 0; i < folders.length; i++) {
+      if (url.includes(folders[i])) { activeFolder = folders[i]; break; }
+    }
+    if (!activeFolder) return;
+
+    // Desktop nav links (inside header, outside mobile drawer)
+    var headerEl = document.querySelector('header');
+    if (headerEl) {
+      var links = headerEl.querySelectorAll('a[href]');
+      for (var j = 0; j < links.length; j++) {
+        var a = links[j];
+        if (a.closest('#mobile-drawer')) continue;
+        var href = a.getAttribute('href') || '';
+        var isNavLink = false;
+        for (var k = 0; k < folders.length; k++) { if (href.includes(folders[k])) { isNavLink = true; break; } }
+        if (!isNavLink) continue;
+        if (href.includes(activeFolder)) {
+          a.className = 'relative text-primary font-bold font-label-mono text-label-mono transition-colors duration-200 after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-primary after:rounded-full';
+        } else {
+          a.className = 'relative text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-colors duration-200';
+        }
+      }
+    }
+
+    // Drawer nav links
+    var drawerNav = document.querySelector('#mobile-drawer nav');
+    if (drawerNav) {
+      var dLinks = drawerNav.querySelectorAll('a[href]');
+      for (var d = 0; d < dLinks.length; d++) {
+        var da = dLinks[d];
+        var dHref = da.getAttribute('href') || '';
+        var isDLink = false;
+        for (var dk = 0; dk < folders.length; dk++) { if (dHref.includes(folders[dk])) { isDLink = true; break; } }
+        if (!isDLink) continue;
+        var dDelay = da.style.transitionDelay || '';
+        if (dHref.includes(activeFolder)) {
+          da.className = 'drawer-item flex items-center gap-md px-lg py-md rounded-2xl bg-primary/10 border border-primary/20 text-primary font-bold font-label-mono text-label-mono';
+        } else {
+          da.className = 'drawer-item flex items-center gap-md px-lg py-md rounded-2xl hover:bg-white/5 text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-all duration-300';
+        }
+        if (dDelay) da.style.transitionDelay = dDelay;
+      }
+    }
+
+    // Bottom nav links (find nav not in header or drawer)
+    var allNavs = document.querySelectorAll('nav');
+    for (var n = 0; n < allNavs.length; n++) {
+      var nav = allNavs[n];
+      if (nav.closest('header') || nav.closest('#mobile-drawer')) continue;
+      var bLinks = nav.querySelectorAll('a[href]');
+      for (var b = 0; b < bLinks.length; b++) {
+        var ba = bLinks[b];
+        var bHref = ba.getAttribute('href') || '';
+        var isBLink = false;
+        for (var bk = 0; bk < folders.length; bk++) { if (bHref.includes(folders[bk])) { isBLink = true; break; } }
+        if (!isBLink) continue;
+        if (bHref.includes(activeFolder)) {
+          ba.className = 'flex flex-col items-center justify-center gap-[3px] flex-1 relative text-primary';
+          ba.setAttribute('aria-current', 'page');
+          if (!ba.querySelector('[data-nav-indicator]')) {
+            var ind = document.createElement('div');
+            ind.className = 'absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-primary rounded-b-full';
+            ind.setAttribute('data-nav-indicator', '');
+            ba.insertBefore(ind, ba.firstChild);
+          }
+          var bTxt = ba.querySelector('span:last-child');
+          if (bTxt && !bTxt.classList.contains('font-bold')) bTxt.classList.add('font-bold');
+        } else {
+          ba.className = 'flex flex-col items-center justify-center gap-[3px] flex-1 text-on-surface-variant hover:text-primary transition-colors duration-200 active:scale-95';
+          ba.removeAttribute('aria-current');
+          var existInd = ba.querySelector('[data-nav-indicator]');
+          if (existInd) existInd.remove();
+          var bTxt2 = ba.querySelector('span:last-child');
+          if (bTxt2) bTxt2.classList.remove('font-bold');
+        }
+      }
+    }
+  }
+
+  // SPA Router for smooth page transitions
+  function navigateTo(url) {
+    if (window.location.href === url) return;
+    history.pushState(null, '', url);
+    loadPage(url);
+  }
+
+  window.addEventListener('popstate', () => {
+    loadPage(window.location.href, true);
+  });
+
+  async function loadPage(url, isPopState) {
+    const main = document.querySelector('main');
+    if (!main) return;
+
+    // Close mobile drawer if open
+    const drawer = document.getElementById('mobile-drawer');
+    if (drawer && drawer.classList.contains('open')) {
+      const closeBtn = document.getElementById('mobile-drawer-close');
+      if (closeBtn) {
+        drawer.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Fade out main content
+    main.style.transition = 'opacity 0.15s ease-out, transform 0.15s ease-out';
+    main.style.opacity = '0';
+    main.style.transform = 'translateY(8px)';
+    
+    await new Promise(r => setTimeout(r, 150));
+
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error("Fetch failed: " + res.status);
+      const htmlText = await res.text();
+      
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(htmlText, 'text/html');
+      
+      // Update title
+      document.title = doc.title;
+
+      // Clean up old SPA scripts to prevent memory build-up
+      document.querySelectorAll('script[data-spa-script="true"]').forEach(s => s.remove());
+
+      // Swap main container content and classes
+      const docMain = doc.querySelector('main');
+      if (docMain) {
+        main.innerHTML = docMain.innerHTML;
+        main.className = docMain.className;
+      }
+
+      // Update Navigation highlights (class-based, no innerHTML replacement = no flicker)
+      updateNavHighlights(url);
+
+      // Synchronize window.PORTFOLIO_CONFIG
+      const configScript = doc.querySelector('script[id^="stitch-config-json"]') || Array.from(doc.querySelectorAll('script')).find(s => s.innerHTML.includes('window.PORTFOLIO_CONFIG ='));
+      if (configScript) {
+        try {
+          const match = configScript.innerHTML.match(/window\.PORTFOLIO_CONFIG\s*=\s*(\{[\s\S]*?\});/);
+          if (match) {
+            window.PORTFOLIO_CONFIG = JSON.parse(match[1]);
+          }
+        } catch (e) {
+          console.error("Failed to parse config from loaded page script:", e);
+        }
+      }
+
+      // Execute scripts in main
+      executePageScripts(main);
+
+      // Load only NEW external scripts (CDN libs like Marked.js, Prism.js)
+      // Skip inline body scripts to prevent duplicate event listeners
+      var bodyScripts = Array.from(doc.body.querySelectorAll('script')).filter(function(s) {
+        var inHeader = s.closest('header');
+        var inDrawer = s.closest('#mobile-drawer');
+        var inMain = s.closest('main');
+        return !inHeader && !inDrawer && !inMain;
+      });
+      var loadedSrcs = new Set(Array.from(document.querySelectorAll('script[src]')).map(function(s) { return s.src; }));
+      bodyScripts.forEach(function(oldScript) {
+        var src = oldScript.getAttribute('src');
+        if (src) {
+          var tmp = document.createElement('a'); tmp.href = src;
+          if (!loadedSrcs.has(tmp.href)) {
+            var newScript = document.createElement('script');
+            newScript.setAttribute('data-spa-script', 'true');
+            Array.from(oldScript.attributes).forEach(function(attr) { newScript.setAttribute(attr.name, attr.value); });
+            document.body.appendChild(newScript);
+            loadedSrcs.add(tmp.href);
+          }
+        }
+      });
+
+      // Scroll to top
+      window.scrollTo(0, 0);
+
+      // Trigger popstate routing event hooks if needed (e.g. for blog posts details page hash checks)
+      window.dispatchEvent(new Event('hashchange'));
+
+    } catch (err) {
+      console.error("SPA routing error, performing fallback full redirect:", err);
+      window.location.href = url;
+      return;
+    }
+
+    // Fade back in with proper transition (double rAF ensures browser paints the faded state first)
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        main.style.transition = 'opacity 0.25s ease-out, transform 0.25s ease-out';
+        main.style.opacity = '1';
+        main.style.transform = 'translateY(0)';
+      });
+    });
+  }
+
+  function executePageScripts(container) {
+    const scripts = container.querySelectorAll('script');
+    scripts.forEach(oldScript => {
+      const newScript = document.createElement('script');
+      newScript.setAttribute('data-spa-script', 'true');
+      Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+      newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+      oldScript.parentNode.replaceChild(newScript, oldScript);
+    });
+  }
+
+  // Intercept relative page anchor clicks
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (!link) return;
+    
+    const href = link.getAttribute('href');
+    if (!href) return;
+    
+    if (href.startsWith('http') && !href.startsWith(window.location.origin)) return;
+    if (href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || link.target === '_blank') return;
+    if (href.includes('drive.google.com') || href.toLowerCase().endsWith('.pdf')) return;
+    
+    if (href.includes('code.html') || href.startsWith('/') || href.startsWith('..')) {
+      e.preventDefault();
+      navigateTo(link.href);
+    }
+  });
+
+  // Bind state and click handlers
+  document.addEventListener('DOMContentLoaded', () => {
+    const isModeActive = localStorage.getItem('recruiterMode') === 'true';
+    applyRecruiterView(isModeActive);
+    initTerminal();
+
+    // Header Switch Click Handler
+    const toggle = document.getElementById('global-recruiter-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        const active = localStorage.getItem('recruiterMode') === 'true';
+        const newState = !active;
+        localStorage.setItem('recruiterMode', newState ? 'true' : 'false');
+        applyRecruiterView(newState);
+      });
+    }
+
+    // Settings Page Switch Click Handler
+    const pageToggle = document.getElementById('toggle-recruiter');
+    if (pageToggle) {
+      pageToggle.addEventListener('click', () => {
+        const active = localStorage.getItem('recruiterMode') === 'true';
+        const newState = !active;
+        localStorage.setItem('recruiterMode', newState ? 'true' : 'false');
+        applyRecruiterView(newState);
+      });
+    }
+  });
+})();
+</script>
+      
+<!-- STITCH_HEADER_AVATAR_END -->
+    </div>
+  </header>
+  <!-- Main Content -->
+  <main class="container mx-auto px-md pt-24 pb-32 max-w-container-max min-h-screen">
+    <div class="flex flex-col lg:grid lg:grid-cols-12 gap-lg">
+      <!-- Left Column: Settings & Personal Identity -->
+      <aside class="lg:col-span-4 space-y-lg">
+        <!-- Profile Header -->
+        <!-- STITCH_PROFILE_HEADER_START -->
+<section class="glass-card p-lg rounded-xl space-y-4">
+  <div class="flex items-start justify-between">
+    <div>
+      <h1 class="font-headline-md text-headline-md text-on-surface">Nani Sontyana</h1>
+      <p class="text-on-surface-variant font-label-mono text-xs uppercase tracking-widest mt-1">Full Stack Developer</p>
+    </div>
+    <span class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full font-label-mono text-[10px]">VERIFIED</span>
+  </div>
+  <p class="text-on-surface-variant leading-relaxed">
+    Building high-performance, scalable web applications with a focus on developer experience and elegant UI.
+  </p>
+  <div class="flex flex-wrap gap-2 pt-2">
+    <span class="px-2 py-1 bg-surface-container rounded-md text-xs font-label-mono text-outline">#FRONTEND</span>
+    <span class="px-2 py-1 bg-surface-container rounded-md text-xs font-label-mono text-outline">#BACKEND</span>
+    <span class="px-2 py-1 bg-surface-container rounded-md text-xs font-label-mono text-outline">#TOOLS</span>
+  </div>
+</section>
+<!-- STITCH_PROFILE_HEADER_END -->
+        <!-- Recruiter View Toggle -->
+        <section class="glass-card p-lg rounded-xl flex items-center justify-between" id="recruiter-card">
+          <div class="space-y-1">
+            <h3 class="font-headline-md text-sm text-on-surface">Recruiter View</h3>
+            <p class="text-xs text-on-surface-variant">Prioritize technical stats &amp; links</p>
+          </div>
+          <button
+            class="relative inline-flex h-6 w-11 items-center rounded-full bg-surface-variant transition-colors duration-300 focus:outline-none"
+            id="toggle-recruiter">
+            <span
+              class="inline-block h-4 w-4 transform rounded-full bg-on-surface-variant transition-transform duration-300 translate-x-1"
+              id="toggle-thumb"></span>
+          </button>
+        </section>
+        <!-- Social Grid -->
+        <!-- STITCH_SOCIALS_GRID_START -->
+<section class="grid grid-cols-2 gap-4">
+  <a class="glass-card p-4 rounded-xl flex flex-col items-center justify-center gap-2 hover:translate-y-[-2px] transition-transform group" href="https://github.com/NaniSontyana" target="_blank">
+    <span class="material-symbols-outlined text-2xl group-hover:text-primary" data-icon="terminal">terminal</span>
+    <span class="font-label-mono text-xs text-on-surface-variant">GitHub</span>
+  </a>
+  <a class="glass-card p-4 rounded-xl flex flex-col items-center justify-center gap-2 hover:translate-y-[-2px] transition-transform group" href="https://linkedin.com/in/nani-sontyana" target="_blank">
+    <span class="material-symbols-outlined text-2xl group-hover:text-primary" data-icon="work">work</span>
+    <span class="font-label-mono text-xs text-on-surface-variant">LinkedIn</span>
+  </a>
+  <a class="glass-card p-4 rounded-xl flex flex-col items-center justify-center gap-2 hover:translate-y-[-2px] transition-transform group" href="https://twitter.com/nani_sontyana" target="_blank">
+    <span class="material-symbols-outlined text-2xl group-hover:text-primary" data-icon="chat">chat</span>
+    <span class="font-label-mono text-xs text-on-surface-variant">Twitter</span>
+  </a>
+  <a class="glass-card p-4 rounded-xl flex flex-col items-center justify-center gap-2 hover:translate-y-[-2px] transition-transform group" href="https://leetcode.com/u/nani_sontyana" target="_blank">
+    <span class="material-symbols-outlined text-2xl group-hover:text-primary" data-icon="code">code</span>
+    <span class="font-label-mono text-xs text-on-surface-variant">LeetCode</span>
+  </a>
+</section>
+<!-- STITCH_SOCIALS_GRID_END -->
+        <!-- Location Widget -->
+        <!-- STITCH_LOCATION_WIDGET_START -->
+<section class="glass-card p-lg rounded-xl">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<span class="font-headline-md text-sm">Visakhapatnam, India</span>
+</div>
+<div class="h-32 rounded-lg bg-surface-container overflow-hidden grayscale opacity-50 contrast-125">
+<div class="w-full h-full bg-cover bg-center" data-location="Visakhapatnam, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDcXxNEN7K3j2UkIg_nPdYSNqlAX1_8y1tqCEO4QM3koYO9w_0You46LWy63JDJUDaV0cYObKYRskOs8UkFGxMIZa-5sKdS57aNRamKWnkb40pbGECIPvLkDB6jcrAtGZS6wOd5UnMdFGcJu6EVoZyZvnK6y_Z0Ic7dTHo7G4YelfLHtSUMuLY5Ibfaefe7Xh2ovlMHbZUNrXR8UGP8po1NMWwZCXNOOh-HUOS_u8A4kfrO3kMZLV0iD15Q1eysRtBkEjt4MlRLvjEd')')"></div>
+</div>
+</section>
+<!-- STITCH_LOCATION_WIDGET_END -->
+      </aside>
+      <!-- Right Column: Contact Form & Advanced Features -->
+      <div class="lg:col-span-8 space-y-lg">
+        <!-- Contact Form Section -->
+        <section class="glass-card p-xl rounded-xl">
+          <!-- Right Column Tab Switcher -->
+          <div class="flex gap-6 border-b border-white/10 pb-4 mb-8">
+            <button id="tab-btn-message"
+              class="text-primary font-bold border-b-2 border-primary pb-2 px-1 transition-all flex items-center gap-2 text-sm font-label-mono uppercase tracking-wider">
+              <span class="material-symbols-outlined text-base">send</span> Send Message
+            </button>
+            <button id="tab-btn-editor"
+              class="text-on-surface-variant hover:text-on-surface pb-2 px-1 transition-all flex items-center gap-2 text-sm font-label-mono uppercase tracking-wider">
+              <span class="material-symbols-outlined text-base">admin_panel_settings</span> Edit Portfolio (CMS)
+            </button>
+          </div>
+
+          <!-- Tab 1: Send Message Container -->
+          <div id="contact-form-container">
+            <div class="mb-8">
+              <h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary">Get In Touch</h2>
+              <p class="text-on-surface-variant mt-2">Have a technical challenge or a role you'd like to discuss? Drop
+                me a message.</p>
+            </div>
+            <form class="space-y-6" id="contact-form">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                  <label class="font-label-mono text-xs text-outline uppercase tracking-wider" for="name">Full
+                    Name</label>
+                  <input
+                    class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:ring-0 transition-all"
+                    id="name" placeholder="John Doe" required="" type="text" />
+                </div>
+                <div class="space-y-2">
+                  <label class="font-label-mono text-xs text-outline uppercase tracking-wider" for="email">Email
+                    Address</label>
+                  <input
+                    class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:ring-0 transition-all"
+                    id="email" placeholder="john@example.com" required="" type="email" />
+                </div>
+              </div>
+              <div class="space-y-2">
+                <label class="font-label-mono text-xs text-outline uppercase tracking-wider"
+                  for="subject">Subject</label>
+                <select
+                  class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-3 text-on-surface-variant/40 invalid:text-on-surface-variant/40 valid:text-on-surface focus:ring-0 transition-all appearance-none"
+                  id="subject" required>
+                  <option value="" disabled selected hidden>Select a subject...</option>
+                  <option value="New Project Opportunity">New Project Opportunity</option>
+                  <option value="Recruitment Inquiry">Recruitment Inquiry</option>
+                  <option value="Technical Consultation">Technical Consultation</option>
+                  <option value="General Feedback">General Feedback</option>
+                </select>
+              </div>
+              <div class="space-y-2">
+                <label class="font-label-mono text-xs text-outline uppercase tracking-wider"
+                  for="message">Message</label>
+                <textarea
+                  class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:ring-0 transition-all resize-none"
+                  id="message" placeholder="Your technical requirements or collaboration details..." required=""
+                  rows="5"></textarea>
+              </div>
+              <div class="flex items-center justify-between pt-4">
+                <div class="text-xs font-label-mono hidden" id="status-message"></div>
+                <button
+                  class="bg-primary text-on-primary font-bold px-8 py-3 rounded-lg flex items-center gap-2 hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-primary/20"
+                  type="submit">
+                  <span>Send Signal</span>
+                  <span class="material-symbols-outlined text-sm" data-icon="send">send</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Tab 2: Visual Config Editor Container (Hidden by default) -->
+          <div id="editor-container" class="hidden space-y-6">
+            <div id="editor-content" class="hidden space-y-6">
+              <div class="mb-6">
+                <h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary">Portfolio Live
+                  Editor</h2>
+                <p class="text-on-surface-variant mt-2">Modify details visually. Click "Save &amp; Compile" to update
+                  the entire portfolio instantly.</p>
+              </div>
+
+              <!-- Sub-tab switcher for editor sections -->
+              <div class="flex flex-wrap gap-2 mb-6 bg-surface-container-low p-1.5 rounded-xl border border-white/5">
+                <button type="button" onclick="switchSubTab('general')" id="subtab-btn-general"
+                  class="subtab-btn px-4 py-2 text-xs font-label-mono uppercase rounded-lg bg-primary text-on-primary font-bold transition-all">General</button>
+                <button type="button" onclick="switchSubTab('socials-stats')" id="subtab-btn-socials-stats"
+                  class="subtab-btn px-4 py-2 text-xs font-label-mono uppercase rounded-lg text-on-surface-variant hover:text-on-surface transition-all">Socials
+                  &amp; Stats</button>
+                <button type="button" onclick="switchSubTab('skills')" id="subtab-btn-skills"
+                  class="subtab-btn px-4 py-2 text-xs font-label-mono uppercase rounded-lg text-on-surface-variant hover:text-on-surface transition-all">Skills</button>
+                <button type="button" onclick="switchSubTab('skills-summary')" id="subtab-btn-skills-summary"
+                  class="subtab-btn px-4 py-2 text-xs font-label-mono uppercase rounded-lg text-on-surface-variant hover:text-on-surface transition-all">Skills
+                  Summary</button>
+                <button type="button" onclick="switchSubTab('projects')" id="subtab-btn-projects"
+                  class="subtab-btn px-4 py-2 text-xs font-label-mono uppercase rounded-lg text-on-surface-variant hover:text-on-surface transition-all">Projects</button>
+                <button type="button" onclick="switchSubTab('experience-education')"
+                  id="subtab-btn-experience-education"
+                  class="subtab-btn px-4 py-2 text-xs font-label-mono uppercase rounded-lg text-on-surface-variant hover:text-on-surface transition-all">Experience
+                  &amp; Edu</button>
+                <button type="button" onclick="switchSubTab('blog-posts')" id="subtab-btn-blog-posts"
+                  class="subtab-btn px-4 py-2 text-xs font-label-mono uppercase rounded-lg text-on-surface-variant hover:text-on-surface transition-all">Blog
+                  Posts</button>
+              </div>
+
+              <!-- Editor Forms -->
+              <div id="editor-forms-container" class="space-y-6">
+
+                <!-- 1. General Section -->
+                <div id="section-general" class="editor-section space-y-4">
+                  <h3
+                    class="font-label-mono text-xs text-outline uppercase tracking-widest border-b border-white/5 pb-2 mb-4">
+                    Personal Information</h3>
+                  <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label class="font-label-mono text-xs text-outline uppercase tracking-wider block mb-1">Display
+                        Name</label>
+                      <input type="text" id="edit-name"
+                        class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-2.5 text-xs text-on-surface focus:ring-0">
+                    </div>
+                    <div>
+                      <label
+                        class="font-label-mono text-xs text-outline uppercase tracking-wider block mb-1">Professional
+                        Title</label>
+                      <input type="text" id="edit-title"
+                        class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-2.5 text-xs text-on-surface focus:ring-0">
+                    </div>
+                  </div>
+
+                  <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label class="font-label-mono text-xs text-outline uppercase tracking-wider block mb-1">Contact
+                        Email</label>
+                      <input type="email" id="edit-email"
+                        class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-2.5 text-xs text-on-surface focus:ring-0">
+                    </div>
+                    <div>
+                      <label
+                        class="font-label-mono text-xs text-outline uppercase tracking-wider block mb-1">Location</label>
+                      <input type="text" id="edit-location"
+                        class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-2.5 text-xs text-on-surface focus:ring-0">
+                    </div>
+                  </div>
+
+                  <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label class="font-label-mono text-xs text-outline uppercase tracking-wider block mb-1">Profile
+                        Photo URL</label>
+                      <input type="text" id="edit-profilePhoto"
+                        class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-2.5 text-xs text-on-surface focus:ring-0">
+                    </div>
+                    <div>
+                      <label class="font-label-mono text-xs text-outline uppercase tracking-wider block mb-1">Resume /
+                        CV Link</label>
+                      <input type="text" id="edit-resumeUrl"
+                        class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-2.5 text-xs text-on-surface focus:ring-0">
+                    </div>
+                  </div>
+
+                  <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label class="font-label-mono text-xs text-outline uppercase tracking-wider block mb-1">Years of
+                        Experience / Level</label>
+                      <input type="text" id="edit-yearsOfExperience"
+                        class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-2.5 text-xs text-on-surface focus:ring-0"
+                        placeholder="e.g. Fresher, 5+, 8+">
+                    </div>
+                    <div>
+                      <label class="font-label-mono text-xs text-outline uppercase tracking-wider block mb-1">Experience
+                        Label</label>
+                      <input type="text" id="edit-yearsOfExperienceLabel"
+                        class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-2.5 text-xs text-on-surface focus:ring-0"
+                        placeholder="e.g. Experience, Years Experience">
+                    </div>
+                  </div>
+
+                  <div>
+                    <label class="font-label-mono text-xs text-outline uppercase tracking-wider block mb-1">Hero
+                      Introduction</label>
+                    <textarea id="edit-introduction" rows="3"
+                      class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-2.5 text-xs text-on-surface focus:ring-0 resize-none"></textarea>
+                  </div>
+
+                  <div>
+                    <label class="font-label-mono text-xs text-outline uppercase tracking-wider block mb-1">Short
+                      Biography (About Page)</label>
+                    <textarea id="edit-shortBio" rows="3"
+                      class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-2.5 text-xs text-on-surface focus:ring-0 resize-none"></textarea>
+                  </div>
+                </div>
+
+                <!-- 2. Socials & Stats Section -->
+                <div id="section-socials-stats" class="editor-section hidden space-y-6">
+                  <div>
+                    <h3
+                      class="font-label-mono text-xs text-outline uppercase tracking-widest border-b border-white/5 pb-2 mb-4">
+                      Social Network Connections</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label
+                          class="font-label-mono text-[10px] text-outline uppercase tracking-wider block mb-1">GitHub
+                          Profile Link</label>
+                        <input type="text" id="edit-social-github"
+                          class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-2 text-xs text-on-surface focus:ring-0">
+                      </div>
+                      <div>
+                        <label
+                          class="font-label-mono text-[10px] text-outline uppercase tracking-wider block mb-1">LinkedIn
+                          Profile Link</label>
+                        <input type="text" id="edit-social-linkedin"
+                          class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-2 text-xs text-on-surface focus:ring-0">
+                      </div>
+                      <div>
+                        <label
+                          class="font-label-mono text-[10px] text-outline uppercase tracking-wider block mb-1">Twitter
+                          Profile Link</label>
+                        <input type="text" id="edit-social-twitter"
+                          class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-2 text-xs text-on-surface focus:ring-0">
+                      </div>
+                      <div>
+                        <label
+                          class="font-label-mono text-[10px] text-outline uppercase tracking-wider block mb-1">LeetCode
+                          Profile Link</label>
+                        <input type="text" id="edit-social-leetcode"
+                          class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-2 text-xs text-on-surface focus:ring-0">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3
+                      class="font-label-mono text-xs text-outline uppercase tracking-widest border-b border-white/5 pb-2 mb-4">
+                      Portfolio Statistics</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                      <div class="p-3 bg-surface-container/30 border border-white/5 rounded-xl space-y-2">
+                        <input type="hidden" id="edit-stat-0-label" value="Projects Completed">
+                        <label class="font-label-mono text-[10px] text-primary uppercase tracking-wider block">Projects
+                          Completed Value</label>
+                        <input type="text" id="edit-stat-0-value"
+                          class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-2 text-xs text-on-surface focus:ring-0">
+                      </div>
+                      <div class="p-3 bg-surface-container/30 border border-white/5 rounded-xl space-y-2">
+                        <input type="hidden" id="edit-stat-1-label" value="Certifications">
+                        <label
+                          class="font-label-mono text-[10px] text-primary uppercase tracking-wider block">Certifications
+                          Value</label>
+                        <input type="text" id="edit-stat-1-value"
+                          class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-2 text-xs text-on-surface focus:ring-0">
+                      </div>
+                      <div class="p-3 bg-surface-container/30 border border-white/5 rounded-xl space-y-2">
+                        <input type="hidden" id="edit-stat-2-label" value="Internships">
+                        <label
+                          class="font-label-mono text-[10px] text-primary uppercase tracking-wider block">Internships
+                          Value</label>
+                        <input type="text" id="edit-stat-2-value"
+                          class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-2 text-xs text-on-surface focus:ring-0">
+                      </div>
+                      <div class="p-3 bg-surface-container/30 border border-white/5 rounded-xl space-y-2">
+                        <input type="hidden" id="edit-stat-3-label" value="Problems Solved">
+                        <label class="font-label-mono text-[10px] text-primary uppercase tracking-wider block">LeetCode
+                          Solved Value</label>
+                        <input type="text" id="edit-stat-3-value"
+                          class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-2 text-xs text-on-surface focus:ring-0">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Skills Section -->
+                <div id="section-skills" class="editor-section hidden space-y-6">
+                  <div class="flex justify-between items-center border-b border-white/5 pb-2 mb-4">
+                    <h3 class="font-label-mono text-xs text-outline uppercase tracking-widest">Skill Categories &amp;
+                      Proficiencies</h3>
+                    <button type="button" onclick="addSkillCategory()"
+                      class="bg-primary/20 hover:bg-primary/30 text-primary border border-primary/30 px-3 py-1.5 rounded-lg text-xs transition-all flex items-center gap-1 font-label-mono">
+                      <span class="material-symbols-outlined text-xs">add</span> Add Category
+                    </button>
+                  </div>
+                  <div id="skills-editor-list" class="space-y-6">
+                    <!-- Rendered dynamically -->
+                  </div>
+                </div>
+
+                <!-- 3.5. Skills Summary Section -->
+                <div id="section-skills-summary" class="editor-section hidden space-y-6">
+                  <div class="flex justify-between items-center border-b border-white/5 pb-2 mb-4">
+                    <h3 class="font-label-mono text-xs text-outline uppercase tracking-widest">Skills Summary (Logos
+                      Grid)</h3>
+                    <button type="button" onclick="addSkillsSummaryCategory()"
+                      class="bg-primary/20 hover:bg-primary/30 text-primary border border-primary/30 px-3 py-1.5 rounded-lg text-xs transition-all flex items-center gap-1 font-label-mono">
+                      <span class="material-symbols-outlined text-xs">add</span> Add Category
+                    </button>
+                  </div>
+                  <div id="skills-summary-editor-list" class="space-y-6">
+                    <!-- Rendered dynamically -->
+                  </div>
+                </div>
+
+                <!-- 4. Projects Section -->
+                <div id="section-projects" class="editor-section hidden space-y-6">
+                  <div class="flex justify-between items-center border-b border-white/5 pb-2 mb-4">
+                    <h3 class="font-label-mono text-xs text-outline uppercase tracking-widest">Projects Showcase</h3>
+                    <button type="button" onclick="addProject()"
+                      class="bg-primary/20 hover:bg-primary/30 text-primary border border-primary/30 px-3 py-1.5 rounded-lg text-xs transition-all flex items-center gap-1 font-label-mono">
+                      <span class="material-symbols-outlined text-xs">add</span> Add Project
+                    </button>
+                  </div>
+                  <div id="projects-editor-list" class="space-y-6">
+                    <!-- Rendered dynamically -->
+                  </div>
+                </div>
+
+                <!-- 5. Experience & Education Section -->
+                <div id="section-experience-education" class="editor-section hidden space-y-6">
+                  <!-- Experience sub-block -->
+                  <div class="space-y-4">
+                    <div class="flex justify-between items-center border-b border-white/5 pb-2 mb-4">
+                      <h3 class="font-label-mono text-xs text-outline uppercase tracking-widest">Work Experience</h3>
+                      <button type="button" onclick="addExperience()"
+                        class="bg-primary/20 hover:bg-primary/30 text-primary border border-primary/30 px-3 py-1.5 rounded-lg text-xs transition-all flex items-center gap-1 font-label-mono">
+                        <span class="material-symbols-outlined text-xs">add</span> Add Position
+                      </button>
+                    </div>
+                    <div id="experience-editor-list" class="space-y-6">
+                      <!-- Rendered dynamically -->
+                    </div>
+                  </div>
+
+                  <!-- Education sub-block -->
+                  <div class="space-y-4 pt-6">
+                    <div class="flex justify-between items-center border-b border-white/5 pb-2 mb-4">
+                      <h3 class="font-label-mono text-xs text-outline uppercase tracking-widest">Education History</h3>
+                      <button type="button" onclick="addEducation()"
+                        class="bg-primary/20 hover:bg-primary/30 text-primary border border-primary/30 px-3 py-1.5 rounded-lg text-xs transition-all flex items-center gap-1 font-label-mono">
+                        <span class="material-symbols-outlined text-xs">add</span> Add Education
+                      </button>
+                    </div>
+                    <div id="education-editor-list" class="space-y-6">
+                      <!-- Rendered dynamically -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 6. Blog Posts Section -->
+                <div id="section-blog-posts" class="editor-section hidden space-y-6">
+                  <div class="flex justify-between items-center border-b border-white/5 pb-2 mb-4">
+                    <h3 class="font-label-mono text-xs text-outline uppercase tracking-widest">Blog Posts Inventory</h3>
+                    <button type="button" onclick="addBlogPost()"
+                      class="bg-primary/20 hover:bg-primary/30 text-primary border border-primary/30 px-3 py-1.5 rounded-lg text-xs transition-all flex items-center gap-1 font-label-mono">
+                      <span class="material-symbols-outlined text-xs">add</span> Add Post
+                    </button>
+                  </div>
+                  <div id="blog-posts-editor-list" class="space-y-6">
+                    <!-- Rendered dynamically -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Compile Actions -->
+              <div class="flex items-center justify-between pt-6 border-t border-white/10 mt-8">
+                <div id="editor-status" class="text-xs font-label-mono text-primary hidden"></div>
+                <div class="flex gap-4">
+                  <button type="button" onclick="lockEditor()"
+                    class="bg-surface-container-high hover:bg-surface-container-highest px-6 py-3 rounded-lg text-xs font-label-mono border border-white/5 text-outline hover:text-error transition-all active:scale-95 flex items-center gap-1">
+                    <span class="material-symbols-outlined text-xs">logout</span> LOCK CMS
+                  </button>
+                  <button type="button" onclick="saveAndCompile()"
+                    class="bg-primary text-on-primary font-bold px-8 py-3 rounded-lg flex items-center gap-2 hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-primary/20">
+                    <span>Save &amp; Compile</span>
+                    <span class="material-symbols-outlined text-sm">published_with_changes</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Passcode authentication overlay -->
+            <div id="editor-auth-overlay"
+              class="glass-card p-lg md:p-xl rounded-xl space-y-6 max-w-md mx-auto my-8 border border-primary/20">
+              <div class="text-center space-y-2">
+                <span class="material-symbols-outlined text-4xl text-primary animate-pulse">lock</span>
+                <h3 id="auth-title" class="font-headline-md text-lg text-on-surface">CMS Security Lock</h3>
+                <p id="auth-desc" class="text-xs text-on-surface-variant">Verify ownership to access settings and edit
+                  portfolio content.</p>
+              </div>
+
+              <div class="space-y-4">
+                <div id="passcode-field-group" class="space-y-2">
+                  <label id="passcode-label" class="font-label-mono text-xs text-outline uppercase tracking-wider block"
+                    for="auth-passcode">Administrative Passcode</label>
+                  <input
+                    class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-3 text-on-surface text-center focus:ring-0 transition-all font-mono tracking-widest"
+                    id="auth-passcode" placeholder="••••" type="password" />
+                </div>
+
+                <div id="passcode-confirm-group" class="space-y-2 hidden">
+                  <label class="font-label-mono text-xs text-outline uppercase tracking-wider block"
+                    for="auth-passcode-confirm">Confirm Passcode</label>
+                  <input
+                    class="w-full bg-surface-container-low border border-white/10 rounded-lg px-4 py-3 text-on-surface text-center focus:ring-0 transition-all font-mono tracking-widest"
+                    id="auth-passcode-confirm" placeholder="••••" type="password" />
+                </div>
+
+                <div id="auth-error" class="text-xs font-label-mono text-error text-center hidden"></div>
+
+                <button id="auth-btn" onclick="submitAuthForm()"
+                  class="w-full bg-primary text-on-primary font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:brightness-110 active:scale-[0.98] transition-all shadow-lg shadow-primary/20">
+                  <span>Authenticate</span>
+                  <span class="material-symbols-outlined text-sm">key</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Engineering Stats Grid (Visible clearly in Recruiter View) -->
+        <!-- STITCH_STATS_GRID_START -->
+<section class="grid md:grid-cols-4 gap-4" id="stats-grid">
+  <div class="glass-card p-6 rounded-xl text-center space-y-1">
+    <p class="text-primary font-display text-2xl font-bold">15+</p>
+    <p class="text-[10px] font-label-mono text-on-surface-variant uppercase">Projects</p>
+  </div>
+  <div class="glass-card p-6 rounded-xl text-center space-y-1">
+    <p class="text-primary font-display text-2xl font-bold">4</p>
+    <p class="text-[10px] font-label-mono text-on-surface-variant uppercase">Certifications</p>
+  </div>
+  <div class="glass-card p-6 rounded-xl text-center space-y-1">
+    <p class="text-primary font-display text-2xl font-bold">2</p>
+    <p class="text-[10px] font-label-mono text-on-surface-variant uppercase">Internships</p>
+  </div>
+  <div class="glass-card p-6 rounded-xl text-center space-y-1">
+    <p class="text-primary font-display text-2xl font-bold">200+</p>
+    <p class="text-[10px] font-label-mono text-on-surface-variant uppercase">LeetCode Solved</p>
+  </div>
+</section>
+<!-- STITCH_STATS_GRID_END -->
+        <!-- Newsletter / Availability Bar -->
+        <div
+          class="glass-card p-6 rounded-xl flex flex-col md:flex-row items-center justify-between gap-4 border-l-4 border-l-primary">
+          <div class="flex items-center gap-4">
+            <div class="relative">
+              <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+              <div class="absolute inset-0 w-3 h-3 bg-green-500 rounded-full animate-ping opacity-75"></div>
+            </div>
+            <div>
+              <p class="font-bold text-on-surface">Available for new opportunities</p>
+              <p class="text-xs text-on-surface-variant">Prefer Remote or San Francisco based roles.</p>
+            </div>
+          </div>
+          <div class="flex gap-2">
+            <button
+              class="bg-surface-container-high hover:bg-surface-container-highest px-4 py-2 rounded-lg text-sm transition-colors border border-white/5">
+              Copy Email
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        // Recruiter Toggle Logic
+        const toggleBtn = document.getElementById('toggle-recruiter');
+        const thumb = document.getElementById('toggle-thumb');
+        const statsGrid = document.getElementById('stats-grid');
+        const recruiterCard = document.getElementById('recruiter-card');
+        let recruiterMode = false;
+
+    toggleBtn.addEventListener('click', () => {
+          recruiterMode = !recruiterMode;
+
+        if (recruiterMode) {
+          thumb.style.transform = 'translateX(20px)';
+        toggleBtn.classList.replace('bg-surface-variant', 'bg-primary');
+        thumb.classList.replace('bg-on-surface-variant', 'bg-on-primary');
+        recruiterCard.classList.add('recruiter-mode-active');
+
+        // Highlight stats
+        statsGrid.querySelectorAll('.glass-card').forEach(card => {
+          card.classList.add('border-primary/40');
+        card.style.transform = 'scale(1.02)';
+        });
+      } else {
+          thumb.style.transform = 'translateX(4px)';
+        toggleBtn.classList.replace('bg-primary', 'bg-surface-variant');
+        thumb.classList.replace('bg-on-primary', 'bg-on-surface-variant');
+        recruiterCard.classList.remove('recruiter-mode-active');
+        
+        statsGrid.querySelectorAll('.glass-card').forEach(card => {
+          card.classList.remove('border-primary/40');
+        card.style.transform = 'scale(1)';
+        });
+      }
+    });
+
+        // Form Validation & Submission Logic
+        const contactForm = document.getElementById('contact-form');
+        const statusMsg = document.getElementById('status-message');
+
+    contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+        const nameVal = document.getElementById('name').value.trim();
+        const emailVal = document.getElementById('email').value.trim();
+        const subjectVal = document.getElementById('subject').value;
+        const messageVal = document.getElementById('message').value.trim();
+
+        if (!nameVal || !emailVal || !subjectVal || !messageVal) {
+          statusMsg.textContent = "ERROR: All fields are required.";
+        statusMsg.classList.remove('hidden', 'text-primary');
+        statusMsg.classList.add('text-error', 'text-red-400');
+        return;
+      }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailVal)) {
+          statusMsg.textContent = "ERROR: Invalid email address.";
+        statusMsg.classList.remove('hidden', 'text-primary');
+        statusMsg.classList.add('text-error', 'text-red-400');
+        return;
+      }
+
+        statusMsg.textContent = "TRANSMITTING SIGNAL...";
+        statusMsg.classList.remove('hidden', 'text-error', 'text-red-400');
+        statusMsg.classList.add('text-primary');
+
+      setTimeout(() => {
+          statusMsg.textContent = "SIGNAL RECEIVED. ACKNOWLEDGED.";
+        contactForm.reset();
+        setTimeout(() => {
+          statusMsg.classList.add('hidden');
+        }, 3000);
+      }, 1500);
+    });
+
+    // Hover Lift Effect
+    document.querySelectorAll('.glass-card').forEach(card => {
+          card.addEventListener('mouseenter', () => {
+            if (!card.classList.contains('recruiter-mode-active')) {
+              card.style.transform = 'translateY(-4px)';
+            }
+          });
+      card.addEventListener('mouseleave', () => {
+        if (!card.classList.contains('recruiter-mode-active')) {
+          card.style.transform = 'translateY(0)';
+        }
+      });
+    });
+    </script>
+
+    <!-- STITCH_CONFIG_JSON_START -->
+<script>window.PORTFOLIO_CONFIG = {"personalInfo":{"name":"Nani Sontyana","title":"Full Stack Developer","introduction":"Building high-performance, scalable web applications with a focus on developer experience and elegant UI.","shortBio":"Passionate about bridging the gap between design and engineering. Specialized in React, TypeScript, and Cloud Architecture.","profilePhoto":"","resumeUrl":"https://drive.google.com/file/d/1e1WEKuGPQeq2oAnUPHIDEYMaESPyZYyE/view?usp=drive_link","email":"nanisontyana47@gmail.com","location":"Visakhapatnam, India","yearsOfExperience":"Fresher","yearsOfExperienceLabel":"Experience"},"socialLinks":{"github":"https://github.com/NaniSontyana","linkedin":"https://linkedin.com/in/nani-sontyana","twitter":"https://twitter.com/nani_sontyana","leetcode":"https://leetcode.com/u/nani_sontyana"},"stats":[{"label":"Projects Completed","value":"15+","icon":"Briefcase"},{"label":"Certifications","value":"4","icon":"Award"},{"label":"Internships","value":"2","icon":"Terminal"},{"label":"Problems Solved","value":"200+","icon":"Code"}],"skills":[{"category":"Frontend","items":[{"name":"React","level":96,"icon":"atom"},{"name":"TypeScript","level":99,"icon":"code"},{"name":"Angular","level":94},{"name":"JavaScript","level":80},{"name":"Tailwind css","level":80}]},{"category":"Backend","items":[{"name":"Node.js","level":90,"icon":"cpu"},{"name":"Python","level":80,"icon":"cpu"},{"name":"PostgreSQL","level":85,"icon":"database"},{"name":"MongoDB","level":100},{"name":"Next.js","level":80}]},{"category":"Tools","items":[{"name":"Docker","level":80,"icon":"container"},{"name":"Git","level":95,"icon":"git-branch"},{"name":"AWS","level":75,"icon":"cloud"},{"name":"GitHub","level":80}]}],"projects":[{"title":"smartHR-attrition Based Prediction System","description":"ML): Designed and built an enterprise-grade HR\nintelligence platform featuring real-time attrition risk scoring and workforce telemetry. Implemented a decoupled architecture\nhosting a React/Vite SPA on Vercel, an Express API gateway on Render, and a Python Flask ML microservice. Leveraged\nScikit-Learn to execute feature importance analyses, enabling explainable risk predictions based on demographic and\noperational metrics. Established security best practices including Bcrypt password hashing, JWT authorization middleware.\n","technologies":["React","Tailwind","Express","Python","ML"],"githubLink":"https://github.com/NaniSontyana/smartHR-main","liveLink":"https://smarthr-three.vercel.app/","image":"https://drive.google.com/file/d/1b7VGox5fkNkqv1g92xKaiscqxqqx1bXy/view?usp=sharing","category":"Web Development & ML","featured":true,"metrics":{"latency":"< 20ms","fcp":"0.40s","bundleSize":"40kB"}},{"title":"Subscription Tracker","description":"(Backend-Focused): Developed a backend-driven subscription management system to help\nusers track recurring subscriptions and avoid missed renewals. Implemented automated email reminders scheduled at multiple\nintervals before renewal dates using event-driven workflows. Designed secure RESTful APIs for subscription management,\nauthentication, and notifications. Tech: Node.js, Express.js, MongoDB, JWT, Nodemailer, Upstash QStash, Arcjet, Git.","technologies":["HTML","CSS","javascript","Express.js"],"githubLink":"https://github.com/NaniSontyana/subscrption_tracker","liveLink":"https://subscrption-tracker-2.onrender.com","image":"https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=600","category":"Web Development","featured":true,"metrics":{"latency":"< 10ms","fcp":"0.40s","bundleSize":"40kB"}},{"title":"E-commerce platform","description":"A complete E-commerce website with frontend, backend and Admin page. used MongoDb as a Database server to store the complete data to store the data.","technologies":["React","Tailwind","Express","Node","MongoDB"],"githubLink":"https://github.com/NaniSontyana/e-commerce-2","liveLink":"https://github.com/NaniSontyana/e-commerce-2","image":"https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=600","category":"Web Development","featured":true,"metrics":{"latency":"< 10ms","fcp":"0.40s","bundleSize":"40kB"}}],"experience":[{"company":"TechNova Systems","role":"Software Engineering Intern","duration":"June 2023 - Aug 2023","location":"Remote","description":"Developed microservices for a large-scale e-commerce platform using Spring Boot.","technologies":["Java","Spring Boot","Kafka"],"logo":"https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&q=80&w=100"}],"education":[{"institution":"Stanford University","degree":"B.S. in Computer Science","duration":"2020 - 2024","cgpa":"3.9/4.0","achievements":["Dean's List","UPE Honor Society"]}],"skillsSummary":[{"category":"Languages","icon":"translate","color":"primary","items":[{"name":"JAVA","iconType":"devicon","icon":"devicon-java-plain colored"},{"name":"Python","iconType":"devicon","icon":"devicon-python-plain colored"},{"name":"JavaScript","iconType":"devicon","icon":"devicon-javascript-plain colored"},{"name":"C++","iconType":"devicon","icon":"devicon-cplusplus-plain colored"}]},{"category":"Frameworks","icon":"layers","color":"tertiary","items":[{"name":"React.js","iconType":"devicon","icon":"devicon-react-original colored"},{"name":"Express.js","iconType":"devicon","icon":"devicon-express-original"},{"name":"NodeJS","iconType":"devicon","icon":"devicon-nodejs-plain colored"}]},{"category":"Tools","icon":"build","color":"primary","items":[{"name":"Git","iconType":"devicon","icon":"devicon-git-plain colored"},{"name":"GitHub","iconType":"devicon","icon":"devicon-github-original"},{"name":"MongoDB","iconType":"devicon","icon":"devicon-mongodb-plain colored"},{"name":"PostgreSQL","iconType":"devicon","icon":"devicon-postgresql-plain colored"},{"name":"MySQL","iconType":"devicon","icon":"devicon-mysql-plain colored"},{"name":"SQLite","iconType":"devicon","icon":"devicon-sqlite-plain colored"}]},{"category":"Soft Skills","icon":"psychology","color":"tertiary","items":[{"name":"Leadership","iconType":"material","icon":"groups"},{"name":"Writing","iconType":"material","icon":"edit_note"},{"name":"Public Speaking","iconType":"material","icon":"record_voice_over"},{"name":"Time Management","iconType":"material","icon":"schedule"}]}],"blogPosts":[{"title":"Building a Config-Driven Developer Portfolio","slug":"config-driven-portfolio","description":"How to create a single source of truth for your developer profile, projects, and themes using a dynamic compiler.","date":"2026-06-18","tags":["NodeJS","JavaScript","HTML","CMS"],"filePath":"../blog_portfolio/posts/config-driven-portfolio.md"},{"title":"Understanding WebGL Shaders for Web Design","slug":"webgl-shaders","description":"An introduction to writing vertex and fragment shaders for atmospheric web backgrounds and interactive elements.","date":"2026-06-15","tags":["WebGL","GLSL","Graphics","CSS"],"filePath":"../blog_portfolio/posts/webgl-shaders.md"}]};</script>
+<!-- STITCH_CONFIG_JSON_END -->
+
+    <script>
+        // ----------------------------------------------------
+        // Portfolio Editor / CMS Code
+        // ----------------------------------------------------
+
+        // Tab switching logic (Send Message vs Edit Portfolio)
+        const tabBtnMessage = document.getElementById('tab-btn-message');
+        const tabBtnEditor = document.getElementById('tab-btn-editor');
+        const contactFormContainer = document.getElementById('contact-form-container');
+        const editorContainer = document.getElementById('editor-container');
+        let editorInitialized = false;
+
+        if (tabBtnMessage && tabBtnEditor) {
+          tabBtnMessage.addEventListener('click', () => {
+            tabBtnMessage.classList.add('text-primary', 'border-b-2', 'border-primary');
+            tabBtnMessage.classList.remove('text-on-surface-variant');
+            tabBtnEditor.classList.add('text-on-surface-variant');
+            tabBtnEditor.classList.remove('text-primary', 'border-b-2', 'border-primary');
+
+            contactFormContainer.classList.remove('hidden');
+            editorContainer.classList.add('hidden');
+          });
+      
+      tabBtnEditor.addEventListener('click', () => {
+          tabBtnEditor.classList.add('text-primary', 'border-b-2', 'border-primary');
+        tabBtnEditor.classList.remove('text-on-surface-variant');
+        tabBtnMessage.classList.add('text-on-surface-variant');
+        tabBtnMessage.classList.remove('text-primary', 'border-b-2', 'border-primary');
+
+        contactFormContainer.classList.add('hidden');
+        editorContainer.classList.remove('hidden');
+
+        checkAuthStatus();
+      });
+    }
+
+        // Fallback config if STITCH has not yet run
+        const fallbackConfig = {
+          personalInfo: {
+          name: "Nani Sontyana",
+        title: "Senior Full Stack Engineer",
+        introduction: "Building high-performance, scalable web applications...",
+        shortBio: "Passionate about bridging the gap...",
+        profilePhoto: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200",
+        resumeUrl: "#",
+        email: "nani@example.com",
+        location: "San Francisco, CA",
+        yearsOfExperience: "Fresher",
+        yearsOfExperienceLabel: "Experience"
+      },
+        socialLinks: {github: "https://github.com", linkedin: "https://linkedin.com", twitter: "https://twitter.com", leetcode: "https://leetcode.com" },
+        stats: [
+        {label: "Projects Completed", value: "24+", icon: "Briefcase" },
+        {label: "Certifications", value: "12", icon: "Award" },
+        {label: "Internships", value: "3", icon: "Terminal" },
+        {label: "Problems Solved", value: "500+", icon: "Code" }
+        ],
+        skills: [],
+        skillsSummary: [],
+        projects: [],
+        experience: [],
+        education: []
+    };
+
+        let config = window.PORTFOLIO_CONFIG || fallbackConfig;
+
+        function initEditor() {
+          // 1. Load General & Social Info
+          document.getElementById('edit-name').value = config.personalInfo.name || '';
+        document.getElementById('edit-title').value = config.personalInfo.title || '';
+        document.getElementById('edit-email').value = config.personalInfo.email || '';
+        document.getElementById('edit-location').value = config.personalInfo.location || '';
+        document.getElementById('edit-profilePhoto').value = config.personalInfo.profilePhoto || '';
+        document.getElementById('edit-resumeUrl').value = config.personalInfo.resumeUrl || '';
+        document.getElementById('edit-introduction').value = config.personalInfo.introduction || '';
+        document.getElementById('edit-shortBio').value = config.personalInfo.shortBio || '';
+        document.getElementById('edit-yearsOfExperience').value = config.personalInfo.yearsOfExperience || '';
+        document.getElementById('edit-yearsOfExperienceLabel').value = config.personalInfo.yearsOfExperienceLabel || '';
+
+        document.getElementById('edit-social-github').value = config.socialLinks.github || '';
+        document.getElementById('edit-social-linkedin').value = config.socialLinks.linkedin || '';
+        document.getElementById('edit-social-twitter').value = config.socialLinks.twitter || '';
+        document.getElementById('edit-social-leetcode').value = config.socialLinks.leetcode || '';
+
+        // Load Stats
+        if (config.stats) {
+          config.stats.forEach((stat, idx) => {
+            const valInput = document.getElementById(`edit-stat-${idx}-value`);
+            const lblInput = document.getElementById(`edit-stat-${idx}-label`);
+            if (valInput) valInput.value = stat.value || '';
+            if (lblInput) lblInput.value = stat.label || '';
+          });
+      }
+
+        // 2. Render dynamic lists
+        renderSkills();
+        renderSkillsSummary();
+        renderProjects();
+        renderExperience();
+        renderEducation();
+        renderBlogPosts();
+    }
+
+        function switchSubTab(tabName) {
+          document.querySelectorAll('.subtab-btn').forEach(btn => {
+            btn.classList.remove('bg-primary', 'text-on-primary', 'font-bold');
+            btn.classList.add('text-on-surface-variant', 'hover:text-on-surface');
+          });
+        document.getElementById(`subtab-btn-${tabName}`).classList.add('bg-primary', 'text-on-primary', 'font-bold');
+        document.getElementById(`subtab-btn-${tabName}`).classList.remove('text-on-surface-variant', 'hover:text-on-surface');
+      
+      document.querySelectorAll('.editor-section').forEach(sec => sec.classList.add('hidden'));
+        document.getElementById(`section-${tabName}`).classList.remove('hidden');
+    }
+
+        // --- SKILLS ---
+        function renderSkills() {
+      const container = document.getElementById('skills-editor-list');
+        if (!container) return;
+        container.innerHTML = '';
+      
+      config.skills.forEach((cat, catIdx) => {
+        const catDiv = document.createElement('div');
+        catDiv.className = 'glass-card p-4 rounded-xl border border-white/5 space-y-4';
+
+        let itemsHtml = '';
+        (cat.items || []).forEach((item, itemIdx) => {
+          itemsHtml += `
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-surface-container/30 p-3 rounded-lg border border-white/5">
+              <div class="flex-grow w-full">
+                <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Skill Name</label>
+                <input type="text" value="${item.name}" onchange="updateSkillName(${catIdx}, ${itemIdx}, this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-1.5 text-xs text-on-surface focus:ring-0">
+              </div>
+              <div class="w-full sm:w-32 flex items-center gap-2">
+                <div class="flex-grow">
+                  <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Level: ${item.level}%</label>
+                  <input type="range" min="0" max="100" value="${item.level}" onchange="updateSkillLevel(${catIdx}, ${itemIdx}, this.value)" class="w-full h-1.5 bg-surface-container rounded-lg appearance-none cursor-pointer accent-primary">
+                </div>
+              </div>
+              <button type="button" onclick="deleteSkill(${catIdx}, ${itemIdx})" class="self-end sm:self-center text-error/70 hover:text-error hover:bg-error/10 p-1.5 rounded transition-all">
+                <span class="material-symbols-outlined text-sm">delete</span>
+              </button>
+            </div>
+          `;
+        });
+
+        catDiv.innerHTML = `
+        <div class="flex justify-between items-center border-b border-white/10 pb-2">
+          <div class="flex-grow max-w-xs">
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Category Name</label>
+            <input type="text" value="${cat.category}" onchange="updateSkillCategory(${catIdx}, this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-1.5 text-xs text-on-surface focus:ring-0 font-bold text-primary">
+          </div>
+          <button type="button" onclick="deleteSkillCategory(${catIdx})" class="text-error/70 hover:text-error hover:bg-error/10 p-1.5 rounded transition-all flex items-center gap-1 text-xs font-label-mono">
+            <span class="material-symbols-outlined text-sm">delete</span> Delete Category
+          </button>
+        </div>
+        <div class="space-y-2">
+          ${itemsHtml || '<p class="text-xs text-outline italic">No skills in this category yet.</p>'}
+        </div>
+        <button type="button" onclick="addSkillToCategory(${catIdx})" class="bg-surface-container-high hover:bg-surface-container-highest px-3 py-1.5 rounded-lg text-xs transition-colors border border-white/5 flex items-center gap-1 font-label-mono text-outline hover:text-primary">
+          <span class="material-symbols-outlined text-xs">add</span> Add Skill
+        </button>
+        `;
+        container.appendChild(catDiv);
+      });
+    }
+
+        window.updateSkillName = function(catIdx, itemIdx, value) {
+          config.skills[catIdx].items[itemIdx].name = value;
+    }
+
+        window.updateSkillLevel = function(catIdx, itemIdx, value) {
+          config.skills[catIdx].items[itemIdx].level = parseInt(value, 10);
+        renderSkills(); // re-render to update the label
+    }
+
+        window.updateSkillCategory = function(catIdx, value) {
+          config.skills[catIdx].category = value;
+    }
+
+        window.deleteSkill = function(catIdx, itemIdx) {
+          config.skills[catIdx].items.splice(itemIdx, 1);
+        renderSkills();
+    }
+
+        window.deleteSkillCategory = function(catIdx) {
+          config.skills.splice(catIdx, 1);
+        renderSkills();
+    }
+
+        window.addSkillToCategory = function(catIdx) {
+      if (!config.skills[catIdx].items) config.skills[catIdx].items = [];
+        config.skills[catIdx].items.push({name: 'New Skill', level: 80 });
+        renderSkills();
+    }
+
+        window.addSkillCategory = function() {
+      if (!config.skills) config.skills = [];
+        config.skills.push({category: 'New Category', items: [] });
+        renderSkills();
+    }
+
+        // --- SKILLS SUMMARY ---
+        function renderSkillsSummary() {
+      const container = document.getElementById('skills-summary-editor-list');
+        if (!container) return;
+        container.innerHTML = '';
+
+        if (!config.skillsSummary) {
+          config.skillsSummary = [];
+      }
+      
+      config.skillsSummary.forEach((cat, catIdx) => {
+        const catDiv = document.createElement('div');
+        catDiv.className = 'glass-card p-4 rounded-xl border border-white/5 space-y-4';
+
+        let itemsHtml = '';
+        (cat.items || []).forEach((item, itemIdx) => {
+          itemsHtml += `
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-surface-container/30 p-3 rounded-lg border border-white/5">
+              <div class="flex-grow w-full">
+                <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Skill Name</label>
+                <input type="text" value="${item.name || ''}" onchange="updateSkillsSummaryItemName(${catIdx}, ${itemIdx}, this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-1.5 text-xs text-on-surface focus:ring-0">
+              </div>
+              <div class="w-full sm:w-36">
+                <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Icon Type</label>
+                <select onchange="updateSkillsSummaryItemIconType(${catIdx}, ${itemIdx}, this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-1.5 text-xs text-on-surface focus:ring-0">
+                  <option value="devicon" ${item.iconType === 'devicon' ? 'selected' : ''}>Devicon Class</option>
+                  <option value="material" ${item.iconType === 'material' ? 'selected' : ''}>Material Icon Name</option>
+                </select>
+              </div>
+              <div class="flex-grow w-full">
+                <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Icon Identifier</label>
+                <input type="text" value="${item.icon || ''}" onchange="updateSkillsSummaryItemIcon(${catIdx}, ${itemIdx}, this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-1.5 text-xs text-on-surface focus:ring-0" placeholder="e.g. devicon-java-plain colored or groups">
+              </div>
+              <button type="button" onclick="deleteSkillsSummaryItem(${catIdx}, ${itemIdx})" class="self-end sm:self-center text-error/70 hover:text-error hover:bg-error/10 p-1.5 rounded transition-all">
+                <span class="material-symbols-outlined text-sm">delete</span>
+              </button>
+            </div>
+          `;
+        });
+
+        catDiv.innerHTML = `
+        <div class="flex flex-col md:flex-row gap-4 justify-between border-b border-white/10 pb-4">
+          <div class="flex-grow grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div>
+              <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Category Name</label>
+              <input type="text" value="${cat.category || ''}" onchange="updateSkillsSummaryCategoryName(${catIdx}, this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-1.5 text-xs text-on-surface focus:ring-0 font-bold text-primary">
+            </div>
+            <div>
+              <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Header Material Icon</label>
+              <input type="text" value="${cat.icon || 'translate'}" onchange="updateSkillsSummaryCategoryIcon(${catIdx}, this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-1.5 text-xs text-on-surface focus:ring-0">
+            </div>
+            <div>
+              <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Accent Color Group</label>
+              <select onchange="updateSkillsSummaryCategoryColor(${catIdx}, this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-1.5 text-xs text-on-surface focus:ring-0">
+                <option value="primary" ${cat.color === 'primary' ? 'selected' : ''}>Primary (Blue/Teal Accent)</option>
+                <option value="tertiary" ${cat.color === 'tertiary' ? 'selected' : ''}>Tertiary (Orange/Gold Accent)</option>
+              </select>
+            </div>
+          </div>
+          <button type="button" onclick="deleteSkillsSummaryCategory(${catIdx})" class="self-end md:self-center text-error/70 hover:text-error hover:bg-error/10 p-1.5 rounded transition-all flex items-center gap-1 text-xs font-label-mono h-9">
+            <span class="material-symbols-outlined text-sm">delete</span> Delete Category
+          </button>
+        </div>
+        <div class="space-y-2">
+          ${itemsHtml || '<p class="text-xs text-outline italic">No skills in this category yet.</p>'}
+        </div>
+        <button type="button" onclick="addSkillsSummaryItemToCategory(${catIdx})" class="bg-surface-container-high hover:bg-surface-container-highest px-3 py-1.5 rounded-lg text-xs transition-colors border border-white/5 flex items-center gap-1 font-label-mono text-outline hover:text-primary">
+          <span class="material-symbols-outlined text-xs">add</span> Add Skill
+        </button>
+        `;
+        container.appendChild(catDiv);
+      });
+    }
+
+        window.updateSkillsSummaryItemName = function(catIdx, itemIdx, value) {
+          config.skillsSummary[catIdx].items[itemIdx].name = value;
+    }
+
+        window.updateSkillsSummaryItemIconType = function(catIdx, itemIdx, value) {
+          config.skillsSummary[catIdx].items[itemIdx].iconType = value;
+        renderSkillsSummary();
+    }
+
+        window.updateSkillsSummaryItemIcon = function(catIdx, itemIdx, value) {
+          config.skillsSummary[catIdx].items[itemIdx].icon = value;
+    }
+
+        window.updateSkillsSummaryCategoryName = function(catIdx, value) {
+          config.skillsSummary[catIdx].category = value;
+    }
+
+        window.updateSkillsSummaryCategoryIcon = function(catIdx, value) {
+          config.skillsSummary[catIdx].icon = value;
+    }
+
+        window.updateSkillsSummaryCategoryColor = function(catIdx, value) {
+          config.skillsSummary[catIdx].color = value;
+    }
+
+        window.deleteSkillsSummaryItem = function(catIdx, itemIdx) {
+          config.skillsSummary[catIdx].items.splice(itemIdx, 1);
+        renderSkillsSummary();
+    }
+
+        window.deleteSkillsSummaryCategory = function(catIdx) {
+          config.skillsSummary.splice(catIdx, 1);
+        renderSkillsSummary();
+    }
+
+        window.addSkillsSummaryItemToCategory = function(catIdx) {
+      if (!config.skillsSummary[catIdx].items) config.skillsSummary[catIdx].items = [];
+        config.skillsSummary[catIdx].items.push({name: 'New Skill', iconType: 'devicon', icon: 'devicon-javascript-plain colored' });
+        renderSkillsSummary();
+    }
+
+        window.addSkillsSummaryCategory = function() {
+      if (!config.skillsSummary) config.skillsSummary = [];
+        config.skillsSummary.push({category: 'New Category', icon: 'translate', color: 'primary', items: [] });
+        renderSkillsSummary();
+    }
+
+        // --- PROJECTS ---
+        function renderProjects() {
+      const container = document.getElementById('projects-editor-list');
+        if (!container) return;
+        container.innerHTML = '';
+      
+      config.projects.forEach((proj, idx) => {
+        const projDiv = document.createElement('div');
+        projDiv.className = 'glass-card p-5 rounded-xl border border-white/5 space-y-4';
+
+        projDiv.innerHTML = `
+        <div class="flex justify-between items-center border-b border-white/10 pb-2">
+          <h4 class="font-headline-md text-sm text-primary font-bold">Project #${idx + 1}: ${proj.title || 'Untitled'}</h4>
+          <button type="button" onclick="deleteProject(${idx})" class="text-error/70 hover:text-error hover:bg-error/10 p-1.5 rounded transition-all flex items-center gap-1 text-xs font-label-mono">
+            <span class="material-symbols-outlined text-sm">delete</span> Delete Project
+          </button>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Project Title</label>
+            <input type="text" value="${proj.title || ''}" onchange="updateProjectField(${idx}, 'title', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Category</label>
+            <input type="text" value="${proj.category || ''}" onchange="updateProjectField(${idx}, 'category', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Image URL</label>
+            <input type="text" value="${proj.image || ''}" onchange="updateProjectField(${idx}, 'image', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Technologies (comma separated)</label>
+            <input type="text" value="${(proj.technologies || []).join(', ')}" onchange="updateProjectTech(${idx}, this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">GitHub Link</label>
+            <input type="text" value="${proj.githubLink || ''}" onchange="updateProjectField(${idx}, 'githubLink', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Live Demo Link</label>
+            <input type="text" value="${proj.liveLink || ''}" onchange="updateProjectField(${idx}, 'liveLink', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-4">
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Latency Metric</label>
+            <input type="text" value="${proj.metrics?.latency || ''}" onchange="updateProjectMetric(${idx}, 'latency', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0" placeholder="e.g. < 8ms">
+          </div>
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">FCP Metric</label>
+            <input type="text" value="${proj.metrics?.fcp || ''}" onchange="updateProjectMetric(${idx}, 'fcp', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0" placeholder="e.g. 0.20s">
+          </div>
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Bundle Size Metric</label>
+            <input type="text" value="${proj.metrics?.bundleSize || ''}" onchange="updateProjectMetric(${idx}, 'bundleSize', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0" placeholder="e.g. 25kB">
+          </div>
+        </div>
+
+        <div>
+          <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Description</label>
+          <textarea onchange="updateProjectField(${idx}, 'description', this.value)" rows="3" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0 resize-none">${proj.description || ''}</textarea>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <input type="checkbox" id="project-feat-${idx}" ${proj.featured ? 'checked' : ''} onchange="updateProjectField(${idx}, 'featured', this.checked)" class="rounded bg-surface-container-low border-white/10 text-primary focus:ring-0">
+            <label for="project-feat-${idx}" class="text-xs font-label-mono text-on-surface-variant cursor-pointer uppercase">Featured Project (displays in hero grid)</label>
+        </div>
+        `;
+        container.appendChild(projDiv);
+      });
+    }
+
+        window.updateProjectField = function(idx, field, value) {
+          config.projects[idx][field] = value;
+        if (field === 'title') renderProjects(); // update card header
+    }
+
+        window.updateProjectMetric = function(idx, key, value) {
+      if (!config.projects[idx].metrics) config.projects[idx].metrics = { };
+        config.projects[idx].metrics[key] = value;
+    }
+
+        window.updateProjectTech = function(idx, value) {
+          config.projects[idx].technologies = value.split(',').map(s => s.trim()).filter(Boolean);
+    }
+
+        window.deleteProject = function(idx) {
+          config.projects.splice(idx, 1);
+        renderProjects();
+    }
+
+        window.addProject = function() {
+      if (!config.projects) config.projects = [];
+        config.projects.push({
+          title: "New Project",
+        description: "Brief description of this project...",
+        technologies: ["React", "Tailwind"],
+        githubLink: "#",
+        liveLink: "#",
+        image: "https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=600",
+        category: "Web Development",
+        featured: false,
+        metrics: {
+          latency: "< 10ms",
+        fcp: "0.40s",
+        bundleSize: "40kB"
+        }
+      });
+        renderProjects();
+    }
+
+        // --- EXPERIENCE ---
+        function renderExperience() {
+      const container = document.getElementById('experience-editor-list');
+        if (!container) return;
+        container.innerHTML = '';
+      
+      config.experience.forEach((exp, idx) => {
+        const expDiv = document.createElement('div');
+        expDiv.className = 'glass-card p-5 rounded-xl border border-white/5 space-y-4';
+
+        expDiv.innerHTML = `
+        <div class="flex justify-between items-center border-b border-white/10 pb-2">
+          <h4 class="font-headline-md text-sm text-primary font-bold">Job #${idx + 1}: ${exp.company || 'New Company'}</h4>
+          <button type="button" onclick="deleteExperience(${idx})" class="text-error/70 hover:text-error hover:bg-error/10 p-1.5 rounded transition-all flex items-center gap-1 text-xs font-label-mono">
+            <span class="material-symbols-outlined text-sm">delete</span> Delete Position
+          </button>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Company</label>
+            <input type="text" value="${exp.company || ''}" onchange="updateExperienceField(${idx}, 'company', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Role</label>
+            <input type="text" value="${exp.role || ''}" onchange="updateExperienceField(${idx}, 'role', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-4">
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Duration</label>
+            <input type="text" value="${exp.duration || ''}" onchange="updateExperienceField(${idx}, 'duration', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0" placeholder="e.g. June 2023 - Aug 2023">
+          </div>
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Location</label>
+            <input type="text" value="${exp.location || ''}" onchange="updateExperienceField(${idx}, 'location', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Logo Image URL</label>
+            <input type="text" value="${exp.logo || ''}" onchange="updateExperienceField(${idx}, 'logo', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Technologies (comma separated)</label>
+            <input type="text" value="${(exp.technologies || []).join(', ')}" onchange="updateExperienceTech(${idx}, this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Short Description / Quote</label>
+            <input type="text" value="${exp.description || ''}" onchange="updateExperienceField(${idx}, 'description', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+        </div>
+
+        <div>
+          <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Key Achievements (One per line)</label>
+          <textarea onchange="updateExperienceAchievements(${idx}, this.value)" rows="4" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0 resize-none" placeholder="achievement 1&#10;achievement 2">${(exp.achievements || []).join('\n')}</textarea>
+        </div>
+        `;
+        container.appendChild(expDiv);
+      });
+    }
+
+        window.updateExperienceField = function(idx, field, value) {
+          config.experience[idx][field] = value;
+        if (field === 'company') renderExperience();
+    }
+
+        window.updateExperienceTech = function(idx, value) {
+          config.experience[idx].technologies = value.split(',').map(s => s.trim()).filter(Boolean);
+    }
+
+        window.updateExperienceAchievements = function(idx, value) {
+          config.experience[idx].achievements = value.split('\n').map(s => s.trim()).filter(Boolean);
+    }
+
+        window.deleteExperience = function(idx) {
+          config.experience.splice(idx, 1);
+        renderExperience();
+    }
+
+        window.addExperience = function() {
+      if (!config.experience) config.experience = [];
+        config.experience.push({
+          company: "New Company",
+        role: "Software Engineer",
+        duration: "Jan 2026 - Present",
+        location: "San Francisco, CA",
+        description: "Described experience details here.",
+        technologies: ["Node.js", "React"],
+        logo: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&q=80&w=100",
+        achievements: []
+      });
+        renderExperience();
+    }
+
+        // --- EDUCATION ---
+        function renderEducation() {
+      const container = document.getElementById('education-editor-list');
+        if (!container) return;
+        container.innerHTML = '';
+      
+      config.education.forEach((edu, idx) => {
+        const eduDiv = document.createElement('div');
+        eduDiv.className = 'glass-card p-5 rounded-xl border border-white/5 space-y-4';
+
+        eduDiv.innerHTML = `
+        <div class="flex justify-between items-center border-b border-white/10 pb-2">
+          <h4 class="font-headline-md text-sm text-primary font-bold">School #${idx + 1}: ${edu.institution || 'New Institution'}</h4>
+          <button type="button" onclick="deleteEducation(${idx})" class="text-error/70 hover:text-error hover:bg-error/10 p-1.5 rounded transition-all flex items-center gap-1 text-xs font-label-mono">
+            <span class="material-symbols-outlined text-sm">delete</span> Delete Education
+          </button>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Institution</label>
+            <input type="text" value="${edu.institution || ''}" onchange="updateEducationField(${idx}, 'institution', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Degree</label>
+            <input type="text" value="${edu.degree || ''}" onchange="updateEducationField(${idx}, 'degree', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-4">
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Duration</label>
+            <input type="text" value="${edu.duration || ''}" onchange="updateEducationField(${idx}, 'duration', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Cumulative GPA</label>
+            <input type="text" value="${edu.cgpa || ''}" onchange="updateEducationField(${idx}, 'cgpa', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Focus Area</label>
+            <input type="text" value="${edu.focusArea || ''}" onchange="updateEducationField(${idx}, 'focusArea', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+        </div>
+
+        <div>
+          <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Key Achievements (One per line)</label>
+          <textarea onchange="updateEducationAchievements(${idx}, this.value)" rows="3" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0 resize-none" placeholder="e.g. Dean's List">${(edu.achievements || []).join('\n')}</textarea>
+        </div>
+        `;
+        container.appendChild(eduDiv);
+      });
+    }
+
+        window.updateEducationField = function(idx, field, value) {
+          config.education[idx][field] = value;
+        if (field === 'institution') renderEducation();
+    }
+
+        window.updateEducationAchievements = function(idx, value) {
+          config.education[idx].achievements = value.split('\n').map(s => s.trim()).filter(Boolean);
+    }
+
+        window.deleteEducation = function(idx) {
+          config.education.splice(idx, 1);
+        renderEducation();
+    }
+
+        window.addEducation = function() {
+      if (!config.education) config.education = [];
+        config.education.push({
+          institution: "New University",
+        degree: "B.S. in Computer Science",
+        duration: "2022 - 2026",
+        cgpa: "3.8/4.0",
+        focusArea: "Software Engineering",
+        achievements: []
+      });
+        renderEducation();
+    }
+
+        // --- BLOG POSTS ---
+        function renderBlogPosts() {
+      const container = document.getElementById('blog-posts-editor-list');
+        if (!container) return;
+        container.innerHTML = '';
+
+        if (!config.blogPosts) config.blogPosts = [];
+      
+      config.blogPosts.forEach((post, idx) => {
+        const postDiv = document.createElement('div');
+        postDiv.className = 'glass-card p-5 rounded-xl border border-white/5 space-y-4';
+
+        postDiv.innerHTML = `
+        <div class="flex justify-between items-center border-b border-white/10 pb-2">
+          <h4 class="font-headline-md text-sm text-primary font-bold">Post #${idx + 1}: ${post.title || 'Untitled'}</h4>
+          <button type="button" onclick="deleteBlogPost(${idx})" class="text-error/70 hover:text-error hover:bg-error/10 p-1.5 rounded transition-all flex items-center gap-1 text-xs font-label-mono">
+            <span class="material-symbols-outlined text-sm">delete</span> Delete Post
+          </button>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Post Title</label>
+            <input type="text" value="${post.title || ''}" onchange="updateBlogPostField(${idx}, 'title', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">URL Slug</label>
+            <input type="text" value="${post.slug || ''}" onchange="updateBlogPostField(${idx}, 'slug', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-4">
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Date</label>
+            <input type="date" value="${post.date || ''}" onchange="updateBlogPostField(${idx}, 'date', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">File Path (Relative)</label>
+            <input type="text" value="${post.filePath || ''}" onchange="updateBlogPostField(${idx}, 'filePath', this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+          <div>
+            <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Tags (comma separated)</label>
+            <input type="text" value="${(post.tags || []).join(', ')}" onchange="updateBlogPostTags(${idx}, this.value)" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0">
+          </div>
+        </div>
+
+        <div>
+          <label class="text-[10px] font-label-mono text-outline uppercase tracking-wider block mb-1">Short Description / Excerpt</label>
+          <textarea onchange="updateBlogPostField(${idx}, 'description', this.value)" rows="2" class="w-full bg-surface-container-low border border-white/10 rounded-lg px-3 py-2 text-xs text-on-surface focus:ring-0 resize-none">${post.description || ''}</textarea>
+        </div>
+        `;
+        container.appendChild(postDiv);
+      });
+    }
+
+        window.updateBlogPostField = function(idx, field, value) {
+          config.blogPosts[idx][field] = value;
+        if (field === 'title') renderBlogPosts();
+    }
+
+        window.updateBlogPostTags = function(idx, value) {
+          config.blogPosts[idx].tags = value.split(',').map(s => s.trim()).filter(Boolean);
+    }
+
+        window.deleteBlogPost = function(idx) {
+          config.blogPosts.splice(idx, 1);
+        renderBlogPosts();
+    }
+
+        window.addBlogPost = function() {
+      if (!config.blogPosts) config.blogPosts = [];
+        config.blogPosts.push({
+          title: "New Article",
+        slug: "new-article-slug",
+        description: "A short snippet description of the article content...",
+        date: new Date().toISOString().split('T')[0],
+        tags: ["JavaScript", "WebDev"],
+        filePath: "../blog_portfolio/posts/new-article-slug.md"
+      });
+        renderBlogPosts();
+    }
+
+        // --- SAVE AND COMPILE ---
+        window.saveAndCompile = function() {
+          // Gather general info
+          config.personalInfo.name = document.getElementById('edit-name').value;
+        config.personalInfo.title = document.getElementById('edit-title').value;
+        config.personalInfo.email = document.getElementById('edit-email').value;
+        config.personalInfo.location = document.getElementById('edit-location').value;
+        config.personalInfo.profilePhoto = document.getElementById('edit-profilePhoto').value;
+        config.personalInfo.resumeUrl = document.getElementById('edit-resumeUrl').value;
+        config.personalInfo.introduction = document.getElementById('edit-introduction').value;
+        config.personalInfo.shortBio = document.getElementById('edit-shortBio').value;
+        config.personalInfo.yearsOfExperience = document.getElementById('edit-yearsOfExperience').value;
+        config.personalInfo.yearsOfExperienceLabel = document.getElementById('edit-yearsOfExperienceLabel').value;
+
+        // Gather socials
+        config.socialLinks.github = document.getElementById('edit-social-github').value;
+        config.socialLinks.linkedin = document.getElementById('edit-social-linkedin').value;
+        config.socialLinks.twitter = document.getElementById('edit-social-twitter').value;
+        config.socialLinks.leetcode = document.getElementById('edit-social-leetcode').value;
+
+        // Gather stats
+        if (config.stats) {
+          config.stats.forEach((stat, idx) => {
+            const valVal = document.getElementById(`edit-stat-${idx}-value`).value;
+            const lblVal = document.getElementById(`edit-stat-${idx}-label`).value;
+            stat.value = valVal;
+            stat.label = lblVal;
+          });
+      }
+
+        // API Call
+        const statusEl = document.getElementById('editor-status');
+        statusEl.textContent = 'COMPILING PORTFOLIO CHANGES...';
+        statusEl.classList.remove('hidden', 'text-red-400');
+        statusEl.classList.add('text-primary');
+
+        const token = sessionStorage.getItem('admin_session_token') || '';
+        fetch('/api/save-config', {
+          method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + token
+        },
+        body: JSON.stringify(config)
+      })
+      .then(res => {
+        if (res.status === 401) {
+          lockEditor();
+        throw new Error('Session expired or unauthorized. Please re-authenticate.');
+        }
+        if (!res.ok) throw new Error('HTTP Status ' + res.status);
+        return res.json();
+      })
+      .then(data => {
+          statusEl.textContent = 'PORTFOLIO STITCHED SUCCESSFULLY! RELOADING...';
+        setTimeout(() => {
+          location.reload();
+        }, 1500);
+      })
+      .catch(err => {
+          console.error(err);
+        statusEl.textContent = 'ERROR COMPILING: ' + err.message;
+        statusEl.classList.replace('text-primary', 'text-red-400');
+      });
+    }
+
+        // --- SECURITY & PASSCODE MANAGEMENT ---
+        let authMode = 'login'; // 'login' or 'setup'
+
+        window.checkAuthStatus = function() {
+          fetch('/api/passcode-status')
+            .then(res => res.json())
+            .then(data => {
+              const authOverlay = document.getElementById('editor-auth-overlay');
+              const editorContent = document.getElementById('editor-content');
+              const errorEl = document.getElementById('auth-error');
+              if (errorEl) errorEl.classList.add('hidden');
+
+              if (!data.initialized) {
+                // Setup passcode mode
+                authMode = 'setup';
+                document.getElementById('auth-title').textContent = 'Set Admin Passcode';
+                document.getElementById('auth-desc').textContent = 'Choose a secure administrative passcode to protect your settings editor. Minimum 4 characters.';
+                document.getElementById('passcode-confirm-group').classList.remove('hidden');
+                const authBtnText = document.getElementById('auth-btn').querySelector('span');
+                if (authBtnText) authBtnText.textContent = 'Initialize Passcode';
+                authOverlay.classList.remove('hidden');
+                editorContent.classList.add('hidden');
+              } else {
+                // Login mode
+                authMode = 'login';
+                document.getElementById('auth-title').textContent = 'CMS Security Lock';
+                document.getElementById('auth-desc').textContent = 'Verify ownership to access settings and edit portfolio content.';
+                document.getElementById('passcode-confirm-group').classList.add('hidden');
+                const authBtnText = document.getElementById('auth-btn').querySelector('span');
+                if (authBtnText) authBtnText.textContent = 'Authenticate';
+
+                const token = sessionStorage.getItem('admin_session_token');
+                if (token) {
+                  authOverlay.classList.add('hidden');
+                  editorContent.classList.remove('hidden');
+                  if (!editorInitialized) {
+                    initEditor();
+                    editorInitialized = true;
+                  }
+                } else {
+                  authOverlay.classList.remove('hidden');
+                  editorContent.classList.add('hidden');
+                }
+              }
+            })
+            .catch(err => {
+              console.error('Error checking passcode status:', err);
+              const errorEl = document.getElementById('auth-error');
+              if (errorEl) {
+                errorEl.textContent = 'Connection error: ' + err.message;
+                errorEl.classList.remove('hidden');
+              }
+            });
+    }
+
+        window.submitAuthForm = function() {
+      const passcodeEl = document.getElementById('auth-passcode');
+        const passcode = passcodeEl.value;
+        const errorEl = document.getElementById('auth-error');
+
+        if (errorEl) errorEl.classList.add('hidden');
+
+        if (!passcode || passcode.trim().length < 4) {
+        if (errorEl) {
+          errorEl.textContent = 'Passcode must be at least 4 characters long.';
+        errorEl.classList.remove('hidden');
+        }
+        return;
+      }
+
+        if (authMode === 'setup') {
+        const confirmPasscode = document.getElementById('auth-passcode-confirm').value;
+        if (passcode !== confirmPasscode) {
+          if (errorEl) {
+          errorEl.textContent = 'Passcodes do not match.';
+        errorEl.classList.remove('hidden');
+          }
+        return;
+        }
+
+        fetch('/api/setup-passcode', {
+          method: 'POST',
+        headers: {'Content-Type': 'application/json' },
+        body: JSON.stringify({passcode: passcode.trim() })
+        })
+        .then(res => res.json())
+        .then(data => {
+          if (data.success) {
+          passcodeEl.value = '';
+        document.getElementById('auth-passcode-confirm').value = '';
+        checkAuthStatus();
+          } else {
+            throw new Error(data.error || 'Failed to initialize passcode.');
+          }
+        })
+        .catch(err => {
+          if (errorEl) {
+          errorEl.textContent = err.message;
+        errorEl.classList.remove('hidden');
+          }
+        });
+      } else {
+          fetch('/api/verify-passcode', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ passcode: passcode.trim() })
+          })
+            .then(res => {
+              if (res.status === 401) {
+                throw new Error('Incorrect passcode.');
+              }
+              if (!res.ok) {
+                return res.json().then(d => { throw new Error(d.error || 'Server error.'); });
+              }
+              return res.json();
+            })
+            .then(data => {
+              if (data.success && data.token) {
+                sessionStorage.setItem('admin_session_token', data.token);
+                passcodeEl.value = '';
+                checkAuthStatus();
+              } else {
+                throw new Error(data.error || 'Failed to authenticate.');
+              }
+            })
+            .catch(err => {
+              if (errorEl) {
+                errorEl.textContent = err.message;
+                errorEl.classList.remove('hidden');
+              }
+            });
+      }
+    }
+
+        window.lockEditor = function() {
+          sessionStorage.removeItem('admin_session_token');
+        document.getElementById('auth-passcode').value = '';
+        const confirmEl = document.getElementById('auth-passcode-confirm');
+        if (confirmEl) confirmEl.value = '';
+
+        const authOverlay = document.getElementById('editor-auth-overlay');
+        const editorContent = document.getElementById('editor-content');
+        if (authOverlay) authOverlay.classList.remove('hidden');
+        if (editorContent) editorContent.classList.add('hidden');
+
+        checkAuthStatus();
+    }
+
+        // Auto switch to general sub-tab initially
+        window.switchSubTab = switchSubTab;
+    </script>
+    <script>
+        (function() {
+        const toggleBtn = document.getElementById('theme-toggle');
+        if (toggleBtn) {
+          const icon = toggleBtn.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.textContent = document.documentElement.classList.contains('dark') ? 'dark_mode' : 'light_mode';
+          }
+        if (!toggleBtn.dataset.listenerBound) {
+          toggleBtn.dataset.listenerBound = 'true';
+            toggleBtn.addEventListener('click', () => {
+              const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        if (icon) {
+          icon.textContent = isDark ? 'dark_mode' : 'light_mode';
+              }
+            });
+          }
+        }
+      })();
+    </script>
+  </main>
+  <!-- BottomNavBar (Active: Settings) -->
+  <!-- STITCH_NAV_MOBILE_START -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full z-50" style="padding-bottom: env(safe-area-inset-bottom, 0px)">
+  <div class="bg-surface/80 backdrop-blur-xl border-t border-white/10 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] flex justify-around items-stretch h-[64px]">
+    <a href="../home_portfolio/code.html" class="flex flex-col items-center justify-center gap-[3px] flex-1 text-on-surface-variant hover:text-primary transition-colors duration-200 active:scale-95">
+      <span class="material-symbols-outlined text-[22px] leading-none">home</span>
+      <span class="font-label-mono text-[9px] tracking-wider uppercase">Home</span>
+    </a>
+    <a href="../about_portfolio/code.html" class="flex flex-col items-center justify-center gap-[3px] flex-1 text-on-surface-variant hover:text-primary transition-colors duration-200 active:scale-95">
+      <span class="material-symbols-outlined text-[22px] leading-none">person</span>
+      <span class="font-label-mono text-[9px] tracking-wider uppercase">About</span>
+    </a>
+    <a href="../projects_portfolio/code.html" class="flex flex-col items-center justify-center gap-[3px] flex-1 text-on-surface-variant hover:text-primary transition-colors duration-200 active:scale-95">
+      <span class="material-symbols-outlined text-[22px] leading-none">code</span>
+      <span class="font-label-mono text-[9px] tracking-wider uppercase">Projects</span>
+    </a>
+    <a href="../experience_portfolio/code.html" class="flex flex-col items-center justify-center gap-[3px] flex-1 text-on-surface-variant hover:text-primary transition-colors duration-200 active:scale-95">
+      <span class="material-symbols-outlined text-[22px] leading-none">work</span>
+      <span class="font-label-mono text-[9px] tracking-wider uppercase">Experience</span>
+    </a>
+    <a href="../blog_portfolio/code.html" class="flex flex-col items-center justify-center gap-[3px] flex-1 text-on-surface-variant hover:text-primary transition-colors duration-200 active:scale-95">
+      <span class="material-symbols-outlined text-[22px] leading-none">article</span>
+      <span class="font-label-mono text-[9px] tracking-wider uppercase">Blog</span>
+    </a>
+    <a href="../contact_portfolio/code.html" class="flex flex-col items-center justify-center gap-[3px] flex-1 relative text-primary" aria-current="page">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-primary rounded-b-full" data-nav-indicator></div>
+      <span class="material-symbols-outlined text-[22px] leading-none">settings</span>
+      <span class="font-label-mono text-[9px] font-bold tracking-wider uppercase">Settings</span>
+    </a>
+  </div>
+</nav>
+<!-- STITCH_NAV_MOBILE_END -->
+
+  </body>
+
+</html>

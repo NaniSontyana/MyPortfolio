@@ -1,0 +1,4 @@
+node_modules/
+stitch_config_driven_engineer_portfolio/security_config.json
+.DS_Store
+*.log

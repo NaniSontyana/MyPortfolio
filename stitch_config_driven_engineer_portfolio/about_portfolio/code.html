@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<script>
+  (function() {
+    const theme = localStorage.getItem('theme') || 'dark';
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  })();
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- STITCH_TITLE_START -->
+<title>About | Nani Sontyana Portfolio</title>
+<!-- STITCH_TITLE_END -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Geist:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --color-background: #f4f6fa;
+            --color-on-background: #0f1015;
+            --color-surface: #ffffff;
+            --color-on-surface: #0f1015;
+            --color-surface-variant: #e2e2ec;
+            --color-on-surface-variant: #43465b;
+            --color-outline: #727790;
+            --color-outline-variant: #c2c5de;
+            --color-primary: #3b3db8;
+            --color-on-primary: #ffffff;
+            --color-primary-container: #e1e0ff;
+            --color-on-primary-container: #0b0091;
+            --color-secondary: #5c5d72;
+            --color-on-secondary: #ffffff;
+            --color-secondary-container: #e1e1f9;
+            --color-on-secondary-container: #191a2c;
+            --color-tertiary: #765600;
+            --color-on-tertiary: #ffffff;
+            --color-tertiary-container: #ffdf9e;
+            --color-on-tertiary-container: #261900;
+            --color-surface-dim: #dbdbe4;
+            --color-surface-bright: #faf8ff;
+            --color-surface-container-lowest: #ffffff;
+            --color-surface-container-low: #f1f3f9;
+            --color-surface-container: #ececf3;
+            --color-surface-container-high: #e5e6ec;
+            --color-surface-container-highest: #dfe0e7;
+            --color-primary-fixed: #e1e0ff;
+            --color-primary-fixed-dim: #c0c1ff;
+            --color-on-primary-fixed: #07006c;
+            --color-on-primary-fixed-variant: #2f2ebe;
+            --color-secondary-fixed: #e5e2e1;
+            --color-secondary-fixed-dim: #c9c6c5;
+            --color-on-secondary-fixed: #1c1b1b;
+            --color-on-secondary-fixed-variant: #474646;
+            --color-tertiary-fixed: #ffdcc5;
+            --color-tertiary-fixed-dim: #ffb783;
+            --color-on-tertiary-fixed: #301400;
+            --color-on-tertiary-fixed-variant: #703700;
+            --color-inverse-primary: #494bd6;
+            --color-inverse-surface: #e3e1ec;
+            --color-inverse-on-surface: #2f3038;
+            --color-surface-tint: #3b3db8;
+            --color-error-container: #ffdad6;
+            --color-error: #ba1a1a;
+            --color-on-error: #ffffff;
+
+            --glass-bg: rgba(255, 255, 255, 0.75);
+            --glass-border: rgba(59, 61, 184, 0.08);
+            --glass-hover-border: rgba(59, 61, 184, 0.18);
+            --glass-shadow: 0 10px 30px -10px rgba(59, 61, 184, 0.08), 0 1px 3px rgba(59, 61, 184, 0.03);
+            --border-color: rgba(59, 61, 184, 0.1);
+            --border-color-soft: rgba(59, 61, 184, 0.05);
+
+            --primary-glow: rgba(59, 61, 184, 0.12);
+            --primary-glow-hover: rgba(59, 61, 184, 0.25);
+            --header-shadow: 0 8px 32px rgba(59, 61, 184, 0.04), 0 1px 2px rgba(59, 61, 184, 0.02);
+            --highlight-border-color: rgba(59, 61, 184, 0.4);
+            --highlight-shadow-color: rgba(59, 61, 184, 0.2);
+        }
+
+        .dark {
+            --color-background: #12131a;
+            --color-on-background: #e3e1ec;
+            --color-surface: #12131a;
+            --color-on-surface: #e3e1ec;
+            --color-surface-variant: #33343c;
+            --color-on-surface-variant: #c7c4d7;
+            --color-outline: #908fa0;
+            --color-outline-variant: #464554;
+            --color-primary: #c0c1ff;
+            --color-on-primary: #1000a9;
+            --color-primary-container: #8083ff;
+            --color-on-primary-container: #0d0096;
+            --color-secondary: #c9c6c5;
+            --color-on-secondary: #313030;
+            --color-secondary-container: #4a4949;
+            --color-on-secondary-container: #bab8b7;
+            --color-tertiary: #ffb783;
+            --color-on-tertiary: #4f2500;
+            --color-tertiary-container: #d97721;
+            --color-on-tertiary-container: #452000;
+            --color-surface-dim: #12131a;
+            --color-surface-bright: #383941;
+            --color-surface-container-lowest: #0d0e15;
+            --color-surface-container-low: #1a1b22;
+            --color-surface-container: #1e1f26;
+            --color-surface-container-high: #292931;
+            --color-surface-container-highest: #33343c;
+            --color-primary-fixed: #e1e0ff;
+            --color-primary-fixed-dim: #c0c1ff;
+            --color-on-primary-fixed: #07006c;
+            --color-on-primary-fixed-variant: #2f2ebe;
+            --color-secondary-fixed: #e5e2e1;
+            --color-secondary-fixed-dim: #c9c6c5;
+            --color-on-secondary-fixed: #1c1b1b;
+            --color-on-secondary-fixed-variant: #474646;
+            --color-tertiary-fixed: #ffdcc5;
+            --color-tertiary-fixed-dim: #ffb783;
+            --color-on-tertiary-fixed: #301400;
+            --color-on-tertiary-fixed-variant: #703700;
+            --color-inverse-primary: #494bd6;
+            --color-inverse-surface: #e3e1ec;
+            --color-inverse-on-surface: #2f3038;
+            --color-surface-tint: #c0c1ff;
+            --color-error-container: #93000a;
+            --color-error: #ffb4ab;
+            --color-on-error: #690005;
+
+            --glass-bg: rgba(10, 10, 10, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-hover-border: rgba(255, 255, 255, 0.2);
+            --glass-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --border-color-soft: rgba(255, 255, 255, 0.05);
+
+            --primary-glow: rgba(192, 193, 255, 0.15);
+            --primary-glow-hover: rgba(192, 193, 255, 0.4);
+            --header-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+            --highlight-border-color: rgba(192, 193, 255, 0.4);
+            --highlight-shadow-color: rgba(192, 193, 255, 0.2);
+        }
+        
+        html:not(.dark) #shader-canvas-ANIMATION_4 {
+            opacity: 0.08;
+            filter: invert(1) hue-rotate(180deg) brightness(1.05);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        html {
+            scrollbar-gutter: stable;
+        }
+        body {
+            background-color: var(--color-background);
+            color: var(--color-on-background);
+            font-family: 'Geist', sans-serif;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        header {
+            box-shadow: var(--header-shadow) !important;
+        }
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: var(--glass-hover-border);
+            transform: translateY(-4px);
+            box-shadow: var(--glass-shadow);
+        }
+        .skill-progress-fill {
+            width: 0%;
+            transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "var(--color-surface)",
+                      "on-tertiary-container": "var(--color-on-tertiary-container)",
+                      "tertiary-fixed": "var(--color-tertiary-fixed)",
+                      "primary": "var(--color-primary)",
+                      "on-primary-container": "var(--color-on-primary-container)",
+                      "primary-fixed-dim": "var(--color-primary-fixed-dim)",
+                      "on-tertiary-fixed-variant": "var(--color-on-tertiary-fixed-variant)",
+                      "on-secondary-fixed-variant": "var(--color-on-secondary-fixed-variant)",
+                      "surface-container-lowest": "var(--color-surface-container-lowest)",
+                      "inverse-primary": "var(--color-inverse-primary)",
+                      "surface-container-low": "var(--color-surface-container-low)",
+                      "on-tertiary-fixed": "var(--color-on-tertiary-fixed)",
+                      "on-surface": "var(--color-on-surface)",
+                      "surface-tint": "var(--color-surface-tint)",
+                      "surface-bright": "var(--color-surface-bright)",
+                      "surface-container-high": "var(--color-surface-container-high)",
+                      "surface-container": "var(--color-surface-container)",
+                      "on-surface-variant": "var(--color-on-surface-variant)",
+                      "inverse-surface": "var(--color-inverse-surface)",
+                      "surface-variant": "var(--color-surface-variant)",
+                      "on-error": "var(--color-on-error)",
+                      "on-error-container": "var(--color-on-error-container)",
+                      "on-primary": "var(--color-on-primary)",
+                      "outline": "var(--color-outline)",
+                      "on-secondary-fixed": "var(--color-on-secondary-fixed)",
+                      "tertiary-fixed-dim": "var(--color-tertiary-fixed-dim)",
+                      "primary-container": "var(--color-primary-container)",
+                      "on-secondary-container": "var(--color-on-secondary-container)",
+                      "on-background": "var(--color-on-background)",
+                      "on-primary-fixed-variant": "var(--color-on-primary-fixed-variant)",
+                      "background": "var(--color-background)",
+                      "tertiary": "var(--color-tertiary)",
+                      "error": "var(--color-error)",
+                      "primary-fixed": "var(--color-primary-fixed)",
+                      "tertiary-container": "var(--color-tertiary-container)",
+                      "on-tertiary": "var(--color-on-tertiary)",
+                      "on-primary-fixed": "var(--color-on-primary-fixed)",
+                      "inverse-on-surface": "var(--color-inverse-on-surface)",
+                      "surface-dim": "var(--color-surface-dim)",
+                      "surface-container-highest": "var(--color-surface-container-highest)",
+                      "secondary-fixed-dim": "var(--color-secondary-fixed-dim)",
+                      "secondary-fixed": "var(--color-secondary-fixed)",
+                      "error-container": "var(--color-error-container)",
+                      "secondary": "var(--color-secondary)",
+                      "outline-variant": "var(--color-outline-variant)",
+                      "secondary-container": "var(--color-secondary-container)",
+                      "on-secondary": "var(--color-on-secondary)",
+                      "white/10": "var(--border-color)",
+                      "white/5": "var(--border-color-soft)"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xxl": "96px",
+                      "xl": "48px",
+                      "lg": "24px",
+                      "container-max": "1200px",
+                      "gutter": "24px",
+                      "md": "16px",
+                      "unit": "4px",
+                      "xs": "4px",
+                      "sm": "8px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Geist"],
+                      "headline-lg": ["Geist"],
+                      "headline-lg-mobile": ["Geist"],
+                      "body-lg": ["Geist"],
+                      "display": ["Geist"],
+                      "body-md": ["Geist"],
+                      "label-mono": ["JetBrains Mono"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-mono": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- STITCH_SHADER_START -->
+<div class="fixed inset-0 w-full h-full" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_4" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_4');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = gl_FragCoord.xy / u_resolution.xy;
+    float color = 0.0;
+    
+    // Create a subtle, moving "digital grain" or "nebula" effect
+    vec2 p = uv * 2.0 - 1.0;
+    p.x *= u_resolution.x / u_resolution.y;
+    
+    float t = u_time * 0.1;
+    
+    for(float i = 1.0; i < 4.0; i++){
+        p.x += 0.3 / i * sin(i * 3.0 * p.y + t);
+        p.y += 0.3 / i * cos(i * 3.0 * p.x + t);
+    }
+    
+    vec3 colorVec = vec3(0.05, 0.06, 0.1); // Deep surface color base
+    colorVec += 0.05 * vec3(0.5, 0.6, 1.0) * (sin(p.x + p.y) + 1.0); // Subtle blue accent
+    
+    gl_FragColor = vec4(colorVec, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END -->
+
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 dark:bg-surface/70 backdrop-blur-xl border-b border-white/10 flex items-center justify-between px-md h-16 shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_0_1px_rgba(255,255,255,0.05)]">
+<div class="flex items-center gap-sm">
+<!-- STITCH_HEADER_LOGO_START -->
+<div class="w-8 h-8 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center">
+<span class="font-display text-primary font-bold text-headline-md-mobile">NS</span>
+</div>
+<span class="font-display text-headline-md-mobile font-bold text-primary hidden min-[400px]:inline">DevPortfolio</span>
+<!-- STITCH_HEADER_LOGO_END -->
+</div>
+<!-- STITCH_NAV_DESKTOP_START -->
+
+<!-- Desktop nav -->
+<nav class="hidden lg:flex gap-6 xl:gap-8 items-center">
+  <a class="relative text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-colors duration-200" href="../home_portfolio/code.html">Home</a>
+  <a class="relative text-primary font-bold font-label-mono text-label-mono transition-colors duration-200 after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-primary after:rounded-full" href="../about_portfolio/code.html">About</a>
+  <a class="relative text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-colors duration-200" href="../projects_portfolio/code.html">Projects</a>
+  <a class="relative text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-colors duration-200" href="../experience_portfolio/code.html">Experience</a>
+  <a class="relative text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-colors duration-200" href="../blog_portfolio/code.html">Blog</a>
+  <a class="relative text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-colors duration-200" href="../contact_portfolio/code.html">Settings</a>
+</nav>
+<!-- Mobile hamburger button (hidden as requested, using bottom mobile nav bar) -->
+<button id="mobile-menu-btn" class="hidden" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+  <span class="material-symbols-outlined text-on-surface">menu</span>
+</button>
+<!-- Mobile full-screen drawer -->
+<div id="mobile-drawer" class="fixed inset-0 z-[200] pointer-events-none" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <!-- Backdrop -->
+  <div id="mobile-drawer-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+  <!-- Drawer panel -->
+  <div id="mobile-drawer-panel" class="absolute top-0 right-0 h-full w-[280px] max-w-[85vw] bg-surface-container-low border-l border-white/10 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+    <!-- Drawer header -->
+    <div class="flex items-center justify-between px-lg py-md border-b border-white/10">
+      <span class="font-display font-bold text-primary text-headline-md-mobile">Navigation</span>
+      <button id="mobile-drawer-close" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-white/5 transition-colors active:scale-95" aria-label="Close navigation menu">
+        <span class="material-symbols-outlined text-on-surface-variant">close</span>
+      </button>
+    </div>
+    <!-- Drawer links -->
+    <nav class="flex flex-col gap-sm px-md py-lg flex-1 overflow-y-auto">
+  <a href="../home_portfolio/code.html" style="transition-delay:0ms" class="drawer-item flex items-center gap-md px-lg py-md rounded-2xl hover:bg-white/5 text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-all duration-300">
+    <span class="material-symbols-outlined text-[22px]">home</span>
+    <span>Home</span>
+  </a>
+  <a href="../about_portfolio/code.html" style="transition-delay:60ms" class="drawer-item flex items-center gap-md px-lg py-md rounded-2xl bg-primary/10 border border-primary/20 text-primary font-bold font-label-mono text-label-mono">
+    <span class="material-symbols-outlined text-[22px]">person</span>
+    <span>About</span>
+  </a>
+  <a href="../projects_portfolio/code.html" style="transition-delay:120ms" class="drawer-item flex items-center gap-md px-lg py-md rounded-2xl hover:bg-white/5 text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-all duration-300">
+    <span class="material-symbols-outlined text-[22px]">code</span>
+    <span>Projects</span>
+  </a>
+  <a href="../experience_portfolio/code.html" style="transition-delay:180ms" class="drawer-item flex items-center gap-md px-lg py-md rounded-2xl hover:bg-white/5 text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-all duration-300">
+    <span class="material-symbols-outlined text-[22px]">work</span>
+    <span>Experience</span>
+  </a>
+  <a href="../blog_portfolio/code.html" style="transition-delay:240ms" class="drawer-item flex items-center gap-md px-lg py-md rounded-2xl hover:bg-white/5 text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-all duration-300">
+    <span class="material-symbols-outlined text-[22px]">article</span>
+    <span>Blog</span>
+  </a>
+  <a href="../contact_portfolio/code.html" style="transition-delay:300ms" class="drawer-item flex items-center gap-md px-lg py-md rounded-2xl hover:bg-white/5 text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-all duration-300">
+    <span class="material-symbols-outlined text-[22px]">settings</span>
+    <span>Settings</span>
+  </a>
+    </nav>
+    <!-- Drawer footer -->
+    <div class="px-lg pb-safe py-md border-t border-white/10">
+      <p class="font-label-mono text-[11px] text-on-surface-variant opacity-50">Swipe right to close</p>
+    </div>
+  </div>
+</div>
+<style>
+  .drawer-item { opacity: 0; transform: translateX(20px); }
+  #mobile-drawer.open .drawer-item { opacity: 1; transform: translateX(0); transition: opacity 0.3s ease, transform 0.3s ease; }
+  #mobile-drawer.open #mobile-drawer-backdrop { opacity: 1; }
+  #mobile-drawer.open #mobile-drawer-panel { transform: translateX(0); }
+  #mobile-drawer.open { pointer-events: auto; }
+</style>
+<script>
+(function() {
+  const btn = document.getElementById('mobile-menu-btn');
+  const drawer = document.getElementById('mobile-drawer');
+  const backdrop = document.getElementById('mobile-drawer-backdrop');
+  const closeBtn = document.getElementById('mobile-drawer-close');
+  if (!btn || !drawer) return;
+  function openDrawer() {
+    drawer.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  btn.addEventListener('click', openDrawer);
+  closeBtn && closeBtn.addEventListener('click', closeDrawer);
+  backdrop && backdrop.addEventListener('click', closeDrawer);
+  // Swipe to close
+  let startX = 0;
+  drawer.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  drawer.addEventListener('touchend', e => { if (e.changedTouches[0].clientX - startX > 60) closeDrawer(); }, { passive: true });
+  // Close on escape
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+})();
+</script>
+<!-- STITCH_NAV_DESKTOP_END -->
+<div class="flex items-center gap-md">
+<button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/5 transition-colors active:scale-95" aria-label="Toggle theme">
+<span class="material-symbols-outlined text-primary">dark_mode</span>
+</button>
+<!-- STITCH_HEADER_AVATAR_START -->
+
+<div class="flex items-center gap-2 mr-2">
+  <span class="font-label-mono text-[10px] text-outline uppercase tracking-wider hidden sm:inline">Recruiter</span>
+  <button id="global-recruiter-toggle" class="relative inline-flex h-5 w-9 shrink-0 items-center rounded-full bg-surface-variant transition-colors duration-300 focus:outline-none" aria-label="Toggle recruiter view">
+    <span class="inline-block h-3.5 w-3.5 transform rounded-full bg-on-surface-variant transition-transform duration-300" id="global-recruiter-thumb" style="transform: translateX(2px)"></span>
+  </button>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-white/10">
+<img alt="Nani Sontyana" class="w-full h-full object-cover" data-alt="Profile" src=""/>
+</div>
+<script>
+(function() {
+  const config = {"personalInfo":{"name":"Nani Sontyana","title":"Full Stack Developer","introduction":"Building high-performance, scalable web applications with a focus on developer experience and elegant UI.","shortBio":"Passionate about bridging the gap between design and engineering. Specialized in React, TypeScript, and Cloud Architecture.","profilePhoto":"","resumeUrl":"https://drive.google.com/file/d/1e1WEKuGPQeq2oAnUPHIDEYMaESPyZYyE/view?usp=drive_link","email":"nanisontyana47@gmail.com","location":"Visakhapatnam, India","yearsOfExperience":"Fresher","yearsOfExperienceLabel":"Experience"},"socialLinks":{"github":"https://github.com/NaniSontyana","linkedin":"https://linkedin.com/in/nani-sontyana","twitter":"https://twitter.com/nani_sontyana","leetcode":"https://leetcode.com/u/nani_sontyana"},"stats":[{"label":"Projects Completed","value":"15+","icon":"Briefcase"},{"label":"Certifications","value":"4","icon":"Award"},{"label":"Internships","value":"2","icon":"Terminal"},{"label":"Problems Solved","value":"200+","icon":"Code"}],"skills":[{"category":"Frontend","items":[{"name":"React","level":96,"icon":"atom"},{"name":"TypeScript","level":99,"icon":"code"},{"name":"Angular","level":94},{"name":"JavaScript","level":80},{"name":"Tailwind css","level":80}]},{"category":"Backend","items":[{"name":"Node.js","level":90,"icon":"cpu"},{"name":"Python","level":80,"icon":"cpu"},{"name":"PostgreSQL","level":85,"icon":"database"},{"name":"MongoDB","level":100},{"name":"Next.js","level":80}]},{"category":"Tools","items":[{"name":"Docker","level":80,"icon":"container"},{"name":"Git","level":95,"icon":"git-branch"},{"name":"AWS","level":75,"icon":"cloud"},{"name":"GitHub","level":80}]}],"projects":[{"title":"smartHR-attrition Based Prediction System","description":"ML): Designed and built an enterprise-grade HR\nintelligence platform featuring real-time attrition risk scoring and workforce telemetry. Implemented a decoupled architecture\nhosting a React/Vite SPA on Vercel, an Express API gateway on Render, and a Python Flask ML microservice. Leveraged\nScikit-Learn to execute feature importance analyses, enabling explainable risk predictions based on demographic and\noperational metrics. Established security best practices including Bcrypt password hashing, JWT authorization middleware.\n","technologies":["React","Tailwind","Express","Python","ML"],"githubLink":"https://github.com/NaniSontyana/smartHR-main","liveLink":"https://smarthr-three.vercel.app/","image":"https://drive.google.com/file/d/1b7VGox5fkNkqv1g92xKaiscqxqqx1bXy/view?usp=sharing","category":"Web Development & ML","featured":true,"metrics":{"latency":"< 20ms","fcp":"0.40s","bundleSize":"40kB"}},{"title":"Subscription Tracker","description":"(Backend-Focused): Developed a backend-driven subscription management system to help\nusers track recurring subscriptions and avoid missed renewals. Implemented automated email reminders scheduled at multiple\nintervals before renewal dates using event-driven workflows. Designed secure RESTful APIs for subscription management,\nauthentication, and notifications. Tech: Node.js, Express.js, MongoDB, JWT, Nodemailer, Upstash QStash, Arcjet, Git.","technologies":["HTML","CSS","javascript","Express.js"],"githubLink":"https://github.com/NaniSontyana/subscrption_tracker","liveLink":"https://subscrption-tracker-2.onrender.com","image":"https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=600","category":"Web Development","featured":true,"metrics":{"latency":"< 10ms","fcp":"0.40s","bundleSize":"40kB"}},{"title":"E-commerce platform","description":"A complete E-commerce website with frontend, backend and Admin page. used MongoDb as a Database server to store the complete data to store the data.","technologies":["React","Tailwind","Express","Node","MongoDB"],"githubLink":"https://github.com/NaniSontyana/e-commerce-2","liveLink":"https://github.com/NaniSontyana/e-commerce-2","image":"https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=600","category":"Web Development","featured":true,"metrics":{"latency":"< 10ms","fcp":"0.40s","bundleSize":"40kB"}}],"experience":[{"company":"TechNova Systems","role":"Software Engineering Intern","duration":"June 2023 - Aug 2023","location":"Remote","description":"Developed microservices for a large-scale e-commerce platform using Spring Boot.","technologies":["Java","Spring Boot","Kafka"],"logo":"https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&q=80&w=100"}],"education":[{"institution":"Stanford University","degree":"B.S. in Computer Science","duration":"2020 - 2024","cgpa":"3.9/4.0","achievements":["Dean's List","UPE Honor Society"]}],"skillsSummary":[{"category":"Languages","icon":"translate","color":"primary","items":[{"name":"JAVA","iconType":"devicon","icon":"devicon-java-plain colored"},{"name":"Python","iconType":"devicon","icon":"devicon-python-plain colored"},{"name":"JavaScript","iconType":"devicon","icon":"devicon-javascript-plain colored"},{"name":"C++","iconType":"devicon","icon":"devicon-cplusplus-plain colored"}]},{"category":"Frameworks","icon":"layers","color":"tertiary","items":[{"name":"React.js","iconType":"devicon","icon":"devicon-react-original colored"},{"name":"Express.js","iconType":"devicon","icon":"devicon-express-original"},{"name":"NodeJS","iconType":"devicon","icon":"devicon-nodejs-plain colored"}]},{"category":"Tools","icon":"build","color":"primary","items":[{"name":"Git","iconType":"devicon","icon":"devicon-git-plain colored"},{"name":"GitHub","iconType":"devicon","icon":"devicon-github-original"},{"name":"MongoDB","iconType":"devicon","icon":"devicon-mongodb-plain colored"},{"name":"PostgreSQL","iconType":"devicon","icon":"devicon-postgresql-plain colored"},{"name":"MySQL","iconType":"devicon","icon":"devicon-mysql-plain colored"},{"name":"SQLite","iconType":"devicon","icon":"devicon-sqlite-plain colored"}]},{"category":"Soft Skills","icon":"psychology","color":"tertiary","items":[{"name":"Leadership","iconType":"material","icon":"groups"},{"name":"Writing","iconType":"material","icon":"edit_note"},{"name":"Public Speaking","iconType":"material","icon":"record_voice_over"},{"name":"Time Management","iconType":"material","icon":"schedule"}]}],"blogPosts":[{"title":"Building a Config-Driven Developer Portfolio","slug":"config-driven-portfolio","description":"How to create a single source of truth for your developer profile, projects, and themes using a dynamic compiler.","date":"2026-06-18","tags":["NodeJS","JavaScript","HTML","CMS"],"filePath":"../blog_portfolio/posts/config-driven-portfolio.md"},{"title":"Understanding WebGL Shaders for Web Design","slug":"webgl-shaders","description":"An introduction to writing vertex and fragment shaders for atmospheric web backgrounds and interactive elements.","date":"2026-06-15","tags":["WebGL","GLSL","Graphics","CSS"],"filePath":"../blog_portfolio/posts/webgl-shaders.md"}]};
+
+  // Override Event Listeners for dynamic scripts loaded via AJAX SPA routing
+  const originalAddEventListener = document.addEventListener;
+  document.addEventListener = function(type, listener, options) {
+    if (type === 'DOMContentLoaded' && document.readyState !== 'loading') {
+      setTimeout(listener, 1);
+    } else {
+      originalAddEventListener.call(this, type, listener, options);
+    }
+  };
+
+  const originalWindowAddEventListener = window.addEventListener;
+  window.addEventListener = function(type, listener, options) {
+    if (type === 'load' && document.readyState === 'complete') {
+      setTimeout(listener, 1);
+    } else {
+      originalWindowAddEventListener.call(this, type, listener, options);
+    }
+  };
+
+  // Inject custom CSS classes for recruiter mode and terminal
+  if (!document.getElementById('global-recruiter-styles')) {
+    const style = document.createElement('style');
+    style.id = 'global-recruiter-styles';
+    style.innerHTML = `
+      .recruiter-mode .stats-grid-highlight {
+        border-color: rgba(192, 193, 255, 0.4) !important;
+        box-shadow: 0 0 20px rgba(192, 193, 255, 0.2) !important;
+        transform: translateY(-4px) scale(1.02) !important;
+      }
+      .recruiter-mode .recruiter-show-grid {
+        display: grid !important;
+      }
+      .recruiter-mode .recruiter-highlight-border {
+        border-color: var(--color-primary) !important;
+      }
+      .recruiter-mode .recruiter-glow {
+        box-shadow: 0 0 20px rgba(192, 193, 255, 0.2) !important;
+      }
+      #dev-terminal-console.hidden {
+        display: none !important;
+      }
+      #dev-terminal-output::-webkit-scrollbar {
+        width: 4px;
+      }
+      #dev-terminal-output::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.02);
+      }
+      #dev-terminal-output::-webkit-scrollbar-thumb {
+        background: rgba(192, 193, 255, 0.2);
+        border-radius: 99px;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  function applyRecruiterView(active) {
+    const thumb = document.getElementById('global-recruiter-thumb');
+    const toggle = document.getElementById('global-recruiter-toggle');
+    const pageToggle = document.getElementById('toggle-recruiter');
+    const pageThumb = document.getElementById('toggle-thumb');
+    const pageCard = document.getElementById('recruiter-card');
+
+    if (active) {
+      document.body.classList.add('recruiter-mode');
+      
+      // Update global header switch
+      if (toggle && thumb) {
+        toggle.classList.replace('bg-surface-variant', 'bg-primary');
+        thumb.style.transform = 'translateX(18px)';
+        thumb.classList.replace('bg-on-surface-variant', 'bg-on-primary');
+      }
+
+      // Update page settings switch if it exists
+      if (pageToggle && pageThumb) {
+        pageToggle.classList.replace('bg-surface-variant', 'bg-primary');
+        pageThumb.style.transform = 'translateX(20px)';
+        pageThumb.classList.replace('bg-on-surface-variant', 'bg-on-primary');
+        if (pageCard) pageCard.classList.add('recruiter-mode-active');
+      }
+
+      // Home Page: highlight stats cards
+      const statsGrid = document.querySelector('main section.grid-cols-2.md\\:grid-cols-4');
+      if (statsGrid) {
+        statsGrid.querySelectorAll('.glass-card').forEach(card => {
+          card.classList.add('stats-grid-highlight');
+        });
+      }
+
+      // Experience Page: highlight GPA and focus area cards
+      const eduStats = document.querySelectorAll('.grid.grid-cols-2.gap-4.mb-8 > .bg-white\\/5');
+      if (eduStats.length) {
+        eduStats.forEach(stat => {
+          stat.classList.add('recruiter-highlight-border', 'recruiter-glow');
+        });
+      }
+    } else {
+      document.body.classList.remove('recruiter-mode');
+
+      // Update global header switch
+      if (toggle && thumb) {
+        toggle.classList.replace('bg-primary', 'bg-surface-variant');
+        thumb.style.transform = 'translateX(2px)';
+        thumb.classList.replace('bg-on-primary', 'bg-on-surface-variant');
+      }
+
+      // Update page settings switch if it exists
+      if (pageToggle && pageThumb) {
+        pageToggle.classList.replace('bg-primary', 'bg-surface-variant');
+        pageThumb.style.transform = 'translateX(4px)';
+        pageThumb.classList.replace('bg-on-primary', 'bg-on-surface-variant');
+        if (pageCard) pageCard.classList.remove('recruiter-mode-active');
+      }
+
+      // Remove Home Page Highlights
+      const statsGrid = document.querySelector('main section.grid-cols-2.md\\:grid-cols-4');
+      if (statsGrid) {
+        statsGrid.querySelectorAll('.glass-card').forEach(card => {
+          card.classList.remove('stats-grid-highlight');
+        });
+      }
+
+      // Remove Experience highlights
+      const eduStats = document.querySelectorAll('.grid.grid-cols-2.gap-4.mb-8 > .bg-white\\/5');
+      if (eduStats.length) {
+        eduStats.forEach(stat => {
+          stat.classList.remove('recruiter-highlight-border', 'recruiter-glow');
+        });
+      }
+    }
+  }
+
+  // --- TERMINAL CLI EMULATOR ---
+  function printLog(outputEl, text, type = '') {
+    const log = document.createElement('div');
+    if (type === 'cmd') {
+      log.innerHTML = `<span class="text-tertiary">guest@portfolio:~$</span> ${text}`;
+    } else if (type === 'error') {
+      log.innerHTML = `<span class="text-red-400 font-bold">Error:</span> ${text}`;
+    } else {
+      log.innerHTML = text;
+    }
+    outputEl.appendChild(log);
+    outputEl.scrollTop = outputEl.scrollHeight;
+  }
+
+  function executeCommand(inputVal) {
+    const outputEl = document.getElementById('dev-terminal-output');
+    if (!outputEl) return;
+
+    const cmdLine = inputVal.trim();
+    printLog(outputEl, cmdLine, 'cmd');
+
+    const args = cmdLine.split(' ');
+    const cmd = args[0].toLowerCase();
+
+    if (cmd === 'clear') {
+      outputEl.innerHTML = '';
+      return;
+    }
+    
+    if (cmd === 'help') {
+      printLog(outputEl, 'Available commands:');
+      printLog(outputEl, '  <span class="text-primary font-bold">neofetch</span> - Show developer profile summary');
+      printLog(outputEl, '  <span class="text-primary font-bold">skills</span>   - List skills and levels');
+      printLog(outputEl, '  <span class="text-primary font-bold">projects</span> - Show portfolio projects');
+      printLog(outputEl, '  <span class="text-primary font-bold">contact</span>  - Output email and social URLs');
+      printLog(outputEl, '  <span class="text-primary font-bold">resume</span>   - Print resume / CV link');
+      printLog(outputEl, '  <span class="text-primary font-bold">theme</span>    - Toggle dark / light mode');
+      printLog(outputEl, '  <span class="text-primary font-bold">clear</span>    - Flush the terminal logs');
+      return;
+    }
+
+    if (cmd === 'neofetch') {
+      printLog(outputEl, `
+<div class="flex gap-4 items-start py-1 font-mono text-[10px] leading-tight">
+  <pre class="text-tertiary font-bold select-none">
+  /\\_/\\  
+ ( o.o ) 
+  > ^ <  
+ /     \\ 
+ (\\  |  /)
+  (__|__)
+  </pre>
+  <div class="space-y-1">
+    <div class="text-on-surface font-bold text-xs">${config.personalInfo.name}</div>
+    <div class="text-outline">---------------------</div>
+    <div><span class="text-tertiary">OS:</span> PortfolioOS v1.0.0</div>
+    <div><span class="text-tertiary">SHELL:</span> Bash v1.2</div>
+    <div><span class="text-tertiary">TITLE:</span> ${config.personalInfo.title}</div>
+    <div><span class="text-tertiary">EXP:</span> ${config.personalInfo.yearsOfExperience}</div>
+    <div><span class="text-tertiary">LOCATION:</span> ${config.personalInfo.location}</div>
+    <div><span class="text-tertiary">THEME:</span> ${document.documentElement.classList.contains('dark') ? 'Dark Neon' : 'Light Classic'}</div>
+  </div>
+</div>
+      `);
+      return;
+    }
+
+    if (cmd === 'skills') {
+      printLog(outputEl, '<span class="text-on-surface font-bold">=== Skills Proficiency Inventory ===</span>');
+      (config.skills || []).forEach(cat => {
+        printLog(outputEl, `&nbsp;`);
+        printLog(outputEl, `<span class="text-tertiary font-bold">${cat.category}</span>`);
+        (cat.items || []).forEach(item => {
+          const barsCount = Math.round(item.level / 5);
+          const bars = '█'.repeat(barsCount) + '░'.repeat(20 - barsCount);
+          const namePadded = item.name.padEnd(14, '.');
+          printLog(outputEl, `  ${namePadded} [${bars}] ${item.level}%`);
+        });
+      });
+      return;
+    }
+
+    if (cmd === 'projects') {
+      printLog(outputEl, '<span class="text-on-surface font-bold">=== Engineering Projects Showcase ===</span>');
+      (config.projects || []).forEach(p => {
+        printLog(outputEl, `&nbsp;`);
+        printLog(outputEl, `<span class="text-tertiary font-bold">${p.title}</span> [${p.category || 'System'}]`);
+        printLog(outputEl, `  Desc: ${p.description}`);
+        if (p.metrics) {
+          printLog(outputEl, `  Specs: Latency: ${p.metrics.latency || 'N/A'} | FCP: ${p.metrics.fcp || 'N/A'} | Bundle: ${p.metrics.bundleSize || 'N/A'}`);
+        }
+      });
+      return;
+    }
+
+    if (cmd === 'contact') {
+      printLog(outputEl, '<span class="text-on-surface font-bold">=== Connection Protocols ===</span>');
+      printLog(outputEl, `  Email:    <a class="text-primary hover:underline" href="mailto:${config.personalInfo.email}">${config.personalInfo.email}</a>`);
+      if (config.socialLinks) {
+        Object.keys(config.socialLinks).forEach(key => {
+          printLog(outputEl, `  ${key.padEnd(8)}: <a class="text-primary hover:underline" href="${config.socialLinks[key]}" target="_blank">${config.socialLinks[key]}</a>`);
+        });
+      }
+      return;
+    }
+
+    if (cmd === 'resume') {
+      printLog(outputEl, '<span class="text-on-surface font-bold">=== Resume Connection ===</span>');
+      printLog(outputEl, `  Link: <a class="text-primary hover:underline" href="${config.personalInfo.resumeUrl}" target="_blank">Google Drive CV Link</a>`);
+      printLog(outputEl, `  (Type 'open resume' to view or click link)`);
+      return;
+    }
+
+    if (cmdLine.toLowerCase() === 'open resume') {
+      window.open(config.personalInfo.resumeUrl, '_blank');
+      printLog(outputEl, 'Opening resume in new tab...');
+      return;
+    }
+
+    if (cmd === 'theme') {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      const icon = document.querySelector('#theme-toggle .material-symbols-outlined');
+      if (icon) icon.textContent = isDark ? 'dark_mode' : 'light_mode';
+      printLog(outputEl, `System theme switched to: <span class="text-tertiary font-bold">${isDark ? 'Dark Mode' : 'Light Mode'}</span>`);
+      return;
+    }
+
+    printLog(outputEl, `Command not found: ${cmd}. Type <span class="text-primary font-bold">help</span> for assistance.`, 'error');
+  }
+
+  function initTerminal() {
+    if (document.getElementById('dev-terminal-console')) return;
+
+    // Create trigger button (floating bottom-left)
+    const trigger = document.createElement('button');
+    trigger.id = 'dev-terminal-trigger';
+    trigger.className = 'fixed bottom-lg left-lg z-50 w-10 h-10 rounded-full glass-card flex items-center justify-center hover:text-primary transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg border border-white/10';
+    trigger.innerHTML = '<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: \'FILL\' 0, \'wght\' 500">terminal</span>';
+    trigger.title = "Developer CLI Console (Press ` key)";
+    document.body.appendChild(trigger);
+
+    // Create console modal
+    const consoleDiv = document.createElement('div');
+    consoleDiv.id = 'dev-terminal-console';
+    consoleDiv.className = 'fixed inset-0 z-[300] flex items-center justify-center hidden p-4';
+    consoleDiv.innerHTML = `
+      <div id="dev-terminal-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-md"></div>
+      <div id="dev-terminal-console-panel" class="relative w-full max-w-2xl h-[400px] bg-black/90 backdrop-blur-xl border border-primary/30 rounded-2xl shadow-2xl p-6 flex flex-col font-mono text-[11px] text-primary z-10">
+        <!-- Header -->
+        <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-4 select-none shrink-0">
+          <div class="flex items-center gap-2">
+            <span class="w-3.5 h-3.5 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            </span>
+            <span class="text-on-surface font-bold text-xs">visitor@nanisontyana:~$ developer_cli</span>
+          </div>
+          <button id="dev-terminal-close" class="text-outline hover:text-white transition-colors flex items-center">
+            <span class="material-symbols-outlined text-sm">close</span>
+          </button>
+        </div>
+        <!-- Output Area -->
+        <div id="dev-terminal-output" class="flex-grow overflow-y-auto space-y-2 mb-4 pr-1">
+          <div class="text-outline font-bold text-xs select-none">
+            Nani Sontyana Developer Command Line Interface (v1.0.0)
+          </div>
+          <div class="text-outline select-none">
+            Type <span class="text-primary font-bold">help</span> to view available operations, or press <span class="text-tertiary font-bold">Esc</span> to dismiss.
+          </div>
+          <div class="text-outline select-none">----------------------------------------------------</div>
+        </div>
+        <!-- Input Row -->
+        <div class="flex items-center gap-2 border-t border-white/10 pt-3 shrink-0">
+          <span class="text-tertiary select-none">guest@portfolio:~$</span>
+          <input type="text" id="dev-terminal-input" class="flex-grow bg-transparent border-0 p-0 text-[11px] font-mono text-primary focus:ring-0 focus:outline-none placeholder-primary/20" placeholder="run command..." autocomplete="off" spellcheck="false" autofocus />
+        </div>
+      </div>
+    `;
+    document.body.appendChild(consoleDiv);
+
+    const consolePanel = document.getElementById('dev-terminal-console-panel');
+    const terminalInput = document.getElementById('dev-terminal-input');
+    const terminalOutput = document.getElementById('dev-terminal-output');
+    const closeBtn = document.getElementById('dev-terminal-close');
+    const backdrop = document.getElementById('dev-terminal-backdrop');
+
+    function toggleTerminal() {
+      const isHidden = consoleDiv.classList.toggle('hidden');
+      if (!isHidden) {
+        setTimeout(() => {
+          terminalInput.focus();
+          terminalOutput.scrollTop = terminalOutput.scrollHeight;
+        }, 50);
+      }
+    }
+
+    trigger.addEventListener('click', toggleTerminal);
+    closeBtn.addEventListener('click', toggleTerminal);
+    backdrop.addEventListener('click', toggleTerminal);
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === '`' || e.key === '~') {
+        e.preventDefault();
+        toggleTerminal();
+      } else if (e.key === 'Escape' && !consoleDiv.classList.contains('hidden')) {
+        toggleTerminal();
+      }
+    });
+
+    terminalInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const val = terminalInput.value;
+        terminalInput.value = '';
+        if (val.trim()) {
+          executeCommand(val);
+        }
+      }
+    });
+  }
+
+  // Update nav highlights by toggling classes on existing elements (no innerHTML replacement = no flicker)
+  function updateNavHighlights(url) {
+    var folders = ['home_portfolio','about_portfolio','projects_portfolio','experience_portfolio','blog_portfolio','contact_portfolio'];
+    var activeFolder = '';
+    for (var i = 0; i < folders.length; i++) {
+      if (url.includes(folders[i])) { activeFolder = folders[i]; break; }
+    }
+    if (!activeFolder) return;
+
+    // Desktop nav links (inside header, outside mobile drawer)
+    var headerEl = document.querySelector('header');
+    if (headerEl) {
+      var links = headerEl.querySelectorAll('a[href]');
+      for (var j = 0; j < links.length; j++) {
+        var a = links[j];
+        if (a.closest('#mobile-drawer')) continue;
+        var href = a.getAttribute('href') || '';
+        var isNavLink = false;
+        for (var k = 0; k < folders.length; k++) { if (href.includes(folders[k])) { isNavLink = true; break; } }
+        if (!isNavLink) continue;
+        if (href.includes(activeFolder)) {
+          a.className = 'relative text-primary font-bold font-label-mono text-label-mono transition-colors duration-200 after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-primary after:rounded-full';
+        } else {
+          a.className = 'relative text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-colors duration-200';
+        }
+      }
+    }
+
+    // Drawer nav links
+    var drawerNav = document.querySelector('#mobile-drawer nav');
+    if (drawerNav) {
+      var dLinks = drawerNav.querySelectorAll('a[href]');
+      for (var d = 0; d < dLinks.length; d++) {
+        var da = dLinks[d];
+        var dHref = da.getAttribute('href') || '';
+        var isDLink = false;
+        for (var dk = 0; dk < folders.length; dk++) { if (dHref.includes(folders[dk])) { isDLink = true; break; } }
+        if (!isDLink) continue;
+        var dDelay = da.style.transitionDelay || '';
+        if (dHref.includes(activeFolder)) {
+          da.className = 'drawer-item flex items-center gap-md px-lg py-md rounded-2xl bg-primary/10 border border-primary/20 text-primary font-bold font-label-mono text-label-mono';
+        } else {
+          da.className = 'drawer-item flex items-center gap-md px-lg py-md rounded-2xl hover:bg-white/5 text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-all duration-300';
+        }
+        if (dDelay) da.style.transitionDelay = dDelay;
+      }
+    }
+
+    // Bottom nav links (find nav not in header or drawer)
+    var allNavs = document.querySelectorAll('nav');
+    for (var n = 0; n < allNavs.length; n++) {
+      var nav = allNavs[n];
+      if (nav.closest('header') || nav.closest('#mobile-drawer')) continue;
+      var bLinks = nav.querySelectorAll('a[href]');
+      for (var b = 0; b < bLinks.length; b++) {
+        var ba = bLinks[b];
+        var bHref = ba.getAttribute('href') || '';
+        var isBLink = false;
+        for (var bk = 0; bk < folders.length; bk++) { if (bHref.includes(folders[bk])) { isBLink = true; break; } }
+        if (!isBLink) continue;
+        if (bHref.includes(activeFolder)) {
+          ba.className = 'flex flex-col items-center justify-center gap-[3px] flex-1 relative text-primary';
+          ba.setAttribute('aria-current', 'page');
+          if (!ba.querySelector('[data-nav-indicator]')) {
+            var ind = document.createElement('div');
+            ind.className = 'absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-primary rounded-b-full';
+            ind.setAttribute('data-nav-indicator', '');
+            ba.insertBefore(ind, ba.firstChild);
+          }
+          var bTxt = ba.querySelector('span:last-child');
+          if (bTxt && !bTxt.classList.contains('font-bold')) bTxt.classList.add('font-bold');
+        } else {
+          ba.className = 'flex flex-col items-center justify-center gap-[3px] flex-1 text-on-surface-variant hover:text-primary transition-colors duration-200 active:scale-95';
+          ba.removeAttribute('aria-current');
+          var existInd = ba.querySelector('[data-nav-indicator]');
+          if (existInd) existInd.remove();
+          var bTxt2 = ba.querySelector('span:last-child');
+          if (bTxt2) bTxt2.classList.remove('font-bold');
+        }
+      }
+    }
+  }
+
+  // SPA Router for smooth page transitions
+  function navigateTo(url) {
+    if (window.location.href === url) return;
+    history.pushState(null, '', url);
+    loadPage(url);
+  }
+
+  window.addEventListener('popstate', () => {
+    loadPage(window.location.href, true);
+  });
+
+  async function loadPage(url, isPopState) {
+    const main = document.querySelector('main');
+    if (!main) return;
+
+    // Close mobile drawer if open
+    const drawer = document.getElementById('mobile-drawer');
+    if (drawer && drawer.classList.contains('open')) {
+      const closeBtn = document.getElementById('mobile-drawer-close');
+      if (closeBtn) {
+        drawer.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Fade out main content
+    main.style.transition = 'opacity 0.15s ease-out, transform 0.15s ease-out';
+    main.style.opacity = '0';
+    main.style.transform = 'translateY(8px)';
+    
+    await new Promise(r => setTimeout(r, 150));
+
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error("Fetch failed: " + res.status);
+      const htmlText = await res.text();
+      
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(htmlText, 'text/html');
+      
+      // Update title
+      document.title = doc.title;
+
+      // Clean up old SPA scripts to prevent memory build-up
+      document.querySelectorAll('script[data-spa-script="true"]').forEach(s => s.remove());
+
+      // Swap main container content and classes
+      const docMain = doc.querySelector('main');
+      if (docMain) {
+        main.innerHTML = docMain.innerHTML;
+        main.className = docMain.className;
+      }
+
+      // Update Navigation highlights (class-based, no innerHTML replacement = no flicker)
+      updateNavHighlights(url);
+
+      // Synchronize window.PORTFOLIO_CONFIG
+      const configScript = doc.querySelector('script[id^="stitch-config-json"]') || Array.from(doc.querySelectorAll('script')).find(s => s.innerHTML.includes('window.PORTFOLIO_CONFIG ='));
+      if (configScript) {
+        try {
+          const match = configScript.innerHTML.match(/window\.PORTFOLIO_CONFIG\s*=\s*(\{[\s\S]*?\});/);
+          if (match) {
+            window.PORTFOLIO_CONFIG = JSON.parse(match[1]);
+          }
+        } catch (e) {
+          console.error("Failed to parse config from loaded page script:", e);
+        }
+      }
+
+      // Execute scripts in main
+      executePageScripts(main);
+
+      // Load only NEW external scripts (CDN libs like Marked.js, Prism.js)
+      // Skip inline body scripts to prevent duplicate event listeners
+      var bodyScripts = Array.from(doc.body.querySelectorAll('script')).filter(function(s) {
+        var inHeader = s.closest('header');
+        var inDrawer = s.closest('#mobile-drawer');
+        var inMain = s.closest('main');
+        return !inHeader && !inDrawer && !inMain;
+      });
+      var loadedSrcs = new Set(Array.from(document.querySelectorAll('script[src]')).map(function(s) { return s.src; }));
+      bodyScripts.forEach(function(oldScript) {
+        var src = oldScript.getAttribute('src');
+        if (src) {
+          var tmp = document.createElement('a'); tmp.href = src;
+          if (!loadedSrcs.has(tmp.href)) {
+            var newScript = document.createElement('script');
+            newScript.setAttribute('data-spa-script', 'true');
+            Array.from(oldScript.attributes).forEach(function(attr) { newScript.setAttribute(attr.name, attr.value); });
+            document.body.appendChild(newScript);
+            loadedSrcs.add(tmp.href);
+          }
+        }
+      });
+
+      // Scroll to top
+      window.scrollTo(0, 0);
+
+      // Trigger popstate routing event hooks if needed (e.g. for blog posts details page hash checks)
+      window.dispatchEvent(new Event('hashchange'));
+
+    } catch (err) {
+      console.error("SPA routing error, performing fallback full redirect:", err);
+      window.location.href = url;
+      return;
+    }
+
+    // Fade back in with proper transition (double rAF ensures browser paints the faded state first)
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        main.style.transition = 'opacity 0.25s ease-out, transform 0.25s ease-out';
+        main.style.opacity = '1';
+        main.style.transform = 'translateY(0)';
+      });
+    });
+  }
+
+  function executePageScripts(container) {
+    const scripts = container.querySelectorAll('script');
+    scripts.forEach(oldScript => {
+      const newScript = document.createElement('script');
+      newScript.setAttribute('data-spa-script', 'true');
+      Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+      newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+      oldScript.parentNode.replaceChild(newScript, oldScript);
+    });
+  }
+
+  // Intercept relative page anchor clicks
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (!link) return;
+    
+    const href = link.getAttribute('href');
+    if (!href) return;
+    
+    if (href.startsWith('http') && !href.startsWith(window.location.origin)) return;
+    if (href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || link.target === '_blank') return;
+    if (href.includes('drive.google.com') || href.toLowerCase().endsWith('.pdf')) return;
+    
+    if (href.includes('code.html') || href.startsWith('/') || href.startsWith('..')) {
+      e.preventDefault();
+      navigateTo(link.href);
+    }
+  });
+
+  // Bind state and click handlers
+  document.addEventListener('DOMContentLoaded', () => {
+    const isModeActive = localStorage.getItem('recruiterMode') === 'true';
+    applyRecruiterView(isModeActive);
+    initTerminal();
+
+    // Header Switch Click Handler
+    const toggle = document.getElementById('global-recruiter-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        const active = localStorage.getItem('recruiterMode') === 'true';
+        const newState = !active;
+        localStorage.setItem('recruiterMode', newState ? 'true' : 'false');
+        applyRecruiterView(newState);
+      });
+    }
+
+    // Settings Page Switch Click Handler
+    const pageToggle = document.getElementById('toggle-recruiter');
+    if (pageToggle) {
+      pageToggle.addEventListener('click', () => {
+        const active = localStorage.getItem('recruiterMode') === 'true';
+        const newState = !active;
+        localStorage.setItem('recruiterMode', newState ? 'true' : 'false');
+        applyRecruiterView(newState);
+      });
+    }
+  });
+})();
+</script>
+      
+<!-- STITCH_HEADER_AVATAR_END -->
+</div>
+</header>
+<main class="relative pt-32 pb-40 px-4 md:px-8 max-w-container-max mx-auto">
+<!-- Hero Section / Identity -->
+<section class="mb-xxl reveal-on-scroll">
+<div class="flex flex-col md:flex-row gap-xl items-start">
+<div class="flex-1">
+<h1 class="font-display text-display text-primary mb-md">Engineering <br/>Architecture.</h1>
+<!-- STITCH_ABOUT_INTRO_START -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    I'm Nani Sontyana, a Full Stack Developer. Passionate about bridging the gap between design and engineering. Specialized in React, TypeScript, and Cloud Architecture.
+                </p>
+<!-- STITCH_ABOUT_INTRO_END -->
+</div>
+<div class="hidden md:block w-px h-64 bg-gradient-to-b from-primary/50 to-transparent self-center mx-lg"></div>
+<div class="flex flex-col gap-sm">
+<!-- STITCH_ABOUT_LOCATION_START -->
+<div class="flex items-center gap-sm text-primary">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+<span class="font-label-mono text-label-mono">Visakhapatnam, India</span>
+</div>
+<!-- STITCH_ABOUT_LOCATION_END -->
+<!-- STITCH_ABOUT_EMAIL_START -->
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-label-mono text-label-mono">nanisontyana47@gmail.com</span>
+</div>
+<!-- STITCH_ABOUT_EMAIL_END -->
+<!-- STITCH_ABOUT_RESUME_START -->
+<div class="mt-md">
+<a href="https://drive.google.com/file/d/1e1WEKuGPQeq2oAnUPHIDEYMaESPyZYyE/view?usp=drive_link" class="bg-primary text-on-primary px-lg py-sm rounded-lg font-bold hover:brightness-110 hover:shadow-[0_0_20px_rgba(192,193,255,0.3)] transition-all active:scale-95 inline-block">Download CV</a>
+</div>
+<!-- STITCH_ABOUT_RESUME_END -->
+</div>
+</div>
+</section>
+<!-- STITCH_PROFILE_HEADER_START -->
+<section class="mb-xxl reveal-on-scroll">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-lg">
+<div class="md:col-span-8 glass-card p-xl rounded-xl">
+<h2 class="font-headline-md text-headline-md text-primary mb-lg">Mission &amp; Expertise</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed space-y-4">
+                        Building high-performance, scalable web applications with a focus on developer experience and elegant UI.
+                        <br/><br/>
+                        Passionate about bridging the gap between design and engineering. Specialized in React, TypeScript, and Cloud Architecture.
+                    </p>
+</div>
+<div class="md:col-span-4 glass-card p-xl rounded-xl flex flex-col justify-center items-center text-center">
+<span class="font-display text-[42px] md:text-[48px] font-extrabold text-primary leading-normal py-4">Fresher</span>
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface-variant">Experience</span>
+<div class="w-16 h-1 bg-primary mt-lg"></div>
+</div>
+</div>
+</section>
+<!-- STITCH_PROFILE_HEADER_END -->
+<!-- STITCH_SKILLS_START -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+  <div class="flex flex-col gap-lg reveal-on-scroll">
+    <div class="flex items-center gap-sm mb-sm">
+      <span class="material-symbols-outlined text-primary" data-icon="palette">palette</span>
+      <h3 class="font-headline-md text-headline-md text-primary">Frontend</h3>
+    </div>
+    <div class="glass-card p-lg rounded-xl flex flex-col gap-md">
+      <div class="flex justify-between items-center">
+        <span class="font-label-mono text-label-mono text-on-surface">React</span>
+        <span class="text-primary font-bold">96%</span>
+      </div>
+      <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+        <div class="skill-progress-fill h-full bg-primary" style="width: 96%"></div>
+      </div>
+    </div>
+    <div class="glass-card p-lg rounded-xl flex flex-col gap-md">
+      <div class="flex justify-between items-center">
+        <span class="font-label-mono text-label-mono text-on-surface">TypeScript</span>
+        <span class="text-primary font-bold">99%</span>
+      </div>
+      <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+        <div class="skill-progress-fill h-full bg-primary" style="width: 99%"></div>
+      </div>
+    </div>
+    <div class="glass-card p-lg rounded-xl flex flex-col gap-md">
+      <div class="flex justify-between items-center">
+        <span class="font-label-mono text-label-mono text-on-surface">Angular</span>
+        <span class="text-primary font-bold">94%</span>
+      </div>
+      <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+        <div class="skill-progress-fill h-full bg-primary" style="width: 94%"></div>
+      </div>
+    </div>
+    <div class="glass-card p-lg rounded-xl flex flex-col gap-md">
+      <div class="flex justify-between items-center">
+        <span class="font-label-mono text-label-mono text-on-surface">JavaScript</span>
+        <span class="text-primary font-bold">80%</span>
+      </div>
+      <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+        <div class="skill-progress-fill h-full bg-primary" style="width: 80%"></div>
+      </div>
+    </div>
+    <div class="glass-card p-lg rounded-xl flex flex-col gap-md">
+      <div class="flex justify-between items-center">
+        <span class="font-label-mono text-label-mono text-on-surface">Tailwind css</span>
+        <span class="text-primary font-bold">80%</span>
+      </div>
+      <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+        <div class="skill-progress-fill h-full bg-primary" style="width: 80%"></div>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-lg reveal-on-scroll" style="transition-delay: 100ms;">
+    <div class="flex items-center gap-sm mb-sm">
+      <span class="material-symbols-outlined text-tertiary" data-icon="database">database</span>
+      <h3 class="font-headline-md text-headline-md text-tertiary">Backend</h3>
+    </div>
+    <div class="glass-card p-lg rounded-xl flex flex-col gap-md">
+      <div class="flex justify-between items-center">
+        <span class="font-label-mono text-label-mono text-on-surface">Node.js</span>
+        <span class="text-tertiary font-bold">90%</span>
+      </div>
+      <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+        <div class="skill-progress-fill h-full bg-tertiary" style="width: 90%"></div>
+      </div>
+    </div>
+    <div class="glass-card p-lg rounded-xl flex flex-col gap-md">
+      <div class="flex justify-between items-center">
+        <span class="font-label-mono text-label-mono text-on-surface">Python</span>
+        <span class="text-tertiary font-bold">80%</span>
+      </div>
+      <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+        <div class="skill-progress-fill h-full bg-tertiary" style="width: 80%"></div>
+      </div>
+    </div>
+    <div class="glass-card p-lg rounded-xl flex flex-col gap-md">
+      <div class="flex justify-between items-center">
+        <span class="font-label-mono text-label-mono text-on-surface">PostgreSQL</span>
+        <span class="text-tertiary font-bold">85%</span>
+      </div>
+      <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+        <div class="skill-progress-fill h-full bg-tertiary" style="width: 85%"></div>
+      </div>
+    </div>
+    <div class="glass-card p-lg rounded-xl flex flex-col gap-md">
+      <div class="flex justify-between items-center">
+        <span class="font-label-mono text-label-mono text-on-surface">MongoDB</span>
+        <span class="text-tertiary font-bold">100%</span>
+      </div>
+      <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+        <div class="skill-progress-fill h-full bg-tertiary" style="width: 100%"></div>
+      </div>
+    </div>
+    <div class="glass-card p-lg rounded-xl flex flex-col gap-md">
+      <div class="flex justify-between items-center">
+        <span class="font-label-mono text-label-mono text-on-surface">Next.js</span>
+        <span class="text-tertiary font-bold">80%</span>
+      </div>
+      <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+        <div class="skill-progress-fill h-full bg-tertiary" style="width: 80%"></div>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-lg reveal-on-scroll" style="transition-delay: 200ms;">
+    <div class="flex items-center gap-sm mb-sm">
+      <span class="material-symbols-outlined text-secondary" data-icon="build">build</span>
+      <h3 class="font-headline-md text-headline-md text-secondary">Tools</h3>
+    </div>
+    <div class="glass-card p-lg rounded-xl flex flex-col gap-md">
+      <div class="flex justify-between items-center">
+        <span class="font-label-mono text-label-mono text-on-surface">Docker</span>
+        <span class="text-secondary font-bold">80%</span>
+      </div>
+      <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+        <div class="skill-progress-fill h-full bg-secondary" style="width: 80%"></div>
+      </div>
+    </div>
+    <div class="glass-card p-lg rounded-xl flex flex-col gap-md">
+      <div class="flex justify-between items-center">
+        <span class="font-label-mono text-label-mono text-on-surface">Git</span>
+        <span class="text-secondary font-bold">95%</span>
+      </div>
+      <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+        <div class="skill-progress-fill h-full bg-secondary" style="width: 95%"></div>
+      </div>
+    </div>
+    <div class="glass-card p-lg rounded-xl flex flex-col gap-md">
+      <div class="flex justify-between items-center">
+        <span class="font-label-mono text-label-mono text-on-surface">AWS</span>
+        <span class="text-secondary font-bold">75%</span>
+      </div>
+      <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+        <div class="skill-progress-fill h-full bg-secondary" style="width: 75%"></div>
+      </div>
+    </div>
+    <div class="glass-card p-lg rounded-xl flex flex-col gap-md">
+      <div class="flex justify-between items-center">
+        <span class="font-label-mono text-label-mono text-on-surface">GitHub</span>
+        <span class="text-secondary font-bold">80%</span>
+      </div>
+      <div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+        <div class="skill-progress-fill h-full bg-secondary" style="width: 80%"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- STITCH_SKILLS_END -->
+<!-- CTA Section -->
+<section class="reveal-on-scroll">
+<div class="glass-card p-xl rounded-2xl flex flex-col md:flex-row items-center justify-between gap-xl bg-primary/5 border-primary/20">
+<div class="text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg text-white mb-sm">Let's build something <span class="text-primary">extraordinary</span>.</h2>
+<p class="text-on-surface-variant font-body-md">Currently available for high-impact collaborations.</p>
+</div>
+<button class="bg-white text-black px-xl py-md rounded-full font-bold hover:bg-primary hover:text-on-primary transition-all active:scale-95 whitespace-nowrap">
+                    Initiate Discussion
+                </button>
+</div>
+</section>
+<script>
+        // Scroll Reveal Implementation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    
+                    // If it contains skill bars, trigger their animation
+                    const bars = entry.target.querySelectorAll('.skill-progress-fill');
+                    bars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 100);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+        // Interaction scale effect for all glass cards
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousedown', () => {
+                card.style.transform = 'scale(0.98) translateY(-2px)';
+            });
+            card.addEventListener('mouseup', () => {
+                card.style.transform = 'scale(1) translateY(-4px)';
+            });
+        });
+    </script>
+    <script>
+      (function() {
+        const toggleBtn = document.getElementById('theme-toggle');
+        if (toggleBtn) {
+          const icon = toggleBtn.querySelector('.material-symbols-outlined');
+          if (icon) {
+            icon.textContent = document.documentElement.classList.contains('dark') ? 'dark_mode' : 'light_mode';
+          }
+          if (!toggleBtn.dataset.listenerBound) {
+            toggleBtn.dataset.listenerBound = 'true';
+            toggleBtn.addEventListener('click', () => {
+              const isDark = document.documentElement.classList.toggle('dark');
+              localStorage.setItem('theme', isDark ? 'dark' : 'light');
+              if (icon) {
+                icon.textContent = isDark ? 'dark_mode' : 'light_mode';
+              }
+            });
+          }
+        }
+      })();
+    </script>
+</main>
+<!-- Bottom Navigation Bar (Mobile) -->
+<!-- STITCH_NAV_MOBILE_START -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full z-50" style="padding-bottom: env(safe-area-inset-bottom, 0px)">
+  <div class="bg-surface/80 backdrop-blur-xl border-t border-white/10 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] flex justify-around items-stretch h-[64px]">
+    <a href="../home_portfolio/code.html" class="flex flex-col items-center justify-center gap-[3px] flex-1 text-on-surface-variant hover:text-primary transition-colors duration-200 active:scale-95">
+      <span class="material-symbols-outlined text-[22px] leading-none">home</span>
+      <span class="font-label-mono text-[9px] tracking-wider uppercase">Home</span>
+    </a>
+    <a href="../about_portfolio/code.html" class="flex flex-col items-center justify-center gap-[3px] flex-1 relative text-primary" aria-current="page">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-primary rounded-b-full" data-nav-indicator></div>
+      <span class="material-symbols-outlined text-[22px] leading-none">person</span>
+      <span class="font-label-mono text-[9px] font-bold tracking-wider uppercase">About</span>
+    </a>
+    <a href="../projects_portfolio/code.html" class="flex flex-col items-center justify-center gap-[3px] flex-1 text-on-surface-variant hover:text-primary transition-colors duration-200 active:scale-95">
+      <span class="material-symbols-outlined text-[22px] leading-none">code</span>
+      <span class="font-label-mono text-[9px] tracking-wider uppercase">Projects</span>
+    </a>
+    <a href="../experience_portfolio/code.html" class="flex flex-col items-center justify-center gap-[3px] flex-1 text-on-surface-variant hover:text-primary transition-colors duration-200 active:scale-95">
+      <span class="material-symbols-outlined text-[22px] leading-none">work</span>
+      <span class="font-label-mono text-[9px] tracking-wider uppercase">Experience</span>
+    </a>
+    <a href="../blog_portfolio/code.html" class="flex flex-col items-center justify-center gap-[3px] flex-1 text-on-surface-variant hover:text-primary transition-colors duration-200 active:scale-95">
+      <span class="material-symbols-outlined text-[22px] leading-none">article</span>
+      <span class="font-label-mono text-[9px] tracking-wider uppercase">Blog</span>
+    </a>
+    <a href="../contact_portfolio/code.html" class="flex flex-col items-center justify-center gap-[3px] flex-1 text-on-surface-variant hover:text-primary transition-colors duration-200 active:scale-95">
+      <span class="material-symbols-outlined text-[22px] leading-none">settings</span>
+      <span class="font-label-mono text-[9px] tracking-wider uppercase">Settings</span>
+    </a>
+  </div>
+</nav>
+<!-- STITCH_NAV_MOBILE_END -->
+</body></html>
