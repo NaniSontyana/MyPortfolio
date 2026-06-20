@@ -8,7 +8,7 @@ export const portfolioConfig = {
     "title": "Full Stack Developer",
     "introduction": "Building high-performance, scalable web applications with a focus on developer experience and elegant UI.",
     "shortBio": "Passionate about bridging the gap between design and engineering. Specialized in React, TypeScript, and Cloud Architecture.",
-    "profilePhoto": "",
+    "profilePhoto": "../home_portfolio/profile.png",
     "resumeUrl": "https://drive.google.com/file/d/1e1WEKuGPQeq2oAnUPHIDEYMaESPyZYyE/view?usp=drive_link",
     "email": "nanisontyana47@gmail.com",
     "location": "Visakhapatnam, India",
