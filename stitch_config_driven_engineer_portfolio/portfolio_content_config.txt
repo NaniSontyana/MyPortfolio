@@ -8,7 +8,7 @@ export const portfolioConfig = {
     "title": "Full Stack Developer",
     "introduction": "Building high-performance, scalable web applications with a focus on developer experience and elegant UI.",
     "shortBio": "Passionate about bridging the gap between design and engineering. Specialized in React, TypeScript, and Cloud Architecture.",
-    "profilePhoto": "https://drive.google.com/file/d/1K_uhyEzBskNXsWk7KUDmbidexuzfbZOe/view?usp=drive_link",
+    "profilePhoto": "https://i.ibb.co/k64c35KZ/Gemini-Generated-Image-1g32h61g32h61g32.png",
     "resumeUrl": "https://drive.google.com/file/d/1e1WEKuGPQeq2oAnUPHIDEYMaESPyZYyE/view?usp=drive_link",
     "email": "nanisontyana47@gmail.com",
     "location": "Visakhapatnam, India",
@@ -190,29 +190,46 @@ export const portfolioConfig = {
   ],
   "experience": [
     {
-      "company": "TechNova Systems",
-      "role": "Software Engineering Intern",
-      "duration": "June 2023 - Aug 2023",
-      "location": "Remote",
+      "company": "brainoVision private LTD.",
+      "role": "full stack developer",
+      "duration": "June 2024 - Aug 2024",
+      "location": "hydrabad",
       "description": "Developed microservices for a large-scale e-commerce platform using Spring Boot.",
       "technologies": [
         "Java",
         "Spring Boot",
-        "Kafka"
+        "Kafka",
+        "tomcat",
+        "html",
+        "css"
       ],
-      "logo": "https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&q=80&w=100"
+      "logo": "https://drive.google.com/file/d/1a3ecQTuDKSVKVMtz6Tw3Djgxd9Z0t4xU/view?usp=sharing"
     }
   ],
   "education": [
     {
-      "institution": "Stanford University",
-      "degree": "B.S. in Computer Science",
-      "duration": "2020 - 2024",
-      "cgpa": "3.9/4.0",
-      "achievements": [
-        "Dean's List",
-        "UPE Honor Society"
-      ]
+      "institution": "Baba Institute Of Technology And Management",
+      "degree": "Computer Science and Engineering",
+      "duration": "2022 - 2026",
+      "cgpa": "8.1/10.0",
+      "achievements": [],
+      "focusArea": "computer Science"
+    },
+    {
+      "institution": "Sri VenkataSai Inter College",
+      "degree": "MPC",
+      "duration": "2020 - 2022",
+      "cgpa": "77.1/100",
+      "focusArea": "science",
+      "achievements": []
+    },
+    {
+      "institution": "Z.P High School -nivagam",
+      "degree": "Secondary Education",
+      "duration": "2020",
+      "cgpa": "9.8/10",
+      "focusArea": "",
+      "achievements": []
     }
   ],
   "skillsSummary": [
