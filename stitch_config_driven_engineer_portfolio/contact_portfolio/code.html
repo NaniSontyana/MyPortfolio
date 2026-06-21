@@ -4,19 +4,112 @@
 
 <head>
   <script>
-    (function () {
-      const theme = localStorage.getItem('theme') || 'dark';
-      if (theme === 'dark') {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-    })();
-  </script>
+  (function() {
+    document.documentElement.classList.add('dark');
+  })();
+</script>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <!-- STITCH_TITLE_START -->
 <title>Settings &amp; Contact | Nani Sontyana Portfolio</title>
+<!-- STITCH_TITLE_END -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+              "maxWidth": {
+                "container-max": "1200px"
+              },
+          "colors": {
+            "surface": "var(--color-surface)",
+            "on-tertiary-container": "var(--color-on-tertiary-container)",
+            "tertiary-fixed": "var(--color-tertiary-fixed)",
+            "primary": "var(--color-primary)",
+            "on-primary-container": "var(--color-on-primary-container)",
+            "primary-fixed-dim": "var(--color-primary-fixed-dim)",
+            "on-tertiary-fixed-variant": "var(--color-on-tertiary-fixed-variant)",
+            "on-secondary-fixed-variant": "var(--color-on-secondary-fixed-variant)",
+            "surface-container-lowest": "var(--color-surface-container-lowest)",
+            "inverse-primary": "var(--color-inverse-primary)",
+            "surface-container-low": "var(--color-surface-container-low)",
+            "on-tertiary-fixed": "var(--color-on-tertiary-fixed)",
+            "on-surface": "var(--color-on-surface)",
+            "surface-tint": "var(--color-surface-tint)",
+            "surface-bright": "var(--color-surface-bright)",
+            "surface-container-high": "var(--color-surface-container-high)",
+            "surface-container": "var(--color-surface-container)",
+            "on-surface-variant": "var(--color-on-surface-variant)",
+            "inverse-surface": "var(--color-inverse-surface)",
+            "surface-variant": "var(--color-surface-variant)",
+            "on-error": "var(--color-on-error)",
+            "on-error-container": "var(--color-on-error-container)",
+            "on-primary": "var(--color-on-primary)",
+            "outline": "var(--color-outline)",
+            "on-secondary-fixed": "var(--color-on-secondary-fixed)",
+            "tertiary-fixed-dim": "var(--color-tertiary-fixed-dim)",
+            "primary-container": "var(--color-primary-container)",
+            "on-secondary-container": "var(--color-on-secondary-container)",
+            "on-background": "var(--color-on-background)",
+            "on-primary-fixed-variant": "var(--color-on-primary-fixed-variant)",
+            "background": "var(--color-background)",
+            "tertiary": "var(--color-tertiary)",
+            "error": "var(--color-error)",
+            "primary-fixed": "var(--color-primary-fixed)",
+            "tertiary-container": "var(--color-tertiary-container)",
+            "on-tertiary": "var(--color-on-tertiary)",
+            "on-primary-fixed": "var(--color-on-primary-fixed)",
+            "inverse-on-surface": "var(--color-inverse-on-surface)",
+            "surface-dim": "var(--color-surface-dim)",
+            "surface-container-highest": "var(--color-surface-container-highest)",
+            "secondary-fixed-dim": "var(--color-secondary-fixed-dim)",
+            "secondary-fixed": "var(--color-secondary-fixed)",
+            "error-container": "var(--color-error-container)",
+            "secondary": "var(--color-secondary)",
+            "outline-variant": "var(--color-outline-variant)",
+            "secondary-container": "var(--color-secondary-container)",
+            "on-secondary": "var(--color-on-secondary)",
+            "white/10": "var(--border-color)",
+            "white/5": "var(--border-color-soft)"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "24px",
+            "sm": "8px",
+            "xxl": "96px",
+            "unit": "4px",
+            "md": "16px",
+            "xl": "48px",
+            "lg": "24px",
+            "xs": "4px",
+            "container-max": "1200px"
+          },
+          "fontFamily": {
+            "headline-md": ["Geist"],
+            "headline-lg": ["Geist"],
+            "label-mono": ["JetBrains Mono"],
+            "body-md": ["Geist"],
+            "display": ["Geist"],
+            "headline-lg-mobile": ["Geist"],
+            "body-lg": ["Geist"]
+          },
+          "fontSize": {
+            "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
 <!-- STITCH_TITLE_END -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link
@@ -122,17 +215,104 @@
             "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
             "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
           }
-    input: focus, textarea: focus, select: focus {
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --font-geist: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --color-background: #12131a;
+      --color-on-background: #e3e1ec;
+      --color-surface: #12131a;
+      --color-on-surface: #e3e1ec;
+      --color-surface-variant: #33343c;
+      --color-on-surface-variant: #c7c4d7;
+      --color-outline: #908fa0;
+      --color-outline-variant: #464554;
+      --color-primary: #c0c1ff;
+      --color-on-primary: #1000a9;
+      --color-primary-container: #8083ff;
+      --color-on-primary-container: #0d0096;
+      --color-secondary: #c9c6c5;
+      --color-on-secondary: #313030;
+      --color-secondary-container: #4a4949;
+      --color-on-secondary-container: #bab8b7;
+      --color-tertiary: #ffb783;
+      --color-on-tertiary: #4f2500;
+      --color-tertiary-container: #d97721;
+      --color-on-tertiary-container: #452000;
+      --color-surface-dim: #12131a;
+      --color-surface-bright: #383941;
+      --color-surface-container-lowest: #0d0e15;
+      --color-surface-container-low: #1a1b22;
+      --color-surface-container: #1e1f26;
+      --color-surface-container-high: #292931;
+      --color-surface-container-highest: #33343c;
+      --color-primary-fixed: #e1e0ff;
+      --color-primary-fixed-dim: #c0c1ff;
+      --color-on-primary-fixed: #07006c;
+      --color-on-primary-fixed-variant: #2f2ebe;
+      --color-secondary-fixed: #e5e2e1;
+      --color-secondary-fixed-dim: #c9c6c5;
+      --color-on-secondary-fixed: #1c1b1b;
+      --color-on-secondary-fixed-variant: #474646;
+      --color-tertiary-fixed: #ffdcc5;
+      --color-tertiary-fixed-dim: #ffb783;
+      --color-on-tertiary-fixed: #301400;
+      --color-on-tertiary-fixed-variant: #703700;
+      --color-inverse-primary: #494bd6;
+      --color-inverse-surface: #e3e1ec;
+      --color-inverse-on-surface: #2f3038;
+      --color-surface-tint: #c0c1ff;
+      --color-error-container: #93000a;
+      --color-error: #ffb4ab;
+      --color-on-error: #690005;
+
+      --glass-bg: rgba(10, 10, 10, 0.7);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --glass-hover-border: rgba(255, 255, 255, 0.2);
+      --glass-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+      --border-color: rgba(255, 255, 255, 0.1);
+      --border-color-soft: rgba(255, 255, 255, 0.05);
+
+      --primary-glow: rgba(192, 193, 255, 0.15);
+      --primary-glow-hover: rgba(192, 193, 255, 0.4);
+      --header-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+      --highlight-border-color: rgba(192, 193, 255, 0.4);
+      --highlight-shadow-color: rgba(192, 193, 255, 0.2);
+      --input-focus-shadow: rgba(192, 193, 255, 0.25);
+    }
+
+    input:focus, textarea:focus, select:focus {
       outline: none;
-      border - color: var(--color - primary);
-      box - shadow: 0 0 0 2px var(--input - focus - shadow);
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 2px var(--input-focus-shadow);
     }
     
     body {
-      min - height: max(884px, 100dvh);
+      min-height: max(884px, 100dvh);
+      background-color: var(--color-background);
+      color: var(--color-on-background);
+      font-family: var(--font-geist);
     }
-  </style >
-</head >
+
+    .glass-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass-card:hover {
+      border-color: var(--glass-hover-border);
+      transform: translateY(-4px);
+      box-shadow: var(--glass-shadow);
+    }
+  </style>
+</head>
       <body class="font-body-md text-body-md antialiased">
 <!-- STITCH_SHADER_START -->
 <div class="fixed inset-0 w-full h-full" style="display:block;">
@@ -257,7 +437,6 @@ void main() {
   <a class="relative text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-colors duration-200" href="../projects_portfolio/code.html">Projects</a>
   <a class="relative text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-colors duration-200" href="../experience_portfolio/code.html">Experience</a>
   <a class="relative text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-colors duration-200" href="../blog_portfolio/code.html">Blog</a>
-  <a class="relative text-primary font-bold font-label-mono text-label-mono transition-colors duration-200 after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-primary after:rounded-full" href="../contact_portfolio/code.html">Settings</a>
 </nav>
 <!-- Mobile hamburger button (hidden as requested, using bottom mobile nav bar) -->
 <button id="mobile-menu-btn" class="hidden" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
@@ -297,10 +476,6 @@ void main() {
   <a href="../blog_portfolio/code.html" style="transition-delay:240ms" class="drawer-item flex items-center gap-md px-lg py-md rounded-2xl hover:bg-white/5 text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-all duration-300">
     <span class="material-symbols-outlined text-[22px]">article</span>
     <span>Blog</span>
-  </a>
-  <a href="../contact_portfolio/code.html" style="transition-delay:300ms" class="drawer-item flex items-center gap-md px-lg py-md rounded-2xl bg-primary/10 border border-primary/20 text-primary font-bold font-label-mono text-label-mono">
-    <span class="material-symbols-outlined text-[22px]">settings</span>
-    <span>Settings</span>
   </a>
     </nav>
     <!-- Drawer footer -->
@@ -346,10 +521,7 @@ void main() {
 </script>
 <!-- STITCH_NAV_DESKTOP_END -->
     <div class="flex items-center gap-md">
-      <button id="theme-toggle"
-        class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/5 transition-colors active:scale-95">
-        <span class="material-symbols-outlined text-primary">dark_mode</span>
-      </button>
+      
       <!-- STITCH_HEADER_AVATAR_START -->
 
 <div class="flex items-center gap-2 mr-2">
@@ -358,9 +530,9 @@ void main() {
     <span class="inline-block h-3.5 w-3.5 transform rounded-full bg-on-surface-variant transition-transform duration-300" id="global-recruiter-thumb" style="transform: translateX(2px)"></span>
   </button>
 </div>
-<div class="w-10 h-10 rounded-full overflow-hidden border border-white/10">
-<img alt="Nani Sontyana" class="w-full h-full object-cover" data-alt="Profile" src="../home_portfolio/profile.png"/>
-</div>
+<a href="../contact_portfolio/code.html#edit" data-avatar-link="true" class="w-10 h-10 rounded-full overflow-hidden border border-white/10 cursor-pointer block hover:scale-105 active:scale-95 transition-transform" title="Admin Settings">
+  <img alt="Nani Sontyana" class="w-full h-full object-cover" data-alt="Profile" src="../home_portfolio/profile.png"/>
+</a>
 <script>
 (function() {
   const config = {"personalInfo":{"name":"Nani Sontyana","title":"Full Stack Developer","introduction":"Building high-performance, scalable web applications with a focus on developer experience and elegant UI.","shortBio":"Passionate about bridging the gap between design and engineering. Specialized in React, TypeScript, and Cloud Architecture.","profilePhoto":"../home_portfolio/profile.png","resumeUrl":"https://drive.google.com/file/d/1e1WEKuGPQeq2oAnUPHIDEYMaESPyZYyE/view?usp=drive_link","email":"nanisontyana47@gmail.com","location":"Visakhapatnam, India","yearsOfExperience":"Fresher","yearsOfExperienceLabel":"Experience"},"socialLinks":{"github":"https://github.com/NaniSontyana","linkedin":"https://linkedin.com/in/nani-sontyana","twitter":"https://twitter.com/nani_sontyana","leetcode":"https://leetcode.com/u/nani_sontyana"},"stats":[{"label":"Projects Completed","value":"15+","icon":"Briefcase"},{"label":"Certifications","value":"4","icon":"Award"},{"label":"Internships","value":"2","icon":"Terminal"},{"label":"Problems Solved","value":"200+","icon":"Code"}],"skills":[{"category":"Frontend","items":[{"name":"React","level":96,"icon":"atom"},{"name":"TypeScript","level":99,"icon":"code"},{"name":"Angular","level":94},{"name":"JavaScript","level":80},{"name":"Tailwind css","level":80}]},{"category":"Backend","items":[{"name":"Node.js","level":90,"icon":"cpu"},{"name":"Python","level":80,"icon":"cpu"},{"name":"PostgreSQL","level":85,"icon":"database"},{"name":"MongoDB","level":100},{"name":"Next.js","level":80}]},{"category":"Tools","items":[{"name":"Docker","level":80,"icon":"container"},{"name":"Git","level":95,"icon":"git-branch"},{"name":"AWS","level":75,"icon":"cloud"},{"name":"GitHub","level":80}]}],"projects":[{"title":"smartHR-attrition Based Prediction System","description":"ML): Designed and built an enterprise-grade HR\nintelligence platform featuring real-time attrition risk scoring and workforce telemetry. Implemented a decoupled architecture\nhosting a React/Vite SPA on Vercel, an Express API gateway on Render, and a Python Flask ML microservice. Leveraged\nScikit-Learn to execute feature importance analyses, enabling explainable risk predictions based on demographic and\noperational metrics. Established security best practices including Bcrypt password hashing, JWT authorization middleware.\n","technologies":["React","Tailwind","Express","Python","ML"],"githubLink":"https://github.com/NaniSontyana/smartHR-main","liveLink":"https://smarthr-three.vercel.app/","image":"https://drive.google.com/file/d/1b7VGox5fkNkqv1g92xKaiscqxqqx1bXy/view?usp=sharing","category":"Web Development & ML","featured":true,"metrics":{"latency":"< 20ms","fcp":"0.40s","bundleSize":"40kB"}},{"title":"Subscription Tracker","description":"(Backend-Focused): Developed a backend-driven subscription management system to help\nusers track recurring subscriptions and avoid missed renewals. Implemented automated email reminders scheduled at multiple\nintervals before renewal dates using event-driven workflows. Designed secure RESTful APIs for subscription management,\nauthentication, and notifications. Tech: Node.js, Express.js, MongoDB, JWT, Nodemailer, Upstash QStash, Arcjet, Git.","technologies":["HTML","CSS","javascript","Express.js"],"githubLink":"https://github.com/NaniSontyana/subscrption_tracker","liveLink":"https://subscrption-tracker-2.onrender.com","image":"https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=600","category":"Web Development","featured":true,"metrics":{"latency":"< 10ms","fcp":"0.40s","bundleSize":"40kB"}},{"title":"E-commerce platform","description":"A complete E-commerce website with frontend, backend and Admin page. used MongoDb as a Database server to store the complete data to store the data.","technologies":["React","Tailwind","Express","Node","MongoDB"],"githubLink":"https://github.com/NaniSontyana/e-commerce-2","liveLink":"https://github.com/NaniSontyana/e-commerce-2","image":"https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=600","category":"Web Development","featured":true,"metrics":{"latency":"< 10ms","fcp":"0.40s","bundleSize":"40kB"}}],"experience":[{"company":"TechNova Systems","role":"Software Engineering Intern","duration":"June 2023 - Aug 2023","location":"Remote","description":"Developed microservices for a large-scale e-commerce platform using Spring Boot.","technologies":["Java","Spring Boot","Kafka"],"logo":"https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&q=80&w=100"}],"education":[{"institution":"Stanford University","degree":"B.S. in Computer Science","duration":"2020 - 2024","cgpa":"3.9/4.0","achievements":["Dean's List","UPE Honor Society"]}],"skillsSummary":[{"category":"Languages","icon":"translate","color":"primary","items":[{"name":"JAVA","iconType":"devicon","icon":"devicon-java-plain colored"},{"name":"Python","iconType":"devicon","icon":"devicon-python-plain colored"},{"name":"JavaScript","iconType":"devicon","icon":"devicon-javascript-plain colored"},{"name":"C++","iconType":"devicon","icon":"devicon-cplusplus-plain colored"}]},{"category":"Frameworks","icon":"layers","color":"tertiary","items":[{"name":"React.js","iconType":"devicon","icon":"devicon-react-original colored"},{"name":"Express.js","iconType":"devicon","icon":"devicon-express-original"},{"name":"NodeJS","iconType":"devicon","icon":"devicon-nodejs-plain colored"}]},{"category":"Tools","icon":"build","color":"primary","items":[{"name":"Git","iconType":"devicon","icon":"devicon-git-plain colored"},{"name":"GitHub","iconType":"devicon","icon":"devicon-github-original"},{"name":"MongoDB","iconType":"devicon","icon":"devicon-mongodb-plain colored"},{"name":"PostgreSQL","iconType":"devicon","icon":"devicon-postgresql-plain colored"},{"name":"MySQL","iconType":"devicon","icon":"devicon-mysql-plain colored"},{"name":"SQLite","iconType":"devicon","icon":"devicon-sqlite-plain colored"}]},{"category":"Soft Skills","icon":"psychology","color":"tertiary","items":[{"name":"Leadership","iconType":"material","icon":"groups"},{"name":"Writing","iconType":"material","icon":"edit_note"},{"name":"Public Speaking","iconType":"material","icon":"record_voice_over"},{"name":"Time Management","iconType":"material","icon":"schedule"}]}],"blogPosts":[{"title":"Building a Config-Driven Developer Portfolio","slug":"config-driven-portfolio","description":"How to create a single source of truth for your developer profile, projects, and themes using a dynamic compiler.","date":"2026-06-18","tags":["NodeJS","JavaScript","HTML","CMS"],"filePath":"../blog_portfolio/posts/config-driven-portfolio.md"},{"title":"Understanding WebGL Shaders for Web Design","slug":"webgl-shaders","description":"An introduction to writing vertex and fragment shaders for atmospheric web backgrounds and interactive elements.","date":"2026-06-15","tags":["WebGL","GLSL","Graphics","CSS"],"filePath":"../blog_portfolio/posts/webgl-shaders.md"}]};
@@ -532,7 +704,7 @@ void main() {
       printLog(outputEl, '  <span class="text-primary font-bold">projects</span> - Show portfolio projects');
       printLog(outputEl, '  <span class="text-primary font-bold">contact</span>  - Output email and social URLs');
       printLog(outputEl, '  <span class="text-primary font-bold">resume</span>   - Print resume / CV link');
-      printLog(outputEl, '  <span class="text-primary font-bold">theme</span>    - Toggle dark / light mode');
+      printLog(outputEl, '  <span class="text-primary font-bold">theme</span>    - Show theme settings status');
       printLog(outputEl, '  <span class="text-primary font-bold">clear</span>    - Flush the terminal logs');
       return;
     }
@@ -556,7 +728,7 @@ void main() {
     <div><span class="text-tertiary">TITLE:</span> ${config.personalInfo.title}</div>
     <div><span class="text-tertiary">EXP:</span> ${config.personalInfo.yearsOfExperience}</div>
     <div><span class="text-tertiary">LOCATION:</span> ${config.personalInfo.location}</div>
-    <div><span class="text-tertiary">THEME:</span> ${document.documentElement.classList.contains('dark') ? 'Dark Neon' : 'Light Classic'}</div>
+    <div><span class="text-tertiary">THEME:</span> Dark Neon</div>
   </div>
 </div>
       `);
@@ -616,11 +788,7 @@ void main() {
     }
 
     if (cmd === 'theme') {
-      const isDark = document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      const icon = document.querySelector('#theme-toggle .material-symbols-outlined');
-      if (icon) icon.textContent = isDark ? 'dark_mode' : 'light_mode';
-      printLog(outputEl, `System theme switched to: <span class="text-tertiary font-bold">${isDark ? 'Dark Mode' : 'Light Mode'}</span>`);
+      printLog(outputEl, `System theme is locked to <span class="text-primary font-bold">Dark Mode</span> for optimal visual aesthetics.`);
       return;
     }
 
@@ -732,6 +900,7 @@ void main() {
       for (var j = 0; j < links.length; j++) {
         var a = links[j];
         if (a.closest('#mobile-drawer')) continue;
+        if (a.getAttribute('data-avatar-link') === 'true') continue;
         var href = a.getAttribute('href') || '';
         var isNavLink = false;
         for (var k = 0; k < folders.length; k++) { if (href.includes(folders[k])) { isNavLink = true; break; } }
@@ -993,21 +1162,43 @@ void main() {
       <aside class="lg:col-span-4 space-y-lg">
         <!-- Profile Header -->
         <!-- STITCH_PROFILE_HEADER_START -->
-<section class="glass-card p-lg rounded-xl space-y-4">
-  <div class="flex items-start justify-between">
-    <div>
-      <h1 class="font-headline-md text-headline-md text-on-surface">Nani Sontyana</h1>
-      <p class="text-on-surface-variant font-label-mono text-xs uppercase tracking-widest mt-1">Full Stack Developer</p>
-    </div>
-    <span class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full font-label-mono text-[10px]">VERIFIED</span>
+<section class="glass-card p-xl rounded-2xl space-y-6 flex flex-col items-center text-center">
+  <!-- Profile Image Container -->
+  <div class="relative w-24 h-24 rounded-full overflow-hidden border-2 border-primary/30 p-1 bg-surface-container/50 shadow-[0_0_20px_rgba(192,193,255,0.15)] shrink-0">
+    <img class="w-full h-full object-cover rounded-full" alt="Nani Sontyana" src="../home_portfolio/profile.png"/>
   </div>
-  <p class="text-on-surface-variant leading-relaxed">
-    Building high-performance, scalable web applications with a focus on developer experience and elegant UI.
+  <div class="space-y-2 w-full">
+    <div class="flex items-center justify-center gap-2">
+      <h1 class="font-headline-md text-headline-md text-on-surface font-bold">Nani Sontyana</h1>
+      <span class="px-2 py-0.5 bg-primary/10 text-primary border border-primary/20 rounded-full font-label-mono text-[9px] font-bold">VERIFIED</span>
+    </div>
+    <p class="text-primary font-label-mono text-xs uppercase tracking-widest font-semibold">Full Stack Developer</p>
+  </div>
+  <p class="text-on-surface-variant font-body-md leading-relaxed text-sm max-w-xs">
+    Passionate about bridging the gap between design and engineering. Specialized in React, TypeScript, and Cloud Architecture.
   </p>
-  <div class="flex flex-wrap gap-2 pt-2">
-    <span class="px-2 py-1 bg-surface-container rounded-md text-xs font-label-mono text-outline">#FRONTEND</span>
-    <span class="px-2 py-1 bg-surface-container rounded-md text-xs font-label-mono text-outline">#BACKEND</span>
-    <span class="px-2 py-1 bg-surface-container rounded-md text-xs font-label-mono text-outline">#TOOLS</span>
+  <!-- Location & Email Metadata -->
+  <div class="w-full border-t border-white/5 pt-4 space-y-2 text-xs font-label-mono text-on-surface-variant/80">
+    <div class="flex items-center justify-center gap-2">
+      <span class="material-symbols-outlined text-sm text-primary">location_on</span>
+      <span>Visakhapatnam, India</span>
+    </div>
+    <div class="flex items-center justify-center gap-2">
+      <span class="material-symbols-outlined text-sm text-primary">mail</span>
+      <a href="mailto:nanisontyana47@gmail.com" class="hover:text-primary transition-colors">nanisontyana47@gmail.com</a>
+    </div>
+  </div>
+  
+  <!-- CMS Quick Action -->
+  <div class="w-full border-t border-white/5 pt-4 flex justify-center">
+    <button onclick="const tab = document.getElementById('tab-btn-editor'); if(tab) tab.click();" class="px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-xl hover:bg-primary/20 transition-all font-label-mono text-xs uppercase tracking-wider flex items-center gap-2">
+      <span class="material-symbols-outlined text-sm">settings</span> Edit Portfolio
+    </button>
+  </div>
+  <div class="flex flex-wrap justify-center gap-2 pt-2 w-full border-t border-white/5">
+    <span class="px-2.5 py-1 bg-surface-container rounded-md text-[10px] font-label-mono text-outline border border-white/5">#FRONTEND</span>
+    <span class="px-2.5 py-1 bg-surface-container rounded-md text-[10px] font-label-mono text-outline border border-white/5">#BACKEND</span>
+    <span class="px-2.5 py-1 bg-surface-container rounded-md text-[10px] font-label-mono text-outline border border-white/5">#TOOLS</span>
   </div>
 </section>
 <!-- STITCH_PROFILE_HEADER_END -->
@@ -1645,6 +1836,24 @@ void main() {
         checkAuthStatus();
       });
     }
+
+        function handleHashRoute() {
+          if (window.location.hash === '#edit' || window.location.hash === '#cms') {
+            if (tabBtnEditor) {
+              tabBtnEditor.click();
+            }
+          } else if (window.location.hash === '#message' || window.location.hash === '#contact') {
+            if (tabBtnMessage) {
+              tabBtnMessage.click();
+            }
+          }
+        }
+
+        // Run on load and hashchange
+        window.addEventListener('hashchange', handleHashRoute);
+        window.addEventListener('DOMContentLoaded', handleHashRoute);
+        // Execute check immediately in case elements are ready
+        setTimeout(handleHashRoute, 50);
 
         // Fallback config if STITCH has not yet run
         const fallbackConfig = {
@@ -2569,27 +2778,7 @@ void main() {
         // Auto switch to general sub-tab initially
         window.switchSubTab = switchSubTab;
     </script>
-    <script>
-        (function() {
-        const toggleBtn = document.getElementById('theme-toggle');
-        if (toggleBtn) {
-          const icon = toggleBtn.querySelector('.material-symbols-outlined');
-        if (icon) {
-          icon.textContent = document.documentElement.classList.contains('dark') ? 'dark_mode' : 'light_mode';
-          }
-        if (!toggleBtn.dataset.listenerBound) {
-          toggleBtn.dataset.listenerBound = 'true';
-            toggleBtn.addEventListener('click', () => {
-              const isDark = document.documentElement.classList.toggle('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        if (icon) {
-          icon.textContent = isDark ? 'dark_mode' : 'light_mode';
-              }
-            });
-          }
-        }
-      })();
-    </script>
+    
   </main>
   <!-- BottomNavBar (Active: Settings) -->
   <!-- STITCH_NAV_MOBILE_START -->
@@ -2614,11 +2803,6 @@ void main() {
     <a href="../blog_portfolio/code.html" class="flex flex-col items-center justify-center gap-[3px] flex-1 text-on-surface-variant hover:text-primary transition-colors duration-200 active:scale-95">
       <span class="material-symbols-outlined text-[22px] leading-none">article</span>
       <span class="font-label-mono text-[9px] tracking-wider uppercase">Blog</span>
-    </a>
-    <a href="../contact_portfolio/code.html" class="flex flex-col items-center justify-center gap-[3px] flex-1 relative text-primary" aria-current="page">
-      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-primary rounded-b-full" data-nav-indicator></div>
-      <span class="material-symbols-outlined text-[22px] leading-none">settings</span>
-      <span class="font-label-mono text-[9px] font-bold tracking-wider uppercase">Settings</span>
     </a>
   </div>
 </nav>

@@ -62,8 +62,7 @@ function getDesktopNav(activePage) {
     { name: 'About', url: '../about_portfolio/code.html', icon: 'person' },
     { name: 'Projects', url: '../projects_portfolio/code.html', icon: 'code' },
     { name: 'Experience', url: '../experience_portfolio/code.html', icon: 'work' },
-    { name: 'Blog', url: '../blog_portfolio/code.html', icon: 'article' },
-    { name: 'Settings', url: '../contact_portfolio/code.html', icon: 'settings' }
+    { name: 'Blog', url: '../blog_portfolio/code.html', icon: 'article' }
   ];
 
   // Desktop nav links
@@ -170,8 +169,7 @@ function getMobileNav(activePage) {
     { name: 'About', url: '../about_portfolio/code.html', icon: 'person' },
     { name: 'Projects', url: '../projects_portfolio/code.html', icon: 'code' },
     { name: 'Experience', url: '../experience_portfolio/code.html', icon: 'work' },
-    { name: 'Blog', url: '../blog_portfolio/code.html', icon: 'article' },
-    { name: 'Settings', url: '../contact_portfolio/code.html', icon: 'settings' }
+    { name: 'Blog', url: '../blog_portfolio/code.html', icon: 'article' }
   ];
 
   let html = '<nav class="lg:hidden fixed bottom-0 left-0 w-full z-50" style="padding-bottom: env(safe-area-inset-bottom, 0px)">\n';
@@ -676,20 +674,46 @@ function getSkillsSummaryHtml(skillsSummary) {
 function getContactProfileHeaderHtml(personalInfo, skills) {
   const tags = skills.map(s => s.category.toUpperCase());
   
-  let html = `<section class="glass-card p-lg rounded-xl space-y-4">\n`;
-  html += `  <div class="flex items-start justify-between">\n`;
-  html += `    <div>\n`;
-  html += `      <h1 class="font-headline-md text-headline-md text-on-surface">${personalInfo.name}</h1>\n`;
-  html += `      <p class="text-on-surface-variant font-label-mono text-xs uppercase tracking-widest mt-1">${personalInfo.title}</p>\n`;
-  html += `    </div>\n`;
-  html += `    <span class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full font-label-mono text-[10px]">VERIFIED</span>\n`;
+  let html = `<section class="glass-card p-xl rounded-2xl space-y-6 flex flex-col items-center text-center">\n`;
+  html += `  <!-- Profile Image Container -->\n`;
+  html += `  <div class="relative w-24 h-24 rounded-full overflow-hidden border-2 border-primary/30 p-1 bg-surface-container/50 shadow-[0_0_20px_rgba(192,193,255,0.15)] shrink-0">\n`;
+  html += `    <img class="w-full h-full object-cover rounded-full" alt="${personalInfo.name}" src="${personalInfo.profilePhoto}"/>\n`;
   html += `  </div>\n`;
-  html += `  <p class="text-on-surface-variant leading-relaxed">\n`;
-  html += `    ${personalInfo.introduction}\n`;
+  
+  html += `  <div class="space-y-2 w-full">\n`;
+  html += `    <div class="flex items-center justify-center gap-2">\n`;
+  html += `      <h1 class="font-headline-md text-headline-md text-on-surface font-bold">${personalInfo.name}</h1>\n`;
+  html += `      <span class="px-2 py-0.5 bg-primary/10 text-primary border border-primary/20 rounded-full font-label-mono text-[9px] font-bold">VERIFIED</span>\n`;
+  html += `    </div>\n`;
+  html += `    <p class="text-primary font-label-mono text-xs uppercase tracking-widest font-semibold">${personalInfo.title}</p>\n`;
+  html += `  </div>\n`;
+  
+  html += `  <p class="text-on-surface-variant font-body-md leading-relaxed text-sm max-w-xs">\n`;
+  html += `    ${personalInfo.shortBio || personalInfo.introduction}\n`;
   html += `  </p>\n`;
-  html += `  <div class="flex flex-wrap gap-2 pt-2">\n`;
+
+  html += `  <!-- Location & Email Metadata -->\n`;
+  html += `  <div class="w-full border-t border-white/5 pt-4 space-y-2 text-xs font-label-mono text-on-surface-variant/80">\n`;
+  html += `    <div class="flex items-center justify-center gap-2">\n`;
+  html += `      <span class="material-symbols-outlined text-sm text-primary">location_on</span>\n`;
+  html += `      <span>${personalInfo.location}</span>\n`;
+  html += `    </div>\n`;
+  html += `    <div class="flex items-center justify-center gap-2">
+      <span class="material-symbols-outlined text-sm text-primary">mail</span>
+      <a href="mailto:${personalInfo.email}" class="hover:text-primary transition-colors">${personalInfo.email}</a>
+    </div>
+  </div>
+  
+  <!-- CMS Quick Action -->
+  <div class="w-full border-t border-white/5 pt-4 flex justify-center">
+    <button onclick="const tab = document.getElementById('tab-btn-editor'); if(tab) tab.click();" class="px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-xl hover:bg-primary/20 transition-all font-label-mono text-xs uppercase tracking-wider flex items-center gap-2">
+      <span class="material-symbols-outlined text-sm">settings</span> Edit Portfolio
+    </button>
+  </div>\n`;
+  
+  html += `  <div class="flex flex-wrap justify-center gap-2 pt-2 w-full border-t border-white/5">\n`;
   tags.forEach(t => {
-    html += `    <span class="px-2 py-1 bg-surface-container rounded-md text-xs font-label-mono text-outline">#${t}</span>\n`;
+    html += `    <span class="px-2.5 py-1 bg-surface-container rounded-md text-[10px] font-label-mono text-outline border border-white/5">#${t}</span>\n`;
   });
   html += `  </div>\n`;
   html += `</section>`;
@@ -818,9 +842,9 @@ directories.forEach(dir => {
     <span class="inline-block h-3.5 w-3.5 transform rounded-full bg-on-surface-variant transition-transform duration-300" id="global-recruiter-thumb" style="transform: translateX(2px)"></span>
   </button>
 </div>
-<div class="${wrapperClass}">
-<img alt="${portfolioConfig.personalInfo.name}" class="w-full h-full object-cover" data-alt="Profile" src="${portfolioConfig.personalInfo.profilePhoto}"/>
-</div>
+<a href="../contact_portfolio/code.html#edit" data-avatar-link="true" class="${wrapperClass} cursor-pointer block hover:scale-105 active:scale-95 transition-transform" title="Admin Settings">
+  <img alt="${portfolioConfig.personalInfo.name}" class="w-full h-full object-cover" data-alt="Profile" src="${portfolioConfig.personalInfo.profilePhoto}"/>
+</a>
 <script>
 (function() {
   const config = ${configJson};
@@ -992,7 +1016,7 @@ directories.forEach(dir => {
       printLog(outputEl, '  <span class="text-primary font-bold">projects</span> - Show portfolio projects');
       printLog(outputEl, '  <span class="text-primary font-bold">contact</span>  - Output email and social URLs');
       printLog(outputEl, '  <span class="text-primary font-bold">resume</span>   - Print resume / CV link');
-      printLog(outputEl, '  <span class="text-primary font-bold">theme</span>    - Toggle dark / light mode');
+      printLog(outputEl, '  <span class="text-primary font-bold">theme</span>    - Show theme settings status');
       printLog(outputEl, '  <span class="text-primary font-bold">clear</span>    - Flush the terminal logs');
       return;
     }
@@ -1016,7 +1040,7 @@ directories.forEach(dir => {
     <div><span class="text-tertiary">TITLE:</span> \${config.personalInfo.title}</div>
     <div><span class="text-tertiary">EXP:</span> \${config.personalInfo.yearsOfExperience}</div>
     <div><span class="text-tertiary">LOCATION:</span> \${config.personalInfo.location}</div>
-    <div><span class="text-tertiary">THEME:</span> \${document.documentElement.classList.contains('dark') ? 'Dark Neon' : 'Light Classic'}</div>
+    <div><span class="text-tertiary">THEME:</span> Dark Neon</div>
   </div>
 </div>
       \`);
@@ -1076,11 +1100,7 @@ directories.forEach(dir => {
     }
 
     if (cmd === 'theme') {
-      const isDark = document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      const icon = document.querySelector('#theme-toggle .material-symbols-outlined');
-      if (icon) icon.textContent = isDark ? 'dark_mode' : 'light_mode';
-      printLog(outputEl, \`System theme switched to: <span class="text-tertiary font-bold">\${isDark ? 'Dark Mode' : 'Light Mode'}</span>\`);
+      printLog(outputEl, \`System theme is locked to <span class="text-primary font-bold">Dark Mode</span> for optimal visual aesthetics.\`);
       return;
     }
 
@@ -1192,6 +1212,7 @@ directories.forEach(dir => {
       for (var j = 0; j < links.length; j++) {
         var a = links[j];
         if (a.closest('#mobile-drawer')) continue;
+        if (a.getAttribute('data-avatar-link') === 'true') continue;
         var href = a.getAttribute('href') || '';
         var isNavLink = false;
         for (var k = 0; k < folders.length; k++) { if (href.includes(folders[k])) { isNavLink = true; break; } }

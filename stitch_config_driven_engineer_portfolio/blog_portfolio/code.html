@@ -2,15 +2,10 @@
 <html class="dark" lang="en">
 <head>
   <script>
-    (function() {
-      const theme = localStorage.getItem('theme') || 'dark';
-      if (theme === 'dark') {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-    })();
-  </script>
+  (function() {
+    document.documentElement.classList.add('dark');
+  })();
+</script>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <!-- STITCH_TITLE_START -->
@@ -31,69 +26,8 @@
 
   <style>
     :root {
-      --color-background: #f4f6fa;
-      --color-on-background: #0f1015;
-      --color-surface: #ffffff;
-      --color-on-surface: #0f1015;
-      --color-surface-variant: #e2e2ec;
-      --color-on-surface-variant: #43465b;
-      --color-outline: #727790;
-      --color-outline-variant: #c2c5de;
-      --color-primary: #3b3db8;
-      --color-on-primary: #ffffff;
-      --color-primary-container: #e1e0ff;
-      --color-on-primary-container: #0b0091;
-      --color-secondary: #5c5d72;
-      --color-on-secondary: #ffffff;
-      --color-secondary-container: #e1e1f9;
-      --color-on-secondary-container: #191a2c;
-      --color-tertiary: #765600;
-      --color-on-tertiary: #ffffff;
-      --color-tertiary-container: #ffdf9e;
-      --color-on-tertiary-container: #261900;
-      --color-surface-dim: #dbdbe4;
-      --color-surface-bright: #faf8ff;
-      --color-surface-container-lowest: #ffffff;
-      --color-surface-container-low: #f1f3f9;
-      --color-surface-container: #ececf3;
-      --color-surface-container-high: #e5e6ec;
-      --color-surface-container-highest: #dfe0e7;
-      --color-primary-fixed: #e1e0ff;
-      --color-primary-fixed-dim: #c0c1ff;
-      --color-on-primary-fixed: #07006c;
-      --color-on-primary-fixed-variant: #2f2ebe;
-      --color-secondary-fixed: #e5e2e1;
-      --color-secondary-fixed-dim: #c9c6c5;
-      --color-on-secondary-fixed: #1c1b1b;
-      --color-on-secondary-fixed-variant: #474646;
-      --color-tertiary-fixed: #ffdcc5;
-      --color-tertiary-fixed-dim: #ffb783;
-      --color-on-tertiary-fixed: #301400;
-      --color-on-tertiary-fixed-variant: #703700;
-      --color-inverse-primary: #494bd6;
-      --color-inverse-surface: #e3e1ec;
-      --color-inverse-on-surface: #2f3038;
-      --color-surface-tint: #3b3db8;
-      --color-error-container: #ffdad6;
-      --color-error: #ba1a1a;
-      --color-on-error: #ffffff;
+      
 
-      --glass-bg: rgba(255, 255, 255, 0.75);
-      --glass-border: rgba(59, 61, 184, 0.08);
-      --glass-hover-border: rgba(59, 61, 184, 0.18);
-      --glass-shadow: 0 10px 30px -10px rgba(59, 61, 184, 0.08), 0 1px 3px rgba(59, 61, 184, 0.03);
-      --border-color: rgba(59, 61, 184, 0.1);
-      --border-color-soft: rgba(59, 61, 184, 0.05);
-
-      --primary-glow: rgba(59, 61, 184, 0.12);
-      --primary-glow-hover: rgba(59, 61, 184, 0.25);
-      --header-shadow: 0 8px 32px rgba(59, 61, 184, 0.04), 0 1px 2px rgba(59, 61, 184, 0.02);
-      --highlight-border-color: rgba(59, 61, 184, 0.4);
-      --highlight-shadow-color: rgba(59, 61, 184, 0.2);
-      --code-inline-bg: rgba(59, 61, 184, 0.06);
-    }
-
-    .dark {
       --color-background: #12131a;
       --color-on-background: #e3e1ec;
       --color-surface: #12131a;
@@ -155,11 +89,10 @@
       --highlight-shadow-color: rgba(192, 193, 255, 0.2);
       --code-inline-bg: rgba(255, 255, 255, 0.06);
     }
+
     
-    html:not(.dark) #shader-canvas-ANIMATION_4 {
-      opacity: 0.08;
-      filter: invert(1) hue-rotate(180deg) brightness(1.05);
-    }
+    
+    
 
     body {
       background-color: var(--color-background);
@@ -469,7 +402,6 @@ void main() {
   <a class="relative text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-colors duration-200" href="../projects_portfolio/code.html">Projects</a>
   <a class="relative text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-colors duration-200" href="../experience_portfolio/code.html">Experience</a>
   <a class="relative text-primary font-bold font-label-mono text-label-mono transition-colors duration-200 after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-primary after:rounded-full" href="../blog_portfolio/code.html">Blog</a>
-  <a class="relative text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-colors duration-200" href="../contact_portfolio/code.html">Settings</a>
 </nav>
 <!-- Mobile hamburger button (hidden as requested, using bottom mobile nav bar) -->
 <button id="mobile-menu-btn" class="hidden" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
@@ -509,10 +441,6 @@ void main() {
   <a href="../blog_portfolio/code.html" style="transition-delay:240ms" class="drawer-item flex items-center gap-md px-lg py-md rounded-2xl bg-primary/10 border border-primary/20 text-primary font-bold font-label-mono text-label-mono">
     <span class="material-symbols-outlined text-[22px]">article</span>
     <span>Blog</span>
-  </a>
-  <a href="../contact_portfolio/code.html" style="transition-delay:300ms" class="drawer-item flex items-center gap-md px-lg py-md rounded-2xl hover:bg-white/5 text-on-surface-variant hover:text-primary font-label-mono text-label-mono transition-all duration-300">
-    <span class="material-symbols-outlined text-[22px]">settings</span>
-    <span>Settings</span>
   </a>
     </nav>
     <!-- Drawer footer -->
@@ -558,9 +486,7 @@ void main() {
 </script>
 <!-- STITCH_NAV_DESKTOP_END -->
     <div class="flex items-center gap-md">
-      <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/5 transition-colors active:scale-95" aria-label="Toggle theme">
-        <span class="material-symbols-outlined text-primary">dark_mode</span>
-      </button>
+      
       <!-- STITCH_HEADER_AVATAR_START -->
 
 <div class="flex items-center gap-2 mr-2">
@@ -569,9 +495,9 @@ void main() {
     <span class="inline-block h-3.5 w-3.5 transform rounded-full bg-on-surface-variant transition-transform duration-300" id="global-recruiter-thumb" style="transform: translateX(2px)"></span>
   </button>
 </div>
-<div class="w-10 h-10 rounded-full overflow-hidden border border-white/10">
-<img alt="Nani Sontyana" class="w-full h-full object-cover" data-alt="Profile" src="../home_portfolio/profile.png"/>
-</div>
+<a href="../contact_portfolio/code.html#edit" data-avatar-link="true" class="w-10 h-10 rounded-full overflow-hidden border border-white/10 cursor-pointer block hover:scale-105 active:scale-95 transition-transform" title="Admin Settings">
+  <img alt="Nani Sontyana" class="w-full h-full object-cover" data-alt="Profile" src="../home_portfolio/profile.png"/>
+</a>
 <script>
 (function() {
   const config = {"personalInfo":{"name":"Nani Sontyana","title":"Full Stack Developer","introduction":"Building high-performance, scalable web applications with a focus on developer experience and elegant UI.","shortBio":"Passionate about bridging the gap between design and engineering. Specialized in React, TypeScript, and Cloud Architecture.","profilePhoto":"../home_portfolio/profile.png","resumeUrl":"https://drive.google.com/file/d/1e1WEKuGPQeq2oAnUPHIDEYMaESPyZYyE/view?usp=drive_link","email":"nanisontyana47@gmail.com","location":"Visakhapatnam, India","yearsOfExperience":"Fresher","yearsOfExperienceLabel":"Experience"},"socialLinks":{"github":"https://github.com/NaniSontyana","linkedin":"https://linkedin.com/in/nani-sontyana","twitter":"https://twitter.com/nani_sontyana","leetcode":"https://leetcode.com/u/nani_sontyana"},"stats":[{"label":"Projects Completed","value":"15+","icon":"Briefcase"},{"label":"Certifications","value":"4","icon":"Award"},{"label":"Internships","value":"2","icon":"Terminal"},{"label":"Problems Solved","value":"200+","icon":"Code"}],"skills":[{"category":"Frontend","items":[{"name":"React","level":96,"icon":"atom"},{"name":"TypeScript","level":99,"icon":"code"},{"name":"Angular","level":94},{"name":"JavaScript","level":80},{"name":"Tailwind css","level":80}]},{"category":"Backend","items":[{"name":"Node.js","level":90,"icon":"cpu"},{"name":"Python","level":80,"icon":"cpu"},{"name":"PostgreSQL","level":85,"icon":"database"},{"name":"MongoDB","level":100},{"name":"Next.js","level":80}]},{"category":"Tools","items":[{"name":"Docker","level":80,"icon":"container"},{"name":"Git","level":95,"icon":"git-branch"},{"name":"AWS","level":75,"icon":"cloud"},{"name":"GitHub","level":80}]}],"projects":[{"title":"smartHR-attrition Based Prediction System","description":"ML): Designed and built an enterprise-grade HR\nintelligence platform featuring real-time attrition risk scoring and workforce telemetry. Implemented a decoupled architecture\nhosting a React/Vite SPA on Vercel, an Express API gateway on Render, and a Python Flask ML microservice. Leveraged\nScikit-Learn to execute feature importance analyses, enabling explainable risk predictions based on demographic and\noperational metrics. Established security best practices including Bcrypt password hashing, JWT authorization middleware.\n","technologies":["React","Tailwind","Express","Python","ML"],"githubLink":"https://github.com/NaniSontyana/smartHR-main","liveLink":"https://smarthr-three.vercel.app/","image":"https://drive.google.com/file/d/1b7VGox5fkNkqv1g92xKaiscqxqqx1bXy/view?usp=sharing","category":"Web Development & ML","featured":true,"metrics":{"latency":"< 20ms","fcp":"0.40s","bundleSize":"40kB"}},{"title":"Subscription Tracker","description":"(Backend-Focused): Developed a backend-driven subscription management system to help\nusers track recurring subscriptions and avoid missed renewals. Implemented automated email reminders scheduled at multiple\nintervals before renewal dates using event-driven workflows. Designed secure RESTful APIs for subscription management,\nauthentication, and notifications. Tech: Node.js, Express.js, MongoDB, JWT, Nodemailer, Upstash QStash, Arcjet, Git.","technologies":["HTML","CSS","javascript","Express.js"],"githubLink":"https://github.com/NaniSontyana/subscrption_tracker","liveLink":"https://subscrption-tracker-2.onrender.com","image":"https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=600","category":"Web Development","featured":true,"metrics":{"latency":"< 10ms","fcp":"0.40s","bundleSize":"40kB"}},{"title":"E-commerce platform","description":"A complete E-commerce website with frontend, backend and Admin page. used MongoDb as a Database server to store the complete data to store the data.","technologies":["React","Tailwind","Express","Node","MongoDB"],"githubLink":"https://github.com/NaniSontyana/e-commerce-2","liveLink":"https://github.com/NaniSontyana/e-commerce-2","image":"https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=600","category":"Web Development","featured":true,"metrics":{"latency":"< 10ms","fcp":"0.40s","bundleSize":"40kB"}}],"experience":[{"company":"TechNova Systems","role":"Software Engineering Intern","duration":"June 2023 - Aug 2023","location":"Remote","description":"Developed microservices for a large-scale e-commerce platform using Spring Boot.","technologies":["Java","Spring Boot","Kafka"],"logo":"https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&q=80&w=100"}],"education":[{"institution":"Stanford University","degree":"B.S. in Computer Science","duration":"2020 - 2024","cgpa":"3.9/4.0","achievements":["Dean's List","UPE Honor Society"]}],"skillsSummary":[{"category":"Languages","icon":"translate","color":"primary","items":[{"name":"JAVA","iconType":"devicon","icon":"devicon-java-plain colored"},{"name":"Python","iconType":"devicon","icon":"devicon-python-plain colored"},{"name":"JavaScript","iconType":"devicon","icon":"devicon-javascript-plain colored"},{"name":"C++","iconType":"devicon","icon":"devicon-cplusplus-plain colored"}]},{"category":"Frameworks","icon":"layers","color":"tertiary","items":[{"name":"React.js","iconType":"devicon","icon":"devicon-react-original colored"},{"name":"Express.js","iconType":"devicon","icon":"devicon-express-original"},{"name":"NodeJS","iconType":"devicon","icon":"devicon-nodejs-plain colored"}]},{"category":"Tools","icon":"build","color":"primary","items":[{"name":"Git","iconType":"devicon","icon":"devicon-git-plain colored"},{"name":"GitHub","iconType":"devicon","icon":"devicon-github-original"},{"name":"MongoDB","iconType":"devicon","icon":"devicon-mongodb-plain colored"},{"name":"PostgreSQL","iconType":"devicon","icon":"devicon-postgresql-plain colored"},{"name":"MySQL","iconType":"devicon","icon":"devicon-mysql-plain colored"},{"name":"SQLite","iconType":"devicon","icon":"devicon-sqlite-plain colored"}]},{"category":"Soft Skills","icon":"psychology","color":"tertiary","items":[{"name":"Leadership","iconType":"material","icon":"groups"},{"name":"Writing","iconType":"material","icon":"edit_note"},{"name":"Public Speaking","iconType":"material","icon":"record_voice_over"},{"name":"Time Management","iconType":"material","icon":"schedule"}]}],"blogPosts":[{"title":"Building a Config-Driven Developer Portfolio","slug":"config-driven-portfolio","description":"How to create a single source of truth for your developer profile, projects, and themes using a dynamic compiler.","date":"2026-06-18","tags":["NodeJS","JavaScript","HTML","CMS"],"filePath":"../blog_portfolio/posts/config-driven-portfolio.md"},{"title":"Understanding WebGL Shaders for Web Design","slug":"webgl-shaders","description":"An introduction to writing vertex and fragment shaders for atmospheric web backgrounds and interactive elements.","date":"2026-06-15","tags":["WebGL","GLSL","Graphics","CSS"],"filePath":"../blog_portfolio/posts/webgl-shaders.md"}]};
@@ -743,7 +669,7 @@ void main() {
       printLog(outputEl, '  <span class="text-primary font-bold">projects</span> - Show portfolio projects');
       printLog(outputEl, '  <span class="text-primary font-bold">contact</span>  - Output email and social URLs');
       printLog(outputEl, '  <span class="text-primary font-bold">resume</span>   - Print resume / CV link');
-      printLog(outputEl, '  <span class="text-primary font-bold">theme</span>    - Toggle dark / light mode');
+      printLog(outputEl, '  <span class="text-primary font-bold">theme</span>    - Show theme settings status');
       printLog(outputEl, '  <span class="text-primary font-bold">clear</span>    - Flush the terminal logs');
       return;
     }
@@ -767,7 +693,7 @@ void main() {
     <div><span class="text-tertiary">TITLE:</span> ${config.personalInfo.title}</div>
     <div><span class="text-tertiary">EXP:</span> ${config.personalInfo.yearsOfExperience}</div>
     <div><span class="text-tertiary">LOCATION:</span> ${config.personalInfo.location}</div>
-    <div><span class="text-tertiary">THEME:</span> ${document.documentElement.classList.contains('dark') ? 'Dark Neon' : 'Light Classic'}</div>
+    <div><span class="text-tertiary">THEME:</span> Dark Neon</div>
   </div>
 </div>
       `);
@@ -827,11 +753,7 @@ void main() {
     }
 
     if (cmd === 'theme') {
-      const isDark = document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      const icon = document.querySelector('#theme-toggle .material-symbols-outlined');
-      if (icon) icon.textContent = isDark ? 'dark_mode' : 'light_mode';
-      printLog(outputEl, `System theme switched to: <span class="text-tertiary font-bold">${isDark ? 'Dark Mode' : 'Light Mode'}</span>`);
+      printLog(outputEl, `System theme is locked to <span class="text-primary font-bold">Dark Mode</span> for optimal visual aesthetics.`);
       return;
     }
 
@@ -943,6 +865,7 @@ void main() {
       for (var j = 0; j < links.length; j++) {
         var a = links[j];
         if (a.closest('#mobile-drawer')) continue;
+        if (a.getAttribute('data-avatar-link') === 'true') continue;
         var href = a.getAttribute('href') || '';
         var isNavLink = false;
         for (var k = 0; k < folders.length; k++) { if (href.includes(folders[k])) { isNavLink = true; break; } }
@@ -1531,27 +1454,7 @@ void main() {
     });
   </script>
   
-  <script>
-    (function() {
-      const toggleBtn = document.getElementById('theme-toggle');
-      if (toggleBtn) {
-        const icon = toggleBtn.querySelector('.material-symbols-outlined');
-        if (icon) {
-          icon.textContent = document.documentElement.classList.contains('dark') ? 'dark_mode' : 'light_mode';
-        }
-        if (!toggleBtn.dataset.listenerBound) {
-          toggleBtn.dataset.listenerBound = 'true';
-          toggleBtn.addEventListener('click', () => {
-            const isDark = document.documentElement.classList.toggle('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            if (icon) {
-              icon.textContent = isDark ? 'dark_mode' : 'light_mode';
-            }
-          });
-        }
-      }
-    })();
-  </script>
+  
 </main>
 <!-- STITCH_NAV_MOBILE_START -->
 <nav class="lg:hidden fixed bottom-0 left-0 w-full z-50" style="padding-bottom: env(safe-area-inset-bottom, 0px)">
@@ -1576,10 +1479,6 @@ void main() {
       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-primary rounded-b-full" data-nav-indicator></div>
       <span class="material-symbols-outlined text-[22px] leading-none">article</span>
       <span class="font-label-mono text-[9px] font-bold tracking-wider uppercase">Blog</span>
-    </a>
-    <a href="../contact_portfolio/code.html" class="flex flex-col items-center justify-center gap-[3px] flex-1 text-on-surface-variant hover:text-primary transition-colors duration-200 active:scale-95">
-      <span class="material-symbols-outlined text-[22px] leading-none">settings</span>
-      <span class="font-label-mono text-[9px] tracking-wider uppercase">Settings</span>
     </a>
   </div>
 </nav>
