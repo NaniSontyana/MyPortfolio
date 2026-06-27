@@ -530,7 +530,7 @@ void main() {
     <span class="inline-block h-3.5 w-3.5 transform rounded-full bg-on-surface-variant transition-transform duration-300" id="global-recruiter-thumb" style="transform: translateX(2px)"></span>
   </button>
 </div>
-<a href="../contact_portfolio/code.html" data-avatar-link="true" class="w-10 h-10 rounded-full overflow-hidden border border-white/10 cursor-pointer block hover:scale-105 active:scale-95 transition-transform" title="Admin Settings">
+<a href="../contact_portfolio/code.html#edit" data-avatar-link="true" class="w-10 h-10 rounded-full overflow-hidden border border-white/10 cursor-pointer block hover:scale-105 active:scale-95 transition-transform" title="Admin Settings">
   <img alt="Nani Sontyana" class="w-full h-full object-cover" data-alt="Profile" src="https://i.ibb.co/k64c35KZ/Gemini-Generated-Image-1g32h61g32h61g32.png"/>
 </a>
 <script>
@@ -728,7 +728,7 @@ void main() {
     <div><span class="text-tertiary">TITLE:</span> ${config.personalInfo.title}</div>
     <div><span class="text-tertiary">EXP:</span> ${config.personalInfo.yearsOfExperience}</div>
     <div><span class="text-tertiary">LOCATION:</span> ${config.personalInfo.location}</div>
-    <div><span class="text-tertiary">THEME:</span> ${document.documentElement.classList.contains('dark') ? 'Dark Neon' : 'Light Classic'}</div>
+    <div><span class="text-tertiary">THEME:</span> Dark Neon</div>
   </div>
 </div>
       `);
@@ -1187,6 +1187,13 @@ void main() {
       <span class="material-symbols-outlined text-sm text-primary">mail</span>
       <a href="mailto:nanisontyana47@gmail.com" class="hover:text-primary transition-colors">nanisontyana47@gmail.com</a>
     </div>
+  </div>
+  
+  <!-- CMS Quick Action -->
+  <div class="w-full border-t border-white/5 pt-4 flex justify-center">
+    <button onclick="const tab = document.getElementById('tab-btn-editor'); if(tab) tab.click();" class="px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-xl hover:bg-primary/20 transition-all font-label-mono text-xs uppercase tracking-wider flex items-center gap-2">
+      <span class="material-symbols-outlined text-sm">settings</span> Edit Portfolio
+    </button>
   </div>
   <div class="flex flex-wrap justify-center gap-2 pt-2 w-full border-t border-white/5">
     <span class="px-2.5 py-1 bg-surface-container rounded-md text-[10px] font-label-mono text-outline border border-white/5">#FRONTEND</span>

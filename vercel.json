@@ -1,5 +1,7 @@
 {
   "cleanUrls": true,
+  "framework": null,
+  "buildCommand": "npm run build",
   "rewrites": [
     {
       "source": "/stitch_config_driven_engineer_portfolio/:path*",
